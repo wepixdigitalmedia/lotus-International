@@ -1,3 +1,8 @@
+export interface ColorSwatch {
+  name: string;
+  hex: string;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -7,8 +12,18 @@ export interface Product {
   gsm: string;
   description: string;
   features: string[];
-  image: string; // Tailwind gradient styled or mock URLs
+  image: string;
+  images: string[]; // Minimum 3 high-res product images
+  colors: ColorSwatch[]; // Interactive color swatches
   moq: number;
+  tags?: string[];
+  specs?: {
+    fit?: string;
+    weave?: string;
+    dyeing?: string;
+    shrinkage?: string;
+    leadTime?: string;
+  };
 }
 
 export interface Certificate {
@@ -46,8 +61,27 @@ export const PRODUCTS: Product[] = [
     gsm: "220 GSM",
     description: "Export-grade pique polo featuring high-durability rib collar, reinforced placket, and side vents. Designed for retail-ready private labeling.",
     features: ["Double-needle stitching", "Enzyme washed for soft handfeel", "Reactive dyed for long-lasting color fastness"],
-    image: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&q=80&w=800",
+    image: "https://ik.imagekit.io/wepix/lotus%20international/Products/Men's%20Classic%20Pique%20Polo%20(2).webp",
+    images: [
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Men's%20Classic%20Pique%20Polo%20(2).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Men's%20Classic%20Pique%20Polo%20(3).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Men's%20Classic%20Pique%20Polo%20(4).webp",
+    ],
+    colors: [
+      { name: "Classic White", hex: "#FFFFFF" },
+      { name: "Deep Ink", hex: "#1F3A3D" },
+      { name: "Terracotta", hex: "#B5654A" },
+      { name: "Sage Green", hex: "#8A9A7E" },
+    ],
     moq: 1000,
+    tags: ["Best Seller", "Polos", "OEKO-TEX Certified"],
+    specs: {
+      fit: "Tailored Regular Fit",
+      weave: "Honeycomb Pique Knit",
+      dyeing: "Reactive Low-Impact Dye",
+      shrinkage: "< 3% ISO standard",
+      leadTime: "45-60 Days Bulk",
+    },
   },
   {
     id: "w-slub-tee",
@@ -58,8 +92,26 @@ export const PRODUCTS: Product[] = [
     gsm: "160 GSM",
     description: "Lightweight, breathable scoop neck t-shirt with a textured slub finish. Sourced from GOTS-certified organic cotton farms.",
     features: ["Eco-friendly low impact dye", "Pre-shrunk to prevent washing shrinkage", "Tear-away neck label support"],
-    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=800",
+    image: "https://ik.imagekit.io/wepix/lotus%20international/Products/Women's%20Organic%20Slub%20T-Shirt%20(1).webp",
+    images: [
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Women's%20Organic%20Slub%20T-Shirt%20(1).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Women's%20Organic%20Slub%20T-Shirt%20(2).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Women's%20Organic%20Slub%20T-Shirt%20(3).webp",
+    ],
+    colors: [
+      { name: "Natural Ivory", hex: "#FAF7F2" },
+      { name: "Terracotta", hex: "#B5654A" },
+      { name: "Charcoal Ink", hex: "#2A2D34" },
+    ],
     moq: 1200,
+    tags: ["GOTS Organic", "Eco Blends"],
+    specs: {
+      fit: "Relaxed Women Fit",
+      weave: "Single Jersey Slub",
+      dyeing: "Natural Herbal Dye",
+      shrinkage: "< 2% ISO standard",
+      leadTime: "40-50 Days Bulk",
+    },
   },
   {
     id: "m-fleece-hoodie",
@@ -70,8 +122,26 @@ export const PRODUCTS: Product[] = [
     gsm: "340 GSM",
     description: "Ultra-dense winter-grade hooded sweatshirt with double-lined hood, kangaroo pocket, and heavy rib cuffs. Perfect for premium street fashion private labels.",
     features: ["Heavyweight fabric construction", "Custom dyed-to-match drawcords", "Low shrinkage fleece weave"],
-    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=800",
+    image: "https://ik.imagekit.io/wepix/lotus%20international/Products/Men's%20Premium%20Heavyweight%20Hoodie%20(2).webp",
+    images: [
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Men's%20Premium%20Heavyweight%20Hoodie%20(2).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Men's%20Premium%20Heavyweight%20Hoodie%20(3).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Men's%20Premium%20Heavyweight%20Hoodie%20(4).webp",
+    ],
+    colors: [
+      { name: "Heather Grey", hex: "#C4C4C4" },
+      { name: "Deep Ink", hex: "#1F3A3D" },
+      { name: "Earth Brown", hex: "#6E473B" },
+    ],
     moq: 800,
+    tags: ["Streetwear", "Heavyweight"],
+    specs: {
+      fit: "Oversized Street Fit",
+      weave: "3-Fleece Loopback",
+      dyeing: "Pigment Garment Wash",
+      shrinkage: "< 1.5%",
+      leadTime: "45-60 Days Bulk",
+    },
   },
   {
     id: "k-cotton-romper",
@@ -82,8 +152,26 @@ export const PRODUCTS: Product[] = [
     gsm: "200 GSM",
     description: "Oeko-Tex Standard 100 certified baby romper. Super stretch rib knit fabric that ensures maximum comfort and zero skin irritation.",
     features: ["Nickel-free snap closures", "Flatlock seams for sensitive skin", "Highly breathable weave"],
-    image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800",
+    image: "https://ik.imagekit.io/wepix/lotus%20international/Products/Kids'%20Comfort%20Rib%20Knit%20Romper%20(1).webp",
+    images: [
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Kids'%20Comfort%20Rib%20Knit%20Romper%20(1).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Kids'%20Comfort%20Rib%20Knit%20Romper%20(2).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Kids'%20Comfort%20Rib%20Knit%20Romper%20(3).webp",
+    ],
+    colors: [
+      { name: "Pastel Sage", hex: "#A8BBA2" },
+      { name: "Warm Oat", hex: "#E8E2D5" },
+      { name: "Dusty Rose", hex: "#D4A395" },
+    ],
     moq: 1500,
+    tags: ["Kids Wear", "Baby Safe", "GOTS Certified"],
+    specs: {
+      fit: "Infant Comfort Fit",
+      weave: "2x2 Stretch Rib",
+      dyeing: "Non-Toxic Water Dye",
+      shrinkage: "< 2%",
+      leadTime: "35-45 Days Bulk",
+    },
   },
   {
     id: "npc-signature-polo",
@@ -94,8 +182,26 @@ export const PRODUCTS: Product[] = [
     gsm: "240 GSM",
     description: "Our in-house flagship garment. Combines the softness of bamboo fibers with the strength of organic cotton, processed entirely using solar-powered machinery.",
     features: ["Natural anti-bacterial properties", "Moisture-wicking yarn blend", "Coconut shell buttons"],
-    image: "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?auto=format&fit=crop&q=80&w=800",
+    image: "https://ik.imagekit.io/wepix/lotus%20international/Products/Nature%20Polo%20Club%20Signature%20Organic%20Polo%20(1).webp",
+    images: [
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Nature%20Polo%20Club%20Signature%20Organic%20Polo%20(1).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Nature%20Polo%20Club%20Signature%20Organic%20Polo%20(2).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Nature%20Polo%20Club%20Signature%20Organic%20Polo%20(3).webp",
+    ],
+    colors: [
+      { name: "Bamboo Green", hex: "#8A9A7E" },
+      { name: "Organic Cream", hex: "#F7F3EC" },
+      { name: "Earth Ochre", hex: "#B5654A" },
+    ],
     moq: 500,
+    tags: ["Flagship", "Eco Blends", "Polos", "Solar Powered"],
+    specs: {
+      fit: "Tailored Premium Fit",
+      weave: "Bamboo Pique Knit",
+      dyeing: "Bio-Based Reactive Dye",
+      shrinkage: "< 1.5%",
+      leadTime: "30-40 Days Bulk",
+    },
   },
   {
     id: "w-loungewear-set",
@@ -106,8 +212,26 @@ export const PRODUCTS: Product[] = [
     gsm: "260 GSM",
     description: "Cozy two-piece loungewear set including drop-shoulder sweatshirt and jogger pants. Premium dye-matching and retail finish.",
     features: ["Unbrushed loopback interior", "Elasticated waistband with custom drawcord", "Premium rib cuffs"],
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800",
+    image: "https://ik.imagekit.io/wepix/lotus%20international/Products/Women's%20French%20Terry%20Loungewear%20Se%20(2).webp",
+    images: [
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Women's%20French%20Terry%20Loungewear%20Se%20(2).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Women's%20French%20Terry%20Loungewear%20Se%20(3).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Women's%20French%20Terry%20Loungewear%20Se%20(4).webp",
+    ],
+    colors: [
+      { name: "Oatmeal", hex: "#E6DFD5" },
+      { name: "Charcoal", hex: "#2C302E" },
+      { name: "Terracotta Tint", hex: "#C7826B" },
+    ],
     moq: 1000,
+    tags: ["Co-Ord Set", "French Terry"],
+    specs: {
+      fit: "Relaxed Drop-Shoulder",
+      weave: "French Terry Loopback",
+      dyeing: "Soft Touch Wash",
+      shrinkage: "< 2%",
+      leadTime: "40-50 Days Bulk",
+    },
   },
   {
     id: "k-play-tee",
@@ -118,8 +242,26 @@ export const PRODUCTS: Product[] = [
     gsm: "150 GSM",
     description: "Soft, everyday t-shirts for children. Available in custom water-based prints and dynamic patterns suitable for sensitive skin.",
     features: ["GOTS certified organic cotton", "Zero chemical residue process", "Reinforced shoulder-to-shoulder taping"],
-    image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&q=80&w=800",
+    image: "https://ik.imagekit.io/wepix/lotus%20international/Products/Kids'%20Organic%20Cotton%20Play%20Tee%20(2).webp",
+    images: [
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Kids'%20Organic%20Cotton%20Play%20Tee%20(2).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Kids'%20Organic%20Cotton%20Play%20Tee%20(3).webp",
+      "https://ik.imagekit.io/wepix/lotus%20international/Products/Kids'%20Organic%20Cotton%20Play%20Tee%20(4).webp",
+    ],
+    colors: [
+      { name: "Sunny Gold", hex: "#E5B25D" },
+      { name: "Sky Blue", hex: "#94B4C7" },
+      { name: "Pure White", hex: "#FFFFFF" },
+    ],
     moq: 2000,
+    tags: ["Kids Play", "High MOQ Saver"],
+    specs: {
+      fit: "Regular Kids Fit",
+      weave: "Single Jersey",
+      dyeing: "Water-based Print Safe",
+      shrinkage: "< 2%",
+      leadTime: "30-40 Days Bulk",
+    },
   },
 ];
 

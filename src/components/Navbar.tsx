@@ -29,14 +29,7 @@ const navConfig = [
       { name: "Nature Polo Club", href: "/nature-polo-club" },
     ],
   },
-  {
-    name: "Our Manufacturing",
-    href: "/manufacturing",
-    submenu: [
-      { name: "Factory Capabilities", href: "/manufacturing" },
-      { name: "Step-by-Step Process", href: "/#manufacturing-process" },
-    ],
-  },
+  { name: "Manufacturing", href: "/manufacturing" },
   { name: "Sustainability", href: "/sustainability" },
   {
     name: "Resources",

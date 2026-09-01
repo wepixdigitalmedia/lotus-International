@@ -58,6 +58,15 @@ body {
   background: #B5654A;
 }
 
+/* Hide scrollbar for carousel elements */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Typography styles */
 .font-serif-heading {
   font-family: var(--font-cormorant), serif;

@@ -45,7 +45,18 @@ export default function ResourcesPage() {
   return (
     <div className="page-transition min-h-screen pb-20">
       {/* Page Header */}
-      <section className="bg-brand-ink text-brand-bg py-20 relative overflow-hidden">
+      <section className="bg-brand-ink text-brand-bg py-20 md:py-24 relative overflow-hidden rounded-b-[2rem] md:rounded-b-[3rem] shadow-lg">
+        {/* Background Hero Image */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/heroes/resources.jpg"
+            alt="Textile Specifications & Fabric Swatch Library"
+            className="w-full h-full object-cover opacity-60"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-ink via-brand-ink/85 to-brand-ink/30" />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal>
             <span className="text-xs font-bold tracking-widest text-brand-accent uppercase mb-3 block">
@@ -59,7 +70,6 @@ export default function ResourcesPage() {
             </p>
           </ScrollReveal>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(#FAF7F2_1px,transparent_1px)] [background-size:16px_16px] opacity-10" />
       </section>
 
       {/* Downloads Section */}

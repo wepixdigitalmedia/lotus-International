@@ -8,7 +8,9 @@ import React, { useEffect, useRef, useState } from "react";
 interface Step {
   num: string;
   title: string;
+  tagline?: string;
   desc: string;
+  icon?: React.ReactNode;
 }
 
 interface Props {
@@ -68,14 +70,14 @@ export default function ManufacturingScrollPin({ steps }: Props) {
 
     const renderLoop = () => {
       const diff = targetProgressRef.current - currentProgressRef.current;
-      if (Math.abs(diff) > 0.0001) {
-        // Scrub smoothing momentum (0.075 factor = buttery smooth 60 FPS dampening)
-        currentProgressRef.current += diff * 0.075;
+      if (Math.abs(diff) > 0.00005) {
+        // Ultra-smooth 60/120 FPS momentum scrub
+        currentProgressRef.current += diff * 0.09;
         setSmoothProgress(currentProgressRef.current);
 
         const currentStep = clamp(Math.floor(currentProgressRef.current * n), 0, n - 1);
         const targetX = ((currentStep + 0.5) / n) * 100;
-        setSpotX((prev) => lerp(prev, targetX, 0.12));
+        setSpotX((prev) => lerp(prev, targetX, 0.14));
       }
       animId = requestAnimationFrame(renderLoop);
     };
@@ -121,20 +123,32 @@ export default function ManufacturingScrollPin({ steps }: Props) {
           </div>
 
           {/* Vertical Timeline Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {steps.map((step, idx) => (
               <div
                 key={idx}
-                className="group relative bg-[#15292B]/90 backdrop-blur-md border border-white/10 hover:border-brand-accent/60 p-7 rounded-[24px] shadow-lg transition-all duration-300 flex flex-col justify-between min-h-[260px]"
+                className="group relative bg-[#183235]/80 backdrop-blur-xl border border-white/15 hover:border-brand-accent/70 rounded-3xl p-7 sm:p-8 shadow-xl transition-all duration-300 flex flex-col justify-between min-h-[280px]"
               >
                 <div>
-                  <span className="text-4xl font-bold tracking-tight text-white/30 group-hover:text-brand-accent transition-colors block mb-12">
-                    {step.num}
-                  </span>
-                  <h4 className="text-lg font-bold text-white mb-2 leading-tight">
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="font-serif-heading text-5xl font-light tracking-tight text-brand-accent/70 group-hover:text-brand-accent transition-colors">
+                      {step.num}
+                    </span>
+                    {step.icon && (
+                      <span className="w-10 h-10 rounded-xl bg-white/[0.06] border border-white/10 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent/20 transition-all [&>svg]:w-5 [&>svg]:h-5">
+                        {step.icon}
+                      </span>
+                    )}
+                  </div>
+                  {step.tagline && (
+                    <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-accent block mb-2">
+                      {step.tagline}
+                    </span>
+                  )}
+                  <h4 className="font-serif-heading text-2xl font-bold text-white mb-2 leading-snug">
                     {step.title}
                   </h4>
-                  <p className="text-xs text-brand-light-grey/80 leading-relaxed font-normal">
+                  <p className="text-xs text-brand-light-grey/90 leading-relaxed font-normal">
                     {step.desc}
                   </p>
                 </div>
@@ -201,7 +215,7 @@ export default function ManufacturingScrollPin({ steps }: Props) {
         {/* Parallax Background Ghost Watermark */}
         <div
           aria-hidden="true"
-          className="absolute top-1/2 left-1/2 text-[12vw] font-bold font-serif-heading text-white/[0.02] tracking-widest uppercase whitespace-nowrap pointer-events-none select-none"
+          className="absolute top-1/2 left-1/2 text-[12vw] font-bold font-serif-heading text-white/[0.03] tracking-widest uppercase whitespace-nowrap pointer-events-none select-none"
           style={{
             transform: `translate3d(calc(-50% + ${smoothProgress * -100}px), -50%, 0)`,
             willChange: "transform",
@@ -214,7 +228,7 @@ export default function ManufacturingScrollPin({ steps }: Props) {
         <div className="relative z-10 w-full px-6 sm:px-12 lg:px-16">
           {/* Header Block */}
           <div
-            className="text-center mb-10"
+            className="text-center mb-8"
             style={{
               transform: `translate3d(0, ${smoothProgress * -20}px, 0)`,
               willChange: "transform",
@@ -232,7 +246,7 @@ export default function ManufacturingScrollPin({ steps }: Props) {
           </div>
 
           {/* Active Step Progress Pill Bar */}
-          <div className="flex items-center justify-center gap-2 mb-10">
+          <div className="flex items-center justify-center gap-2 mb-8">
             {steps.map((_, idx) => (
               <div
                 key={idx}
@@ -254,7 +268,7 @@ export default function ManufacturingScrollPin({ steps }: Props) {
           </div>
 
           {/* 4-Card Horizontal Smooth Sliding Viewport Window */}
-          <div className="relative overflow-hidden py-8 px-6 -mx-6 w-[calc(100%+3rem)]">
+          <div className="relative overflow-hidden py-6 px-6 -mx-6 w-[calc(100%+3rem)]">
             <div
               className="flex gap-6"
               style={{
@@ -273,8 +287,8 @@ export default function ManufacturingScrollPin({ steps }: Props) {
                 const sp = stepProgress(idx);
 
                 // Continuous scale & opacity lerp based on proximity
-                const cardScale = clamp(1.04 - proximity * 0.06, 0.94, 1.04);
-                const cardOpacity = clamp(1.0 - proximity * 0.4, 0.45, 1.0);
+                const cardScale = clamp(1.03 - proximity * 0.04, 0.96, 1.03);
+                const cardOpacity = clamp(1.0 - proximity * 0.12, 0.85, 1.0);
                 const cardY = (1 - clamp(1 - proximity * 0.2, 0, 1)) * 6;
 
                 return (
@@ -285,32 +299,31 @@ export default function ManufacturingScrollPin({ steps }: Props) {
                       transform: `translate3d(0, ${cardY.toFixed(1)}px, 0) scale(${cardScale.toFixed(3)})`,
                       opacity: cardOpacity.toFixed(3),
                       willChange: "transform, opacity",
-                      transition: "transform 0.1s linear, opacity 0.1s linear",
                     }}
                   >
-                    {/* BRAND THEME NEON GLOWING CARD UI */}
+                    {/* LUXURY EDITORIAL NON-IMAGE PROCESS CARD */}
                     <div
-                      className="w-full relative rounded-[24px] p-7 flex flex-col justify-between transition-all duration-300 min-h-[320px] border"
+                      className="w-full relative rounded-3xl p-7 lg:p-8 flex flex-col justify-between transition-colors duration-300 min-h-[350px] border group"
                       style={{
                         background: isActive
-                          ? "linear-gradient(145deg, rgba(40, 73, 77, 0.98) 0%, rgba(23, 45, 48, 0.99) 100%)"
-                          : "rgba(21, 41, 43, 0.75)",
-                        backdropFilter: "blur(16px)",
+                          ? "linear-gradient(145deg, rgba(35, 68, 72, 0.95) 0%, rgba(18, 38, 41, 0.98) 100%)"
+                          : "rgba(22, 44, 47, 0.85)",
+                        backdropFilter: "blur(20px)",
                         borderColor: isActive
                           ? "rgba(181, 101, 74, 0.85)"
-                          : "rgba(255, 255, 255, 0.12)",
+                          : "rgba(255, 255, 255, 0.14)",
                         boxShadow: isActive
-                          ? "0 0 50px -10px rgba(181, 101, 74, 0.35), 0 20px 40px -15px rgba(0, 0, 0, 0.5)"
-                          : "0 8px 24px rgba(0, 0, 0, 0.3)",
+                          ? "0 0 50px -10px rgba(181, 101, 74, 0.35), 0 25px 50px -15px rgba(0, 0, 0, 0.6)"
+                          : "0 10px 30px rgba(0, 0, 0, 0.3)",
                       }}
                     >
-                      {/* Active Card Terracotta Outer Border Glow */}
+                      {/* Active Card Terracotta Outer Glow Border */}
                       {isActive && (
                         <div
-                          className="absolute -inset-[1px] rounded-[25px] pointer-events-none transition-opacity duration-300"
+                          className="absolute -inset-[1px] rounded-[25px] pointer-events-none transition-opacity duration-300 z-20"
                           style={{
-                            background: "linear-gradient(135deg, rgba(181, 101, 74, 0.8), rgba(220, 130, 100, 0.5), transparent 70%)",
-                            opacity: 0.85,
+                            background: "linear-gradient(135deg, rgba(181, 101, 74, 0.9), rgba(220, 130, 100, 0.5), transparent 70%)",
+                            opacity: 0.9,
                             mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                             WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                             maskComposite: "exclude",
@@ -320,40 +333,70 @@ export default function ManufacturingScrollPin({ steps }: Props) {
                         />
                       )}
 
-                      {/* Top Step Number Indicator */}
-                      <div className="relative z-10">
-                        <span
-                          className="text-4xl font-bold tracking-tight transition-colors duration-300 block mb-12"
-                          style={{
-                            color: isActive ? "rgba(181, 101, 74, 0.95)" : "rgba(255, 255, 255, 0.25)",
-                          }}
-                        >
-                          {step.num}
-                        </span>
+                      {/* Top Row: Large Numeral + Refined Stage Icon */}
+                      <div>
+                        <div className="flex items-center justify-between mb-8">
+                          <span
+                            className="font-serif-heading text-5xl lg:text-6xl font-light tracking-tight transition-colors duration-300 leading-none"
+                            style={{
+                              color: isActive ? "rgba(181, 101, 74, 1)" : "rgba(255, 255, 255, 0.25)",
+                            }}
+                          >
+                            {step.num}
+                          </span>
+
+                          {step.icon && (
+                            <span
+                              className="w-10 h-10 rounded-xl border flex items-center justify-center transition-all duration-300 shadow-sm [&>svg]:w-5 [&>svg]:h-5"
+                              style={{
+                                backgroundColor: isActive ? "rgba(181, 101, 74, 0.2)" : "rgba(255, 255, 255, 0.05)",
+                                borderColor: isActive ? "rgba(181, 101, 74, 0.6)" : "rgba(255, 255, 255, 0.12)",
+                                color: isActive ? "#B5654A" : "rgba(255, 255, 255, 0.7)",
+                              }}
+                            >
+                              {step.icon}
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Tagline */}
+                        {step.tagline && (
+                          <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-brand-accent block mb-2.5">
+                            {step.tagline}
+                          </span>
+                        )}
 
                         {/* Title */}
-                        <h4 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-3 leading-snug">
+                        <h4 className="font-serif-heading text-2xl lg:text-[26px] font-bold text-white tracking-tight leading-snug mb-3">
                           {step.title}
                         </h4>
 
                         {/* Description */}
-                        <p className="text-xs md:text-sm text-brand-light-grey/80 leading-relaxed font-normal">
+                        <p className="text-xs sm:text-[13px] text-brand-light-grey/85 leading-relaxed font-normal">
                           {step.desc}
                         </p>
                       </div>
 
-                      {/* Active Card Bottom Step Fill Line */}
-                      {isActive && (
-                        <div className="mt-6 h-[2px] bg-white/10 rounded-full overflow-hidden relative z-10">
+                      {/* Bottom Active Progress Line (Clean without divider line) */}
+                      <div className="mt-8 flex items-center justify-between">
+                        <div className="h-[2.5px] flex-grow bg-white/10 rounded-full overflow-hidden relative mr-4">
                           <div
-                            className="h-full bg-brand-accent rounded-full shadow-[0_0_10px_rgba(181,101,74,0.8)]"
+                            className="h-full bg-brand-accent rounded-full shadow-[0_0_8px_rgba(181,101,74,0.8)]"
                             style={{
-                              width: `${sp * 100}%`,
-                              transition: "width 0.05s linear",
+                              width: isActive ? `${sp * 100}%` : isPast ? "100%" : "0%",
+                              willChange: "width",
                             }}
                           />
                         </div>
-                      )}
+                        <span
+                          className="text-[11px] font-mono font-medium tracking-wider transition-colors duration-200 shrink-0"
+                          style={{
+                            color: isActive ? "rgba(181, 101, 74, 1)" : "rgba(255, 255, 255, 0.35)",
+                          }}
+                        >
+                          {step.num} / {String(n).padStart(2, "0")}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 );

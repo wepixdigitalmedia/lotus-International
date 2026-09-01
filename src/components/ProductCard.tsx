@@ -1,10 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Product } from "@/data/db";
 import { useInquiry } from "./InquiryProvider";
-import { Plus, Check, Eye } from "lucide-react";
+import { Plus, Check, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 
 interface ProductCardProps {
   product: Product;
@@ -13,6 +13,23 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const { addToInquiry, isInInquiry, removeFromInquiry } = useInquiry();
   const added = isInInquiry(product.id);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  const imagesList = product.images && product.images.length >= 3 
+    ? product.images 
+    : [product.image, product.image, product.image];
+
+  const handlePrevImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setActiveImageIndex((prev) => (prev === 0 ? imagesList.length - 1 : prev - 1));
+  };
+
+  const handleNextImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setActiveImageIndex((prev) => (prev === imagesList.length - 1 ? 0 : prev + 1));
+  };
 
   const handleInquiryToggle = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -25,83 +42,114 @@ export default function ProductCard({ product }: ProductCardProps) {
         name: product.name,
         category: product.category,
         fabric: product.fabric,
-        image: product.image,
+        image: imagesList[activeImageIndex] || product.image,
         gsm: product.gsm,
       });
     }
   };
 
   return (
-    <div className="group bg-white border border-brand-light-grey/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full interactive-card">
+    <div className="group relative bg-white border border-brand-light-grey/80 rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-500 flex flex-col h-full hover:-translate-y-1">
       
-      {/* Product Image Container */}
-      <Link href={`/products/${product.id}`} className="relative block overflow-hidden aspect-[4/3] bg-brand-light-grey/40">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={product.image}
-          alt={product.name}
-          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-        />
-        
-        {/* Category tag */}
-        <div className="absolute top-3 left-3 bg-brand-bg/85 backdrop-blur-sm text-[9px] font-bold uppercase tracking-widest text-brand-ink px-2.5 py-1 rounded-lg border border-brand-light-grey/50">
-          {product.category}
-        </div>
-        
-        {/* Quick view icon overlay on hover */}
-        <div className="absolute inset-0 bg-brand-ink/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-          <div className="w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center text-brand-ink scale-90 group-hover:scale-100 transition-transform duration-300">
-            <Eye className="w-4.5 h-4.5" />
+      {/* 3:4 Aspect Ratio Carousel Viewport */}
+      <div className="relative w-full aspect-[3/4] overflow-hidden bg-brand-light-grey/30 group/img">
+        <Link 
+          href={`/products/${product.id}`} 
+          className="block w-full h-full"
+        >
+          {/* Main Product Image */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={imagesList[activeImageIndex] || product.image}
+            alt={product.name}
+            className="object-cover w-full h-full transition-all duration-500 ease-out group-hover/img:scale-105"
+          />
+
+          {/* Minimal Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/70 via-transparent to-black/10 opacity-50 group-hover/img:opacity-75 transition-opacity duration-300 pointer-events-none" />
+        </Link>
+
+
+
+        {/* Carousel Navigation Arrows (Hover reveal) */}
+        {imagesList.length > 1 && (
+          <>
+            <button
+              onClick={handlePrevImage}
+              aria-label="Previous image"
+              className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 text-brand-ink hover:bg-brand-accent hover:text-white shadow-md flex items-center justify-center transition-all duration-300 opacity-0 group-hover/img:opacity-100 hover:scale-110 cursor-pointer"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+
+            <button
+              onClick={handleNextImage}
+              aria-label="Next image"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 text-brand-ink hover:bg-brand-accent hover:text-white shadow-md flex items-center justify-center transition-all duration-300 opacity-0 group-hover/img:opacity-100 hover:scale-110 cursor-pointer"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </>
+        )}
+
+        {/* Carousel Pagination Dots */}
+        {imagesList.length > 1 && (
+          <div className="absolute bottom-3 inset-x-0 flex justify-center items-center gap-1.5 z-10 pointer-events-none">
+            {imagesList.map((_, idx) => (
+              <span
+                key={idx}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  activeImageIndex === idx
+                    ? "bg-white w-4 shadow-sm"
+                    : "bg-white/50 w-1.5"
+                }`}
+              />
+            ))}
           </div>
-        </div>
-      </Link>
+        )}
+      </div>
 
       {/* Product Details */}
-      <div className="p-5 flex-grow flex flex-col justify-between space-y-4">
+      <div className="p-4 sm:p-5 flex-grow flex flex-col justify-between space-y-3.5">
         <div className="space-y-2">
+          
+          {/* Product Title */}
           <Link href={`/products/${product.id}`}>
-            <h3 className="font-serif-heading text-base md:text-lg font-bold text-brand-ink hover:text-brand-accent transition-colors line-clamp-1">
+            <h3 className="font-serif-heading text-base sm:text-lg font-bold text-brand-ink hover:text-brand-accent transition-colors line-clamp-1 leading-snug">
               {product.name}
             </h3>
           </Link>
-          
-          <div className="text-[10px] font-bold text-brand-grey/80 uppercase tracking-wider flex items-center gap-2">
+
+          {/* Specs Pill */}
+          <div className="flex items-center gap-2 text-[10px] font-bold text-brand-grey uppercase tracking-wider">
             <span>{product.type}</span>
-            <span className="w-1 h-1 rounded-full bg-brand-light-grey" />
-            <span>{product.gsm}</span>
-          </div>
-
-          <p className="text-xs text-brand-ink/80 leading-relaxed line-clamp-2">
-            {product.description}
-          </p>
-
-          <div className="text-[10px] font-semibold text-brand-ink bg-brand-bg/60 border border-brand-light-grey/50 px-3 py-2 rounded-xl">
-            <span className="text-brand-grey font-medium">Fabric: </span>
-            {product.fabric}
+            <span className="w-1 h-1 rounded-full bg-brand-accent/50" />
+            <span className="text-brand-accent font-extrabold">{product.gsm}</span>
           </div>
         </div>
 
-        {/* Action Group */}
-        <div className="flex items-center gap-2 pt-3 border-t border-brand-light-grey/40">
+        {/* Action Buttons */}
+        <div className="flex items-center gap-2 pt-3 border-t border-brand-light-grey/50">
           <Link
             href={`/products/${product.id}`}
-            className="flex-grow text-center text-[11px] font-bold tracking-wider uppercase py-2.5 px-3 rounded-xl border border-brand-ink/10 hover:border-brand-accent hover:text-brand-accent transition-all bg-white"
+            className="flex-grow text-center text-[10px] sm:text-[11px] font-bold tracking-wider uppercase py-2.5 px-3 rounded-xl border border-brand-ink/15 hover:border-brand-accent hover:bg-brand-accent hover:text-white transition-all duration-300 text-brand-ink bg-white shadow-2xs"
           >
-            Details
+            View Details
           </Link>
-          
+
           <button
             onClick={handleInquiryToggle}
-            className={`p-2.5 rounded-xl border transition-all flex items-center justify-center shrink-0 ${
+            className={`p-2.5 rounded-xl border transition-all duration-300 flex items-center justify-center shrink-0 shadow-2xs cursor-pointer ${
               added
                 ? "bg-brand-sage border-brand-sage text-white"
-                : "border-brand-accent/20 text-brand-accent hover:bg-brand-accent hover:border-brand-accent hover:text-brand-bg bg-white"
+                : "border-brand-accent/30 text-brand-accent hover:bg-brand-accent hover:border-brand-accent hover:text-white bg-white"
             }`}
             title={added ? "Remove from Inquiry List" : "Add to Inquiry List"}
           >
             {added ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
           </button>
         </div>
+
       </div>
     </div>
   );

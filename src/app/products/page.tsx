@@ -64,6 +64,17 @@ function ProductsCatalogue() {
       
       {/* Page Header */}
       <section className="bg-brand-ink text-brand-bg py-24 relative overflow-hidden rounded-b-[2rem] md:rounded-b-[3rem] shadow-lg">
+        {/* Background Hero Image */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/heroes/products.jpg"
+            alt="Export Knitwear & Loungewear Silhouettes"
+            className="w-full h-full object-cover opacity-60"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-ink via-brand-ink/85 to-brand-ink/30" />
+        </div>
+
         <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 space-y-3">
           <ScrollReveal>
             <span className="text-[10px] font-bold tracking-widest text-brand-accent uppercase bg-brand-accent/15 border border-brand-accent/30 px-3 py-1 rounded-full w-max">
@@ -82,7 +93,6 @@ function ProductsCatalogue() {
             </p>
           </ScrollReveal>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(#FAF7F2_1px,transparent_1px)] [background-size:16px_16px] opacity-10" />
       </section>
 
       {/* Main Filter & Grid Layout */}

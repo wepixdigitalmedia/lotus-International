@@ -38,7 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
-      <body className="bg-brand-bg text-brand-ink min-h-screen flex flex-col antialiased">
+      <body
+        suppressHydrationWarning
+        className="bg-brand-bg text-brand-ink min-h-screen flex flex-col antialiased"
+      >
         <InquiryProvider>
           <LenisProvider>
             <CustomCursor />

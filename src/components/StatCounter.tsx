@@ -41,12 +41,12 @@ export default function StatCounter({ end, suffix = "", duration = 1.5, label }:
   }, [isInView, end, duration]);
 
   return (
-    <div ref={ref} className="text-center p-6 border-b md:border-b-0 md:border-r border-brand-light-grey last:border-0">
-      <div className="text-4xl md:text-5xl font-bold font-serif-heading text-brand-accent mb-2 flex justify-center items-baseline">
+    <div ref={ref} className="text-center p-3 sm:p-4 md:p-6 flex flex-col justify-center items-center">
+      <div className="text-2xl sm:text-3xl md:text-5xl font-bold font-serif-heading text-brand-accent flex justify-center items-baseline leading-none">
         <span>{count}</span>
-        {suffix && <span className="text-2xl md:text-3xl ml-0.5">{suffix}</span>}
+        {suffix && <span className="text-base sm:text-xl md:text-3xl ml-0.5">{suffix}</span>}
       </div>
-      <div className="text-xs md:text-sm text-brand-ink/75 font-semibold tracking-widest uppercase mt-2">
+      <div className="text-[9px] sm:text-[10px] md:text-xs text-brand-ink/75 font-bold tracking-wider sm:tracking-widest uppercase mt-1.5 leading-tight max-w-[120px] md:max-w-none">
         {label}
       </div>
     </div>

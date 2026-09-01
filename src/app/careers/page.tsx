@@ -42,7 +42,18 @@ export default function CareersPage() {
   return (
     <div className="page-transition min-h-screen pb-20">
       {/* Page Header */}
-      <section className="bg-brand-ink text-brand-bg py-20 relative overflow-hidden">
+      <section className="bg-brand-ink text-brand-bg py-20 md:py-24 relative overflow-hidden rounded-b-[2rem] md:rounded-b-[3rem] shadow-lg">
+        {/* Background Hero Image */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/heroes/careers.jpg"
+            alt="Apparel Team & Factory Careers at Lotus International"
+            className="w-full h-full object-cover opacity-60"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-ink via-brand-ink/85 to-brand-ink/30" />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal>
             <span className="text-xs font-bold tracking-widest text-brand-accent uppercase mb-3 block">
@@ -56,16 +67,18 @@ export default function CareersPage() {
             </p>
           </ScrollReveal>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(#FAF7F2_1px,transparent_1px)] [background-size:16px_16px] opacity-10" />
       </section>
 
       {/* Workplace Culture */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
             <div>
               <ScrollReveal>
-                <h2 className="font-serif-heading text-3xl font-bold text-brand-ink mb-6">
+                <span className="text-[10px] font-bold tracking-widest text-brand-accent uppercase bg-brand-accent/10 border border-brand-accent/20 px-3 py-1 rounded-full inline-block mb-3">
+                  Workplace &amp; Culture
+                </span>
+                <h2 className="font-serif-heading text-3xl sm:text-4xl font-bold text-brand-ink mb-4">
                   Life at Lotus
                 </h2>
                 <p className="text-xs md:text-sm text-brand-grey leading-relaxed mb-6 font-medium">
@@ -73,39 +86,59 @@ export default function CareersPage() {
                 </p>
               </ScrollReveal>
 
-              <div className="space-y-4 mt-8">
-                <ScrollReveal delay={0.05} className="flex gap-3 items-start">
-                  <CheckCircle2 className="w-5 h-5 text-brand-sage shrink-0 mt-0.5" />
+              <div className="space-y-4 mt-6">
+                <ScrollReveal delay={0.05} className="flex gap-3.5 items-start">
+                  <div className="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-4 h-4" />
+                  </div>
                   <div>
                     <span className="font-serif-heading text-base font-bold text-brand-ink block">Clean, Safe Environment</span>
-                    <p className="text-xs text-brand-grey">Well-ventilated workspaces, automated machinery guards, and active health checks.</p>
+                    <p className="text-xs text-brand-grey leading-relaxed">Well-ventilated workspaces, automated machinery guards, and active health checks.</p>
                   </div>
                 </ScrollReveal>
-                <ScrollReveal delay={0.1} className="flex gap-3 items-start">
-                  <CheckCircle2 className="w-5 h-5 text-brand-sage shrink-0 mt-0.5" />
+                <ScrollReveal delay={0.1} className="flex gap-3.5 items-start">
+                  <div className="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-4 h-4" />
+                  </div>
                   <div>
                     <span className="font-serif-heading text-base font-bold text-brand-ink block">Skill Upgradation</span>
-                    <p className="text-xs text-brand-grey">We train operators in CAD planning, special sewing techniques, and digital quality checklists.</p>
+                    <p className="text-xs text-brand-grey leading-relaxed">We train operators in CAD planning, special sewing techniques, and digital quality checklists.</p>
                   </div>
                 </ScrollReveal>
-                <ScrollReveal delay={0.15} className="flex gap-3 items-start">
-                  <CheckCircle2 className="w-5 h-5 text-brand-sage shrink-0 mt-0.5" />
+                <ScrollReveal delay={0.15} className="flex gap-3.5 items-start">
+                  <div className="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-4 h-4" />
+                  </div>
                   <div>
-                    <span className="font-serif-heading text-base font-bold text-brand-ink block">Fair Pay & Benefits</span>
-                    <p className="text-xs text-brand-grey">Provident Fund (PF), insurance coverage, free transportation, and annual productivity incentives.</p>
+                    <span className="font-serif-heading text-base font-bold text-brand-ink block">Fair Pay &amp; Benefits</span>
+                    <p className="text-xs text-brand-grey leading-relaxed">Provident Fund (PF), insurance coverage, free transportation, and annual productivity incentives.</p>
                   </div>
                 </ScrollReveal>
               </div>
             </div>
 
-            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-brand-light-grey border border-brand-light-grey">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1521791136368-1a8be829338b?auto=format&fit=crop&q=80&w=800"
-                alt="Happy employees collaborating"
-                className="object-cover w-full h-full"
-              />
-            </div>
+            <ScrollReveal delay={0.15} className="relative group">
+              <div className="relative aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden bg-brand-bg shadow-xl border border-brand-light-grey">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/careers/life_at_lotus.jpg"
+                  alt="Lotus International Ethical Workplace & Empowered Factory Team"
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 brightness-[0.95]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/75 via-transparent to-transparent opacity-75 group-hover:opacity-50 transition-opacity duration-300" />
+                
+                {/* Floating Info Tag */}
+                <div className="absolute bottom-3.5 left-3.5 right-3.5 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-lg flex items-center justify-between">
+                  <div>
+                    <h4 className="text-xs font-bold text-brand-ink font-serif-heading">Empowering Workforce Culture</h4>
+                    <p className="text-[11px] text-brand-grey">Equal Pay • Women Leadership • Health Coverage</p>
+                  </div>
+                  <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-brand-accent/10 text-brand-accent uppercase tracking-wider">
+                    250+ Artisans
+                  </span>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Current Job Openings */}

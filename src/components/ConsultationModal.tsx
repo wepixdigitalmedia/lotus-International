@@ -69,7 +69,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="relative w-full max-w-lg bg-brand-bg rounded-3xl border border-brand-light-grey shadow-2xl p-6 md:p-8 overflow-hidden z-10"
+            className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-brand-bg rounded-2xl md:rounded-3xl border border-brand-light-grey shadow-2xl p-5 sm:p-6 md:p-8 z-10"
           >
             {/* Header */}
             <div className="flex justify-between items-start pb-4 border-b border-brand-light-grey/80 mb-6">
