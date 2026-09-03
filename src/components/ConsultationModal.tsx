@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { X, ArrowRight, Loader2, CheckCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { syncVisitorWithSalesIQ } from "@/lib/salesiq";
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -16,6 +17,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
     name: "",
     company: "",
     email: "",
+    phone: "",
     topic: "Custom Knitwear OEM",
     date: "",
     time: "",
@@ -26,8 +28,18 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Pass consultation enquiry directly to Zoho SalesIQ
+      syncVisitorWithSalesIQ({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        productCategory: formData.topic,
+        qualificationTier: "YELLOW", // Default consultation queue
+      });
+
+      // Simulate API call or CRM webhook dispatch
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       setIsSubmitted(true);
     } catch (err) {
       console.error(err);
@@ -41,6 +53,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
       name: "",
       company: "",
       email: "",
+      phone: "",
       topic: "Custom Knitwear OEM",
       date: "",
       time: "",
@@ -138,18 +151,34 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-[10px] font-bold tracking-wider uppercase text-brand-ink mb-1.5">
-                    Business Email *
-                  </label>
-                  <input
-                    required
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="e.g. sourcing@company.com"
-                    className="w-full px-4 py-2.5 rounded-xl border border-brand-light-grey text-xs focus:outline-none focus:ring-1 focus:ring-brand-accent bg-white/40"
-                  />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-[10px] font-bold tracking-wider uppercase text-brand-ink mb-1.5">
+                      Business Email *
+                    </label>
+                    <input
+                      required
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder="e.g. sourcing@company.com"
+                      className="w-full px-4 py-2.5 rounded-xl border border-brand-light-grey text-xs focus:outline-none focus:ring-1 focus:ring-brand-accent bg-white/40"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] font-bold tracking-wider uppercase text-brand-ink mb-1.5">
+                      Phone / WhatsApp *
+                    </label>
+                    <input
+                      required
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      placeholder="e.g. +1 (555) 234-5678"
+                      className="w-full px-4 py-2.5 rounded-xl border border-brand-light-grey text-xs focus:outline-none focus:ring-1 focus:ring-brand-accent bg-white/40"
+                    />
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

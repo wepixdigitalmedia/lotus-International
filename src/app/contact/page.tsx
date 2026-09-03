@@ -66,8 +66,8 @@ export default function ContactPage() {
                   <Phone className="w-5 h-5 text-brand-accent shrink-0 mt-1" />
                   <div>
                     <h4 className="font-serif-heading text-base font-bold text-brand-ink mb-1">Call Our Tirupur Office</h4>
-                    <a href="tel:+914212224444" className="text-xs text-brand-grey font-medium hover:text-brand-accent transition-colors block">
-                      +91 (421) 222-4444
+                    <a href="tel:+919944495167" className="text-xs text-brand-grey font-medium hover:text-brand-accent transition-colors block">
+                      +91 99444 95167
                     </a>
                   </div>
                 </ScrollReveal>
@@ -86,13 +86,13 @@ export default function ContactPage() {
                 {/* WhatsApp Click-to-Chat */}
                 <ScrollReveal delay={0.2} className="pt-2">
                   <a
-                    href="https://wa.me/914212224444"
+                    href="https://wa.me/919944495167?text=Hello%20The%20Lotus%20International%2C%20I%20would%20like%20to%20inquire%20about%20custom%20garment%20manufacturing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-4 rounded-xl border border-[#25D366] hover:bg-[#25D366]/5 text-[#25D366] font-semibold text-xs tracking-wider uppercase transition-colors flex items-center justify-center gap-2"
                   >
-                    <MessageCircle className="w-5 h-5 fill-current" />
-                    <span>Chat on WhatsApp Business</span>
+                    <MessageCircle className="w-5 h-5 shrink-0" />
+                    <span>Chat on WhatsApp Business (+91 99444 95167)</span>
                   </a>
                 </ScrollReveal>
               </div>

@@ -6,16 +6,22 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useInquiry } from "./InquiryProvider";
 import { X, Send, CheckCircle, Upload, Loader2 } from "lucide-react";
+import { syncVisitorWithSalesIQ } from "@/lib/salesiq";
 
 const rfqSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   company: z.string().min(2, "Company name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
+  phone: z.string().min(6, "Please enter a valid phone or WhatsApp number with country code"),
   country: z.string().min(2, "Please enter your country"),
+  businessType: z.string().min(1, "Please select your business type"),
+  website: z.string().optional(),
+  leadSource: z.string().optional(),
   category: z.string().min(1, "Please select a category"),
   quantity: z.string().min(1, "Please select an estimated quantity"),
   timeline: z.string().min(1, "Please select a target timeline"),
   message: z.string().min(10, "Please provide some details (min 10 characters)"),
+  honeypot: z.string().optional(),
 });
 
 type RFQFormData = z.infer<typeof rfqSchema>;
@@ -35,6 +41,10 @@ export default function RFQForm() {
     resolver: zodResolver(rfqSchema),
     defaultValues: {
       category: items.length > 0 ? items[0].category : "Men",
+      businessType: "",
+      leadSource: "",
+      website: "",
+      honeypot: "",
     },
   });
 
@@ -56,6 +66,20 @@ export default function RFQForm() {
       });
 
       if (response.ok) {
+        const resJson = await response.json();
+        
+        // Link visitor profile & qualification status directly with Zoho SalesIQ widget
+        syncVisitorWithSalesIQ({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          company: data.company,
+          country: data.country,
+          productCategory: data.category,
+          orderQuantity: data.quantity,
+          qualificationTier: resJson?.qualification?.tier,
+        });
+
         setIsSubmitted(true);
         clearInquiry();
         setSelectedFile(null);
@@ -100,6 +124,16 @@ export default function RFQForm() {
   return (
     <div className="bg-white border border-brand-light-grey rounded-2xl p-6 md:p-10 shadow-lg">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+        {/* Anti-spam honeypot field (hidden from real users) */}
+        <input
+          type="text"
+          {...register("honeypot")}
+          tabIndex={-1}
+          autoComplete="off"
+          className="hidden"
+          aria-hidden="true"
+        />
+
         {/* Selected Items section */}
         {items.length > 0 && (
           <div className="bg-brand-bg/50 border border-brand-light-grey rounded-xl p-5 mb-8">
@@ -133,8 +167,8 @@ export default function RFQForm() {
           </div>
         )}
 
+        {/* Row 1: Name & Company */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Name */}
           <div>
             <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
               Your Name *
@@ -150,7 +184,6 @@ export default function RFQForm() {
             {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
           </div>
 
-          {/* Company */}
           <div>
             <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
               Company Name *
@@ -158,7 +191,7 @@ export default function RFQForm() {
             <input
               type="text"
               {...register("company")}
-              placeholder="e.g. Acme Sourcing"
+              placeholder="e.g. Acme Apparel Brands"
               className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-1 focus:ring-brand-accent focus:border-brand-accent bg-brand-bg/25 ${
                 errors.company ? "border-red-500" : "border-brand-light-grey"
               }`}
@@ -167,8 +200,8 @@ export default function RFQForm() {
           </div>
         </div>
 
+        {/* Row 2: Business Email & Phone / WhatsApp */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Email */}
           <div>
             <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
               Business Email *
@@ -184,7 +217,24 @@ export default function RFQForm() {
             {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
           </div>
 
-          {/* Country */}
+          <div>
+            <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
+              Phone / WhatsApp Number *
+            </label>
+            <input
+              type="tel"
+              {...register("phone")}
+              placeholder="e.g. +1 (555) 234-5678"
+              className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-1 focus:ring-brand-accent focus:border-brand-accent bg-brand-bg/25 ${
+                errors.phone ? "border-red-500" : "border-brand-light-grey"
+              }`}
+            />
+            {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
+          </div>
+        </div>
+
+        {/* Row 3: Country & Business Type */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
               Country *
@@ -192,17 +242,72 @@ export default function RFQForm() {
             <input
               type="text"
               {...register("country")}
-              placeholder="e.g. United States"
+              placeholder="e.g. United States, Germany, United Kingdom"
               className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-1 focus:ring-brand-accent focus:border-brand-accent bg-brand-bg/25 ${
                 errors.country ? "border-red-500" : "border-brand-light-grey"
               }`}
             />
             {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country.message}</p>}
           </div>
+
+          <div>
+            <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
+              Business Type *
+            </label>
+            <select
+              {...register("businessType")}
+              className={`w-full px-4 py-3 rounded-lg border text-sm focus:outline-none focus:ring-1 focus:ring-brand-accent focus:border-brand-accent bg-brand-bg/25 ${
+                errors.businessType ? "border-red-500" : "border-brand-light-grey"
+              }`}
+            >
+              <option value="">Select Business Type</option>
+              <option value="Fashion Brand / Label">Fashion Brand / Apparel Label</option>
+              <option value="Wholesaler / Distributor">Wholesaler / Distributor / Importer</option>
+              <option value="Retail Chain / Store">Retail Chain / Department Store</option>
+              <option value="Sourcing / Buying House">Sourcing Agency / Buying House</option>
+              <option value="Private Label / Boutique">Private Label / Boutique</option>
+              <option value="Startup / Emerging Designer">Startup / Emerging Designer</option>
+              <option value="Other">Other B2B Buyer</option>
+            </select>
+            {errors.businessType && <p className="text-red-500 text-xs mt-1">{errors.businessType.message}</p>}
+          </div>
         </div>
 
+        {/* Row 4: Company Website & Lead Source (Optional) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
+              Company Website or LinkedIn <span className="text-brand-grey font-normal normal-case">(Optional)</span>
+            </label>
+            <input
+              type="url"
+              {...register("website")}
+              placeholder="https://yourbrand.com"
+              className="w-full px-4 py-3 rounded-lg border border-brand-light-grey text-sm focus:outline-none focus:ring-1 focus:ring-brand-accent focus:border-brand-accent bg-brand-bg/25"
+            />
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
+              How did you hear about us? <span className="text-brand-grey font-normal normal-case">(Optional)</span>
+            </label>
+            <select
+              {...register("leadSource")}
+              className="w-full px-4 py-3 rounded-lg border border-brand-light-grey text-sm focus:outline-none focus:ring-1 focus:ring-brand-accent focus:border-brand-accent bg-brand-bg/25"
+            >
+              <option value="">Select Source (Optional)</option>
+              <option value="Google Search">Google / Search Engine</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="Trade Fair">Trade Fair / Apparel Exhibition</option>
+              <option value="Industry Referral">Industry / Colleague Referral</option>
+              <option value="B2B Directory">B2B Directory / Export Portal</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        {/* Row 5: Category, Quantity & Timeline */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Category */}
           <div>
             <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
               Product Category *
@@ -222,7 +327,6 @@ export default function RFQForm() {
             {errors.category && <p className="text-red-500 text-xs mt-1">{errors.category.message}</p>}
           </div>
 
-          {/* Quantity */}
           <div>
             <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
               Target Quantity (MOQ) *
@@ -242,7 +346,6 @@ export default function RFQForm() {
             {errors.quantity && <p className="text-red-500 text-xs mt-1">{errors.quantity.message}</p>}
           </div>
 
-          {/* Timeline */}
           <div>
             <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
               Timeline *
@@ -263,7 +366,7 @@ export default function RFQForm() {
           </div>
         </div>
 
-        {/* Message */}
+        {/* Message / Specifications */}
         <div>
           <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">
             Specifications & Details *

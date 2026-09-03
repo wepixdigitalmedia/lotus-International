@@ -7,6 +7,7 @@ import { InquiryProvider } from "@/components/InquiryProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <FloatingWhatsApp />
           </LenisProvider>
         </InquiryProvider>
         <Script id="zsiqchat" strategy="afterInteractive">
