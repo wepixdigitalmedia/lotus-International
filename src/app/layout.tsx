@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 import { InquiryProvider } from "@/components/InquiryProvider";
@@ -52,6 +53,14 @@ export default function RootLayout({
             <Footer />
           </LenisProvider>
         </InquiryProvider>
+        <Script id="zsiqchat" strategy="afterInteractive">
+          {`window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}`}
+        </Script>
+        <Script
+          id="zsiqscript"
+          src="https://salesiq.zohopublic.in/widget?wc=siq1ab8c0c56f50bdf567bd9c97cdee7cbe743aaecf1c876c3ab7c7b963c003afd4"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
