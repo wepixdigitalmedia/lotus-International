@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import * as z from "zod";
 import { qualifyLead } from "@/lib/leadQualification";
+import { createZohoLead } from "@/lib/zohoCrm";
 
 const rfqSchema = z.object({
   name: z.string().min(2),
@@ -67,10 +68,32 @@ export async function POST(request: Request) {
     console.log("Rules Audit:", JSON.stringify(qualification.rulesApplied));
     console.log("-------------------------------");
 
+    // Automatically sync qualified lead into Zoho CRM
+    const zohoResult = await createZohoLead({
+      name: validatedData.name,
+      email: validatedData.email,
+      company: validatedData.company,
+      phone: validatedData.phone,
+      country: validatedData.country,
+      website: validatedData.website,
+      businessType: validatedData.businessType,
+      category: validatedData.category,
+      quantity: validatedData.quantity,
+      timeline: validatedData.timeline,
+      message: validatedData.message,
+      leadSource: validatedData.leadSource || "Website RFQ Form",
+      qualification,
+    });
+
     return NextResponse.json({
       success: true,
       message: "RFQ received successfully. Our merchandising desk will follow up in 1 business day.",
       submissionId: `RFQ-${Math.floor(100000 + Math.random() * 900000)}`,
+      zohoCrm: {
+        synced: zohoResult.success,
+        leadId: zohoResult.leadId,
+        simulated: zohoResult.simulated ?? false,
+      },
       qualification: {
         tier: qualification.tier,
         tierLabel: qualification.tierLabel,

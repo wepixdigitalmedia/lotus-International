@@ -262,6 +262,19 @@ export function qualifyLead(input: LeadQualificationInput): LeadQualificationOut
     });
   }
 
+  // Spam pattern check in message or name
+  const fullText = `${input.name} ${input.company || ""} ${input.message || ""}`.toLowerCase();
+  const spamPatterns = ["crypto", "backlink", "ranking in 7 days", "seo boost", "forex", "casino"];
+  const isSpam = spamPatterns.some((pattern) => fullText.includes(pattern));
+
+  if (isSpam) {
+    rulesApplied.push({
+      rule: "spam_filter",
+      result: "FAIL",
+      detail: "Detected promotional / spam keyword patterns in inquiry text",
+    });
+  }
+
   // 6. Business Email Check
   if (isBusiness) {
     rulesApplied.push({
@@ -273,48 +286,63 @@ export function qualifyLead(input: LeadQualificationInput): LeadQualificationOut
     rulesApplied.push({
       rule: "business_email",
       result: "WARN",
-      detail: `Consumer free email (${email.split("@")[1] || "unknown"})`,
+      detail: `Consumer free email (${email.split("@")[1] || "unknown"}) - flagged for merchandising review`,
     });
   }
 
-  // Determine Qualification Tier based on Client Formula:
-  // - Qualified: All eligibility pass (at least 4 primary criteria pass, no restriction)
-  // - Needs Review: At least 2 criteria pass
-  // - Not Qualified: All criteria fail OR restricted country OR < 10 pcs
+  // Determine Qualification Tier:
+  // - 🔴 RED: Spam, restricted country, explicit 0 quantity, or < 10 pcs
+  // - 🟢 GREEN: All criteria pass (volume ≥ 10, target region, valid profile/timeline) AND corporate email
+  // - 🟡 YELLOW: High-volume inquiry with free consumer email, or partial criteria match
   let tier: QualificationTier = "YELLOW";
   let tierLabel = "Needs Review";
-  let score = Math.round((passCount / 4) * 100);
+  let score = 70;
   let reason = "Inquiry meets partial criteria; routed to merchandising review queue.";
   let recommendedAction = "Review specifications and prepare custom quotation within 1 business day.";
 
-  if (hasRestrictedCountry) {
+  if (isSpam) {
+    tier = "RED";
+    tierLabel = "Not Qualified (Spam Filtered)";
+    score = 0;
+    reason = "Inquiry filtered out by automated spam and promotional content detection.";
+    recommendedAction = "De-prioritize in CRM pipeline; no sales alert.";
+  } else if (hasRestrictedCountry) {
     tier = "RED";
     tierLabel = "Not Qualified (Restricted Region)";
     score = 0;
     reason = `Inquiry originated from restricted territory (${input.country}).`;
     recommendedAction = "De-prioritize in CRM pipeline; polite automated response.";
-  } else if (qty > 0 && qty < 10) {
+  } else if (input.quantity === "0" || input.quantity === 0 || (qty > 0 && qty < 10)) {
     tier = "RED";
     tierLabel = "Not Qualified (Below 10 Pcs)";
-    score = 15;
-    reason = "Requested volume is below client 10-piece minimum.";
+    score = qty === 0 ? 0 : 15;
+    reason = qty === 0 ? "Invalid order volume (0 pcs) specified." : "Requested volume is below client 10-piece minimum.";
     recommendedAction = "Automated email regarding minimum order threshold.";
   } else if (passCount >= 4 && !hasRestrictedCountry) {
-    tier = "GREEN";
-    tierLabel = "Qualified (High Priority)";
-    score = isBusiness ? 100 : 90;
-    reason = "All client qualification criteria passed (MOQ ≥ 10 pcs, preferred region, valid business profile & timeline).";
-    recommendedAction = "Fast-track to sales desk; initiate priority WhatsApp follow-up.";
+    if (isBusiness) {
+      tier = "GREEN";
+      tierLabel = "Qualified (High Priority)";
+      score = 100;
+      reason = "All client qualification criteria passed (MOQ ≥ 10 pcs, preferred region, valid business profile & timeline).";
+      recommendedAction = "Fast-track to sales desk; initiate priority WhatsApp follow-up.";
+    } else {
+      // Valid volume & country but free consumer email -> Flag for review (Yellow)
+      tier = "YELLOW";
+      tierLabel = "Needs Review (Consumer Email)";
+      score = 70;
+      reason = "Legitimate volume and market, but consumer email domain requires merchandising verification.";
+      recommendedAction = "Assign to merchandising desk to verify buyer corporate legitimacy.";
+    }
   } else if (passCount >= 2) {
     tier = "YELLOW";
     tierLabel = "Needs Review";
-    score = Math.max(50, score);
+    score = Math.max(50, isBusiness ? 75 : 60);
     reason = "Meets key criteria (at least 2 parameters passed); requires standard merchandising verification.";
     recommendedAction = "Assign to standard merchandising desk for review within 24 hours.";
   } else {
     tier = "RED";
     tierLabel = "Not Qualified";
-    score = Math.min(30, score);
+    score = 25;
     reason = "Inquiry failed multiple client eligibility criteria.";
     recommendedAction = "Log in CRM without triggering urgent sales alerts.";
   }
