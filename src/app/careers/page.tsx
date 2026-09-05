@@ -202,7 +202,7 @@ export default function CareersPage() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6" suppressHydrationWarning>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-xs font-bold tracking-wider uppercase text-brand-ink mb-2">

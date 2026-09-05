@@ -123,15 +123,18 @@ export default function RFQForm() {
 
   return (
     <div className="bg-white border border-brand-light-grey rounded-2xl p-6 md:p-10 shadow-lg">
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" suppressHydrationWarning>
         {/* Anti-spam honeypot field (hidden from real users) */}
         <input
           type="text"
           {...register("honeypot")}
           tabIndex={-1}
           autoComplete="off"
+          data-lpignore="true"
+          data-1p-ignore="true"
           className="hidden"
           aria-hidden="true"
+          suppressHydrationWarning
         />
 
         {/* Selected Items section */}

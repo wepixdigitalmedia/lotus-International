@@ -1,7 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import TestimonialCard from "@/components/TestimonialCard";
-import { CheckCircle2, Globe } from "lucide-react";
+import { CheckCircle2, Globe, ArrowRight } from "lucide-react";
 
 const CLIENT_BRANDS = [
   {
@@ -310,6 +311,30 @@ export default function ClientsPage() {
                 />
               </ScrollReveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Global Sourcing CTA */}
+      <section className="py-16 md:py-20 bg-brand-ink text-brand-bg relative overflow-hidden rounded-t-[2.5rem] md:rounded-t-[3.5rem]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="relative z-10 max-w-2xl mx-auto">
+            <span className="text-[10px] font-bold tracking-widest text-brand-accent uppercase bg-brand-accent/10 border border-brand-accent/20 px-3 py-1 rounded-full inline-block mb-3">
+              Reliable Export Partner
+            </span>
+            <h3 className="font-serif-heading text-2xl md:text-4xl font-bold mb-3 text-white">
+              Deliver Your Next Collection on Time
+            </h3>
+            <p className="text-xs sm:text-sm text-brand-bg/85 leading-relaxed mb-8 font-medium">
+              Experience the manufacturing precision trusted by international retail brands. Get a competitive factory quote from our Tirupur operations desk.
+            </p>
+            <Link
+              href="/contact"
+              className="px-8 py-4 rounded-full bg-brand-accent hover:bg-brand-accent-hover text-brand-bg font-semibold text-xs tracking-wider uppercase transition-colors inline-flex items-center gap-2 shadow-sm"
+            >
+              <span>Request Brand Sourcing Quote</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>

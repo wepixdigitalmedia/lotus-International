@@ -42,17 +42,29 @@ export default function Footer() {
               <h4 className="text-[10px] font-bold tracking-widest uppercase text-brand-accent">
                 Subscribe to Industry Reports
               </h4>
-              <form onSubmit={handleSubscribe} className="relative flex items-center max-w-sm">
+              <form
+                onSubmit={handleSubscribe}
+                className="relative flex items-center max-w-sm"
+                data-lpignore="true"
+                data-1p-ignore="true"
+                suppressHydrationWarning
+              >
                 <input
                   required
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter business email"
+                  data-lpignore="true"
+                  data-1p-ignore="true"
+                  data-form-type="other"
+                  autoComplete="off"
+                  suppressHydrationWarning
                   className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs focus:outline-none focus:border-brand-accent/50 pr-12 text-brand-bg placeholder:text-brand-bg/40 font-medium"
                 />
                 <button
                   type="submit"
+                  suppressHydrationWarning
                   className="absolute right-1 p-2 rounded-lg bg-brand-accent text-brand-bg hover:bg-brand-accent-hover transition-colors"
                 >
                   {subscribed ? <Check className="w-3.5 h-3.5" /> : <Send className="w-3.5 h-3.5" />}

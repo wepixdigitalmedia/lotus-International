@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { X, ArrowRight, Loader2, CheckCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { syncVisitorWithSalesIQ } from "@/lib/salesiq";
@@ -11,6 +12,7 @@ interface ConsultationModalProps {
 }
 
 export default function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
+  const [mounted, setMounted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -23,6 +25,30 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
     time: "",
     notes: "",
   });
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Handle ESC key and scroll locking
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isOpen, onClose]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,17 +89,19 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
     onClose();
   };
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4 overflow-y-auto">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-brand-ink/40 backdrop-blur-sm"
+            className="fixed inset-0 bg-brand-ink/65 backdrop-blur-md"
           />
 
           {/* Modal Container */}
@@ -81,8 +109,8 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ type: "spring", duration: 0.5 }}
-            className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-brand-bg rounded-2xl md:rounded-3xl border border-brand-light-grey shadow-2xl p-5 sm:p-6 md:p-8 z-10"
+            transition={{ type: "spring", duration: 0.4 }}
+            className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-brand-bg rounded-2xl md:rounded-3xl border border-brand-light-grey shadow-2xl p-5 sm:p-6 md:p-8 z-10 my-auto"
           >
             {/* Header */}
             <div className="flex justify-between items-start pb-4 border-b border-brand-light-grey/80 mb-6">
@@ -121,7 +149,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4" suppressHydrationWarning>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-[10px] font-bold tracking-wider uppercase text-brand-ink mb-1.5">
@@ -258,6 +286,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
           </motion.div>
         </div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }

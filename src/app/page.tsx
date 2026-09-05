@@ -40,8 +40,8 @@ import { motion, AnimatePresence, type Variants } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import StatCounter from "@/components/StatCounter";
 import ParallaxImage from "@/components/ParallaxImage";
-import ConsultationModal from "@/components/ConsultationModal";
 import ProductCard from "@/components/ProductCard";
+import { useInquiry } from "@/components/InquiryProvider";
 import { PRODUCTS } from "@/data/db";
 
 // Hero animated tags
@@ -513,7 +513,7 @@ export default function HomePage() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activePortfolioFilter, setActivePortfolioFilter] = useState("All");
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
+  const { openConsultation } = useInquiry();
 
   // Portfolio filters list
   const portfolioFilters = ["All", "Eco Blends", "Streetwear", "Polos", "Activewear", "Kids Wear"];
@@ -617,7 +617,7 @@ export default function HomePage() {
               </Link>
 
               <button
-                onClick={() => setIsConsultationOpen(true)}
+                onClick={openConsultation}
                 className="px-8 py-4 rounded-xl border border-white/30 hover:border-white hover:bg-white/10 text-white font-bold text-xs tracking-widest uppercase transition-all bg-white/5 flex items-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
@@ -754,7 +754,7 @@ export default function HomePage() {
           {/* Bottom Action CTAs */}
           <ScrollReveal delay={0.3} className="mt-12 md:mt-14 flex flex-wrap items-center justify-center gap-5 sm:gap-8">
             <button
-              onClick={() => setIsConsultationOpen(true)}
+              onClick={openConsultation}
               className="px-8 py-3.5 rounded-full bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-brand-accent/30 flex items-center gap-2 group cursor-pointer"
             >
               <span>Book a Consultation</span>
@@ -762,7 +762,7 @@ export default function HomePage() {
             </button>
 
             <Link
-              href="/services"
+              href="/manufacturing"
               className="text-xs sm:text-sm font-bold text-brand-ink hover:text-brand-accent transition-colors underline underline-offset-8 decoration-brand-accent/60 hover:decoration-brand-accent flex items-center gap-2"
             >
               <span>View All Capabilities</span>
@@ -1239,7 +1239,7 @@ export default function HomePage() {
               Request Quote
             </Link>
             <button
-              onClick={() => setIsConsultationOpen(true)}
+              onClick={openConsultation}
               className="px-8 py-4 rounded-xl border border-white/20 hover:border-brand-accent hover:text-brand-accent text-brand-bg font-bold text-xs tracking-wider uppercase transition-all bg-white/5"
             >
               Book Consultation
@@ -1247,9 +1247,6 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
-
-      {/* Consultation Scheduling Modal overlay */}
-      <ConsultationModal isOpen={isConsultationOpen} onClose={() => setIsConsultationOpen(false)} />
     </div>
   );
 }

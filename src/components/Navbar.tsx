@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, FileText, ChevronDown, Calendar } from "lucide-react";
 import { useInquiry } from "./InquiryProvider";
-import ConsultationModal from "./ConsultationModal";
 
 // WePix-style navigation structure with rich submenus
 const navConfig = [
@@ -45,9 +44,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
-  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const pathname = usePathname();
-  const { items } = useInquiry();
+  const { items, openConsultation } = useInquiry();
   const ticking = useRef(false);
 
   useEffect(() => {
@@ -218,7 +216,7 @@ export default function Navbar() {
 
               {/* Consultation Button */}
               <button
-                onClick={() => setIsConsultationOpen(true)}
+                onClick={openConsultation}
                 className={`px-3.5 py-2 text-xs font-semibold transition-all duration-300 whitespace-nowrap ${
                   scrolled
                     ? "text-white/90 hover:text-white"
@@ -368,7 +366,7 @@ export default function Navbar() {
           <button
             onClick={() => {
               setIsOpen(false);
-              setIsConsultationOpen(true);
+              openConsultation();
             }}
             className="w-full text-center py-3 rounded-full border border-neutral-300 font-semibold text-xs text-neutral-800 hover:bg-neutral-50 transition-colors flex items-center justify-center gap-2"
           >
@@ -384,9 +382,6 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-
-      {/* Consultation Modal */}
-      <ConsultationModal isOpen={isConsultationOpen} onClose={() => setIsConsultationOpen(false)} />
     </>
   );
 }

@@ -1,10 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Download, FileText, Lock, CheckCircle2, User, Building, Mail, Loader2 } from "lucide-react";
 
 export default function ResourcesPage() {
+  const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -13,6 +15,10 @@ export default function ResourcesPage() {
   const [activeDownload, setActiveDownload] = useState<string | null>(null);
   const [unlockedItems, setUnlockedItems] = useState<string[]>([]);
   const [isUnlocking, setIsUnlocking] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -184,8 +190,8 @@ export default function ResourcesPage() {
           </div>
 
           {/* Lead Modal Form */}
-          {activeDownload && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-ink/40 backdrop-blur-sm animate-fadeIn">
+          {mounted && activeDownload && createPortal(
+            <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-brand-ink/65 backdrop-blur-md animate-fadeIn">
               <div className="bg-white border border-brand-light-grey rounded-2xl max-w-md w-full p-6 md:p-8 shadow-2xl relative">
                 <button
                   onClick={() => setActiveDownload(null)}
@@ -199,7 +205,7 @@ export default function ResourcesPage() {
                 <p className="text-xs text-brand-grey font-medium mb-6">
                   Please submit your business credentials. We will immediately unlock the requested PDF downloads.
                 </p>
-                <form onSubmit={handleUnlock} className="space-y-4">
+                <form onSubmit={handleUnlock} className="space-y-4" suppressHydrationWarning>
                   <div>
                     <label className="block text-[10px] font-bold tracking-wider uppercase text-brand-ink mb-1.5">
                       Your Name *
@@ -270,7 +276,8 @@ export default function ResourcesPage() {
                   </button>
                 </form>
               </div>
-            </div>
+            </div>,
+            document.body
           )}
         </div>
       </section>

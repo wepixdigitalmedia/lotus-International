@@ -1,7 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import { TIMELINE } from "@/data/db";
-import { Target, Eye, ShieldCheck, Heart, Sparkles } from "lucide-react";
+import { Target, Eye, ShieldCheck, Heart, Sparkles, ArrowRight } from "lucide-react";
 
 const VALUES = [
   {
@@ -310,6 +311,30 @@ export default function AboutPage() {
               ))}
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Global Partnership CTA */}
+      <section className="py-16 md:py-20 bg-brand-ink text-brand-bg relative overflow-hidden rounded-t-[2.5rem] md:rounded-t-[3.5rem]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="relative z-10 max-w-2xl mx-auto">
+            <span className="text-[10px] font-bold tracking-widest text-brand-accent uppercase bg-brand-accent/10 border border-brand-accent/20 px-3 py-1 rounded-full inline-block mb-3">
+              Partner With Us
+            </span>
+            <h3 className="font-serif-heading text-2xl md:text-4xl font-bold mb-3 text-white">
+              Ready to Partner With an Established Tirupur Exporter?
+            </h3>
+            <p className="text-xs sm:text-sm text-brand-bg/85 leading-relaxed mb-8 font-medium">
+              Join leading apparel labels across Europe, North America, and the Middle East. Request samples and custom manufacturing quotes today.
+            </p>
+            <Link
+              href="/contact"
+              className="px-8 py-4 rounded-full bg-brand-accent hover:bg-brand-accent-hover text-brand-bg font-semibold text-xs tracking-wider uppercase transition-colors inline-flex items-center gap-2 shadow-sm"
+            >
+              <span>Request Factory Quotation</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>

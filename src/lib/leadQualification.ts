@@ -1,10 +1,17 @@
 /**
  * Lotus International - Lead Qualification & Verification Engine
  * 
- * Implements deterministic business rules to classify leads into 3 tiers:
- * - GREEN (High Priority): Instant routing to senior export merchandising team
- * - YELLOW (Manual Review): Placed in standard queue for review within 1 business day
- * - RED (Low Priority / Auto-Filter): Below MOQ, retail, or invalid inquiries
+ * Implements client-approved deterministic business rules:
+ * - Minimum MOQ: From 10 Pcs (Sampling, capsule batches, and bulk accepted)
+ * - Preferred Countries: UAE, Middle East, All European Countries, US Markets
+ * - Restricted Countries: Ghana, Syria, Ukraine (Instant Red Flag)
+ * - Business Types: All types preferred (Brand, Wholesaler, Retailer, Sourcing Agency, etc.)
+ * - Timeline: All timelines accepted (Immediate, 1-3 months, 3-6 months, etc.)
+ * 
+ * Classification Logic:
+ * - 🟢 QUALIFIED (Green): All eligibility criteria pass
+ * - 🟡 NEEDS REVIEW (Yellow): At least 2 criteria pass (routed to merchandising desk)
+ * - 🔴 NOT QUALIFIED (Red): All criteria fail, OR restricted country, OR < 10 pcs
  */
 
 export type QualificationTier = "GREEN" | "YELLOW" | "RED";
@@ -58,12 +65,31 @@ const FREE_EMAIL_DOMAINS = new Set([
   "msn.com",
 ]);
 
-// Top priority export regions
-const TIER_1_COUNTRIES = new Set([
+// Client-restricted countries (Instant Disqualification)
+const RESTRICTED_COUNTRIES = new Set([
+  "ghana",
+  "syria",
+  "ukraine",
+]);
+
+// Client-preferred export markets: UAE, Middle East, Europe, US/North America
+const PREFERRED_REGIONS = new Set([
+  // Middle East & GCC
+  "united arab emirates",
+  "uae",
+  "dubai",
+  "abu dhabi",
+  "saudi arabia",
+  "qatar",
+  "oman",
+  "kuwait",
+  "bahrain",
+  // US & North America
   "united states",
   "usa",
   "us",
   "canada",
+  // European Countries
   "united kingdom",
   "uk",
   "germany",
@@ -71,20 +97,25 @@ const TIER_1_COUNTRIES = new Set([
   "italy",
   "spain",
   "netherlands",
-  "australia",
-  "new zealand",
-  "united arab emirates",
-  "uae",
-  "saudi arabia",
-  "qatar",
-  "japan",
+  "belgium",
+  "switzerland",
   "sweden",
   "denmark",
   "norway",
   "finland",
-  "switzerland",
-  "belgium",
   "ireland",
+  "austria",
+  "poland",
+  "portugal",
+  "greece",
+  "czech republic",
+  "romania",
+  "hungary",
+  // Other High-Volume Markets
+  "australia",
+  "new zealand",
+  "japan",
+  "singapore",
 ]);
 
 /**
@@ -105,13 +136,12 @@ export function parseQuantity(rawQty: string | number): number {
 
   const normalized = rawQty.toLowerCase().replace(/,/g, "").trim();
 
-  // Match pattern like "< 500", "under 500"
-  if (normalized.includes("<") || normalized.includes("under") || normalized.includes("micro")) {
-    const num = parseInt(normalized.replace(/[^0-9]/g, ""), 10);
-    return num ? Math.min(num, 499) : 250;
+  // Match pattern like "< 10"
+  if (normalized.includes("<") && normalized.includes("10")) {
+    return 5;
   }
 
-  // Match ranges like "500 - 1000", "1000 - 5000", "2500 - 5000", "10000+"
+  // Match numbers
   const numbers = normalized.match(/\d+/g);
   if (numbers && numbers.length > 0) {
     return parseInt(numbers[0], 10);
@@ -121,157 +151,181 @@ export function parseQuantity(rawQty: string | number): number {
 }
 
 /**
- * Main Lead Qualification Function
+ * Main Lead Qualification Function based on Client Matrix
  */
 export function qualifyLead(input: LeadQualificationInput): LeadQualificationOutput {
   const rulesApplied: RuleResult[] = [];
-  let score = 50; // Starting baseline
+  let passCount = 0;
+  let hasRestrictedCountry = false;
 
+  const country = (input.country || "").trim().toLowerCase();
   const email = (input.email || "").trim().toLowerCase();
   const isBusiness = checkIsBusinessEmail(email);
   const qty = parseQuantity(input.quantity);
-  const country = (input.country || "").trim().toLowerCase();
-  const isTier1Country = TIER_1_COUNTRIES.has(country);
 
-  // 1. Email Domain Rule
+  // 1. Restricted Country Check (Instant Hard Fail)
+  if (RESTRICTED_COUNTRIES.has(country)) {
+    hasRestrictedCountry = true;
+    rulesApplied.push({
+      rule: "country_restriction",
+      result: "FAIL",
+      detail: `Country (${input.country}) is on client restricted list (Ghana, Syria, Ukraine)`,
+    });
+  }
+
+  // 2. Minimum Order Quantity (MOQ) Rule: From 10 Pcs
+  let moqPass = false;
+  if (qty >= 10) {
+    moqPass = true;
+    passCount++;
+    rulesApplied.push({
+      rule: "moq_eligibility",
+      result: "PASS",
+      detail: `Order volume (${qty} pcs) meets client minimum MOQ requirement (≥ 10 pcs)`,
+    });
+  } else if (qty > 0 && qty < 10) {
+    rulesApplied.push({
+      rule: "moq_eligibility",
+      result: "FAIL",
+      detail: `Quantity (${qty} pcs) is below client minimum threshold (10 pcs)`,
+    });
+  } else {
+    // Unspecified or custom
+    rulesApplied.push({
+      rule: "moq_eligibility",
+      result: "WARN",
+      detail: `Quantity not specified or custom discussion requested (${input.quantity})`,
+    });
+  }
+
+  // 3. Geographic Market Rule: UAE, Middle East, Europe, US
+  let regionPass = false;
+  if (hasRestrictedCountry) {
+    regionPass = false;
+  } else if (PREFERRED_REGIONS.has(country) || Array.from(PREFERRED_REGIONS).some((r) => country.includes(r))) {
+    regionPass = true;
+    passCount++;
+    rulesApplied.push({
+      rule: "preferred_market",
+      result: "PASS",
+      detail: `Client preferred export territory: ${input.country}`,
+    });
+  } else if (country.length >= 2) {
+    rulesApplied.push({
+      rule: "preferred_market",
+      result: "WARN",
+      detail: `Secondary export market (${input.country}) - subject to review`,
+    });
+  } else {
+    rulesApplied.push({
+      rule: "preferred_market",
+      result: "WARN",
+      detail: "Country not specified",
+    });
+  }
+
+  // 4. Business Type Rule: All Types Preferred
+  let bizTypePass = false;
+  const bizType = (input.businessType || "").trim();
+  if (bizType.length > 0) {
+    bizTypePass = true;
+    passCount++;
+    rulesApplied.push({
+      rule: "business_type",
+      result: "PASS",
+      detail: `Accepted business type: ${bizType}`,
+    });
+  } else {
+    rulesApplied.push({
+      rule: "business_type",
+      result: "WARN",
+      detail: "Business type not selected",
+    });
+  }
+
+  // 5. Order Timeline Rule: All Timelines Accepted
+  let timelinePass = false;
+  const timeline = (input.timeline || "").trim();
+  if (timeline.length > 0) {
+    timelinePass = true;
+    passCount++;
+    rulesApplied.push({
+      rule: "timeline_feasibility",
+      result: "PASS",
+      detail: `Timeline requirement: ${timeline} (flexible factory scheduling)`,
+    });
+  } else {
+    rulesApplied.push({
+      rule: "timeline_feasibility",
+      result: "WARN",
+      detail: "Timeline not specified",
+    });
+  }
+
+  // 6. Business Email Check
   if (isBusiness) {
-    score += 15;
     rulesApplied.push({
       rule: "business_email",
       result: "PASS",
-      detail: `Corporate domain detected (${email.split("@")[1]})`,
+      detail: `Corporate email domain detected (${email.split("@")[1]})`,
     });
   } else {
-    score -= 10;
     rulesApplied.push({
       rule: "business_email",
       result: "WARN",
-      detail: `Free consumer email provider (${email.split("@")[1] || "unknown"})`,
+      detail: `Consumer free email (${email.split("@")[1] || "unknown"})`,
     });
   }
 
-  // 2. Minimum Order Quantity (MOQ) Hard Rule
-  let moqFail = false;
-  let isAboveMoq = true;
-
-  if (qty > 0 && qty < 500) {
-    moqFail = true;
-    isAboveMoq = false;
-    score -= 40;
-    rulesApplied.push({
-      rule: "moq_threshold",
-      result: "FAIL",
-      detail: `Quantity (${qty} pcs) is below factory minimum order threshold (500 pcs)`,
-    });
-  } else if (qty >= 2500) {
-    score += 25;
-    rulesApplied.push({
-      rule: "moq_threshold",
-      result: "PASS",
-      detail: `High volume export order (${qty}+ pcs)`,
-    });
-  } else if (qty >= 500) {
-    score += 10;
-    rulesApplied.push({
-      rule: "moq_threshold",
-      result: "PASS",
-      detail: `Meets standard factory minimum order volume (${qty} pcs)`,
-    });
-  } else {
-    rulesApplied.push({
-      rule: "moq_threshold",
-      result: "WARN",
-      detail: `Unspecified or ambiguous quantity (${input.quantity})`,
-    });
-  }
-
-  // 3. Geographic Market Rule
-  if (isTier1Country) {
-    score += 15;
-    rulesApplied.push({
-      rule: "geographic_market",
-      result: "PASS",
-      detail: `Top-priority export region (${input.country})`,
-    });
-  } else {
-    rulesApplied.push({
-      rule: "geographic_market",
-      result: "WARN",
-      detail: `Secondary or emerging export destination (${input.country})`,
-    });
-  }
-
-  // 4. Business Type Rule
-  const bizType = (input.businessType || "").toLowerCase();
-  if (bizType.includes("brand") || bizType.includes("retail") || bizType.includes("wholesal") || bizType.includes("buying")) {
-    score += 15;
-    rulesApplied.push({
-      rule: "business_type",
-      result: "PASS",
-      detail: `Qualified B2B buyer category: ${input.businessType}`,
-    });
-  } else if (bizType.includes("startup") || bizType.includes("boutique")) {
-    score += 5;
-    rulesApplied.push({
-      rule: "business_type",
-      result: "WARN",
-      detail: `Emerging / boutique buyer category: ${input.businessType}`,
-    });
-  }
-
-  // 5. Tech Pack Bonus
-  if (input.techPackAttached) {
-    score += 10;
-    rulesApplied.push({
-      rule: "tech_pack",
-      result: "PASS",
-      detail: "Complete technical specifications / tech pack provided",
-    });
-  }
-
-  // 6. Timeline Validation
-  const timeline = (input.timeline || "").toLowerCase();
-  if (timeline.includes("< 14") || timeline.includes("immediate") || timeline.includes("1 week")) {
-    score -= 20;
-    rulesApplied.push({
-      rule: "lead_time",
-      result: "FAIL",
-      detail: "Requested timeline under 14 days is not feasible for custom knitwear export manufacturing",
-    });
-  }
-
-  // Final Tier Assignment
+  // Determine Qualification Tier based on Client Formula:
+  // - Qualified: All eligibility pass (at least 4 primary criteria pass, no restriction)
+  // - Needs Review: At least 2 criteria pass
+  // - Not Qualified: All criteria fail OR restricted country OR < 10 pcs
   let tier: QualificationTier = "YELLOW";
-  let tierLabel = "Manual Review Queue";
-  let reason = "Enquiry meets basic parameters but requires merchandising assessment.";
-  let recommendedAction = "Queue for general merchandising desk review within 24 hours.";
+  let tierLabel = "Needs Review";
+  let score = Math.round((passCount / 4) * 100);
+  let reason = "Inquiry meets partial criteria; routed to merchandising review queue.";
+  let recommendedAction = "Review specifications and prepare custom quotation within 1 business day.";
 
-  if (moqFail) {
+  if (hasRestrictedCountry) {
     tier = "RED";
-    tierLabel = "Auto-Filtered / Low Priority";
-    reason = "Requested volume is below factory minimum order quantity (500 pcs).";
-    recommendedAction = "Send automated polite response with catalog and MOQ guidelines; tag as Low Priority in CRM.";
-  } else if (score >= 70 && isAboveMoq) {
+    tierLabel = "Not Qualified (Restricted Region)";
+    score = 0;
+    reason = `Inquiry originated from restricted territory (${input.country}).`;
+    recommendedAction = "De-prioritize in CRM pipeline; polite automated response.";
+  } else if (qty > 0 && qty < 10) {
+    tier = "RED";
+    tierLabel = "Not Qualified (Below 10 Pcs)";
+    score = 15;
+    reason = "Requested volume is below client 10-piece minimum.";
+    recommendedAction = "Automated email regarding minimum order threshold.";
+  } else if (passCount >= 4 && !hasRestrictedCountry) {
     tier = "GREEN";
-    tierLabel = "High Priority Export Lead";
-    reason = isBusiness
-      ? "Verified corporate buyer meeting high-volume export criteria."
-      : "High-volume inquiry from key export territory.";
-    recommendedAction = "Route immediately to Senior Export Manager; initiate high-priority WhatsApp follow-up.";
-  } else if (score < 40) {
+    tierLabel = "Qualified (High Priority)";
+    score = isBusiness ? 100 : 90;
+    reason = "All client qualification criteria passed (MOQ ≥ 10 pcs, preferred region, valid business profile & timeline).";
+    recommendedAction = "Fast-track to sales desk; initiate priority WhatsApp follow-up.";
+  } else if (passCount >= 2) {
+    tier = "YELLOW";
+    tierLabel = "Needs Review";
+    score = Math.max(50, score);
+    reason = "Meets key criteria (at least 2 parameters passed); requires standard merchandising verification.";
+    recommendedAction = "Assign to standard merchandising desk for review within 24 hours.";
+  } else {
     tier = "RED";
-    tierLabel = "Low Priority / Disqualified";
-    reason = "Enquiry failed multiple qualification criteria.";
-    recommendedAction = "Log in CRM under unassigned review queue without alerting active sales reps.";
+    tierLabel = "Not Qualified";
+    score = Math.min(30, score);
+    reason = "Inquiry failed multiple client eligibility criteria.";
+    recommendedAction = "Log in CRM without triggering urgent sales alerts.";
   }
 
   return {
     tier,
     tierLabel,
-    score: Math.max(0, Math.min(100, score)),
+    score,
     isBusinessEmail: isBusiness,
     parsedQuantity: qty,
-    isAboveMoq,
+    isAboveMoq: moqPass,
     rulesApplied,
     reason,
     recommendedAction,

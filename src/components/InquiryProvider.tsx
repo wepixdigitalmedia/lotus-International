@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
+import ConsultationModal from "@/components/ConsultationModal";
 
 export interface InquiryItem {
   id: string;
@@ -17,6 +18,9 @@ interface InquiryContextType {
   removeFromInquiry: (id: string) => void;
   clearInquiry: () => void;
   isInInquiry: (id: string) => boolean;
+  isConsultationOpen: boolean;
+  openConsultation: () => void;
+  closeConsultation: () => void;
 }
 
 const InquiryContext = createContext<InquiryContextType | undefined>(undefined);
@@ -24,6 +28,7 @@ const InquiryContext = createContext<InquiryContextType | undefined>(undefined);
 export function InquiryProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<InquiryItem[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
 
   // Load from localStorage on mount
   useEffect(() => {
@@ -67,11 +72,24 @@ export function InquiryProvider({ children }: { children: React.ReactNode }) {
     return items.some((i) => i.id === id);
   };
 
+  const openConsultation = () => setIsConsultationOpen(true);
+  const closeConsultation = () => setIsConsultationOpen(false);
+
   return (
     <InquiryContext.Provider
-      value={{ items, addToInquiry, removeFromInquiry, clearInquiry, isInInquiry }}
+      value={{
+        items,
+        addToInquiry,
+        removeFromInquiry,
+        clearInquiry,
+        isInInquiry,
+        isConsultationOpen,
+        openConsultation,
+        closeConsultation,
+      }}
     >
       {children}
+      <ConsultationModal isOpen={isConsultationOpen} onClose={closeConsultation} />
     </InquiryContext.Provider>
   );
 }

@@ -199,7 +199,13 @@ export default function NaturePoloClubPage() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubscribe} className="space-y-4">
+              <form
+                onSubmit={handleSubscribe}
+                className="space-y-4"
+                data-lpignore="true"
+                data-1p-ignore="true"
+                suppressHydrationWarning
+              >
                 <div className="w-12 h-12 rounded-2xl bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent mx-auto mb-3">
                   <Mail className="w-5 h-5" />
                 </div>
@@ -216,10 +222,16 @@ export default function NaturePoloClubPage() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     placeholder="Enter your email address"
+                    data-lpignore="true"
+                    data-1p-ignore="true"
+                    data-form-type="other"
+                    autoComplete="off"
+                    suppressHydrationWarning
                     className="flex-grow px-4 py-3 rounded-xl bg-brand-bg border border-brand-light-grey focus:outline-none focus:ring-2 focus:ring-brand-accent/40 text-xs text-brand-ink font-medium placeholder:text-brand-grey"
                   />
                   <button
                     type="submit"
+                    suppressHydrationWarning
                     className="px-6 py-3 rounded-xl bg-brand-ink hover:bg-brand-ink/90 text-brand-bg font-semibold text-xs tracking-wider uppercase transition-colors flex items-center justify-center gap-1.5 shrink-0 shadow-sm"
                   >
                     <span>Notify Me</span>
