@@ -35,6 +35,7 @@ const navConfig = [
     href: "/resources",
     submenu: [
       { name: "Industry Insights", href: "/resources" },
+      { name: "Blog & Articles", href: "/blog" },
       { name: "Contact & RFQ", href: "/contact" },
     ],
   },

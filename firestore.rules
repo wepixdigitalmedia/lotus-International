@@ -1,0 +1,16 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Blog Collection: Public read access for published articles, Admin auth for write
+    match /blogs/{blogId} {
+      allow read: if true;
+      allow write, delete: if request.auth != null;
+    }
+
+    // Default deny for all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

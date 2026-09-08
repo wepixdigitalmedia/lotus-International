@@ -139,6 +139,11 @@ export default function Footer() {
                   Downloads & Files
                 </Link>
               </li>
+              <li>
+                <Link href="/blog" className="text-brand-bg/70 hover:text-brand-accent transition-colors">
+                  Blog & Articles
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -252,8 +257,12 @@ export default function Footer() {
             </span>
           </div>
 
-          <div className="text-xs text-brand-bg/50 font-medium">
-            &copy; {currentYear} The Lotus International. All rights reserved. Designed for export reliability.
+          <div className="flex items-center space-x-4 text-xs text-brand-bg/50 font-medium">
+            <span>&copy; {currentYear} The Lotus International. All rights reserved.</span>
+            <span>•</span>
+            <Link href="/admin/login" className="hover:text-brand-accent transition-colors">
+              Admin Portal
+            </Link>
           </div>
         </div>
       </div>

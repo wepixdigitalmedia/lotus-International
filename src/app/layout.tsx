@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { AuthProvider } from "@/components/AuthContext";
 import LenisProvider from "@/components/LenisProvider";
 import { InquiryProvider } from "@/components/InquiryProvider";
 import Navbar from "@/components/Navbar";
@@ -44,17 +45,19 @@ export default function RootLayout({
         suppressHydrationWarning
         className="bg-brand-bg text-brand-ink min-h-screen flex flex-col antialiased"
       >
-        <InquiryProvider>
-          <LenisProvider>
-            <CustomCursor />
-            <Navbar />
-            <main className="flex-grow pt-14 md:pt-16">
-              {children}
-            </main>
-            <Footer />
-            <FloatingWhatsApp />
-          </LenisProvider>
-        </InquiryProvider>
+        <AuthProvider>
+          <InquiryProvider>
+            <LenisProvider>
+              <CustomCursor />
+              <Navbar />
+              <main className="flex-grow pt-14 md:pt-16">
+                {children}
+              </main>
+              <Footer />
+              <FloatingWhatsApp />
+            </LenisProvider>
+          </InquiryProvider>
+        </AuthProvider>
         <Script id="zsiqchat" strategy="afterInteractive">
           {`window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}`}
         </Script>
