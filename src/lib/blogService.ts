@@ -44,8 +44,7 @@ export async function getPublishedBlogs(): Promise<BlogPost[]> {
   try {
     const q = query(
       collection(db, BLOG_COLLECTION),
-      where("published", "==", true),
-      orderBy("publishedAt", "desc")
+      where("published", "==", true)
     );
     const snapshot = await getDocs(q);
 
@@ -58,7 +57,10 @@ export async function getPublishedBlogs(): Promise<BlogPost[]> {
       ...d.data(),
     })) as BlogPost[];
 
-    return firestoreBlogs;
+    // Sort by latest publication date
+    return firestoreBlogs.sort(
+      (a, b) => (b.publishedAt || b.createdAt || 0) - (a.publishedAt || a.createdAt || 0)
+    );
   } catch (error) {
     console.warn("Firestore fetch fallback to initial blogs:", error);
     return INITIAL_BLOGS.filter((b) => b.published);
@@ -96,10 +98,7 @@ export async function getBlogBySlug(slug: string): Promise<BlogPost | null> {
  */
 export async function getAllBlogsForAdmin(): Promise<BlogPost[]> {
   try {
-    const q = query(
-      collection(db, BLOG_COLLECTION),
-      orderBy("updatedAt", "desc")
-    );
+    const q = query(collection(db, BLOG_COLLECTION));
     const snapshot = await getDocs(q);
 
     if (snapshot.empty) {
@@ -111,7 +110,9 @@ export async function getAllBlogsForAdmin(): Promise<BlogPost[]> {
       ...d.data(),
     })) as BlogPost[];
 
-    return firestoreBlogs;
+    return firestoreBlogs.sort(
+      (a, b) => (b.updatedAt || b.createdAt || 0) - (a.updatedAt || a.createdAt || 0)
+    );
   } catch (error) {
     console.warn("Firestore fetch fallback for admin:", error);
     return INITIAL_BLOGS;
@@ -140,6 +141,24 @@ export async function getBlogById(id: string): Promise<BlogPost | null> {
 }
 
 /**
+ * Helper to remove undefined properties recursively so Firestore setDoc does not fail
+ */
+function removeUndefined<T extends Record<string, any>>(obj: T): T {
+  const result: any = {};
+  for (const key of Object.keys(obj)) {
+    const val = obj[key];
+    if (val !== undefined) {
+      if (val && typeof val === "object" && !Array.isArray(val)) {
+        result[key] = removeUndefined(val);
+      } else {
+        result[key] = val;
+      }
+    }
+  }
+  return result;
+}
+
+/**
  * Create or update a blog post
  */
 export async function saveBlogPost(
@@ -149,18 +168,20 @@ export async function saveBlogPost(
   const now = Date.now();
   const id = existingId || doc(collection(db, BLOG_COLLECTION)).id;
 
-  const postPayload: BlogPost = {
+  const rawPayload: BlogPost = {
     ...formData,
     id,
     slug: formData.slug || generateSlug(formData.title),
     readTime: calculateReadTime(formData.content),
-    createdAt: now,
+    createdAt: (formData as any).createdAt || now,
     updatedAt: now,
     publishedAt: formData.published ? (formData.publishedAt || now) : undefined,
   };
 
+  const cleanPayload = removeUndefined(rawPayload);
+
   const docRef = doc(db, BLOG_COLLECTION, id);
-  await setDoc(docRef, postPayload, { merge: true });
+  await setDoc(docRef, cleanPayload, { merge: true });
 
   return id;
 }

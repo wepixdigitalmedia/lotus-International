@@ -148,7 +148,7 @@ export default function BlogEditor({ initialPost, isNew = false }: BlogEditorPro
         seoTitle: seoTitle || `${title} | The Lotus International`,
         seoDescription: seoDescription || excerpt || title,
         focusKeywords: keywords,
-        canonicalUrl: canonicalUrl || undefined,
+        canonicalUrl: canonicalUrl.trim() ? canonicalUrl.trim() : "",
         ogImage: coverImage,
       };
 
