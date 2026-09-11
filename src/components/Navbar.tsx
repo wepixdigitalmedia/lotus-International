@@ -14,6 +14,7 @@ const navConfig = [
     href: "/about",
     submenu: [
       { name: "About Lotus International", href: "/about" },
+      { name: "CSR & Trust", href: "/trust" },
       { name: "Quality & Compliance", href: "/compliance" },
       { name: "Global Clients", href: "/clients" },
       { name: "Careers", href: "/careers" },

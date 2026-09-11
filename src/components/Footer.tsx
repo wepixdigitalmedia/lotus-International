@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Send, Check, MessageCircle } from "lucide-react";
 
@@ -8,6 +8,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,34 +47,40 @@ export default function Footer() {
               <h4 className="text-[10px] font-bold tracking-widest uppercase text-brand-accent">
                 Subscribe to Industry Reports
               </h4>
-              <form
-                onSubmit={handleSubscribe}
-                className="relative flex items-center max-w-sm"
-                data-lpignore="true"
-                data-1p-ignore="true"
-                suppressHydrationWarning
-              >
-                <input
-                  required
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter business email"
-                  data-lpignore="true"
-                  data-1p-ignore="true"
-                  data-form-type="other"
-                  autoComplete="off"
-                  suppressHydrationWarning
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs focus:outline-none focus:border-brand-accent/50 pr-12 text-brand-bg placeholder:text-brand-bg/40 font-medium"
-                />
-                <button
-                  type="submit"
-                  suppressHydrationWarning
-                  className="absolute right-1 p-2 rounded-lg bg-brand-accent text-brand-bg hover:bg-brand-accent-hover transition-colors"
-                >
-                  {subscribed ? <Check className="w-3.5 h-3.5" /> : <Send className="w-3.5 h-3.5" />}
-                </button>
-              </form>
+              <div className="relative flex items-center max-w-sm min-h-[42px]">
+                {mounted ? (
+                  <form
+                    onSubmit={handleSubscribe}
+                    className="relative flex items-center w-full"
+                    data-lpignore="true"
+                    data-1p-ignore="true"
+                    autoComplete="off"
+                  >
+                    <input
+                      required
+                      type="email"
+                      name="newsletter_email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter business email"
+                      data-lpignore="true"
+                      data-1p-ignore="true"
+                      data-form-type="other"
+                      autoComplete="off"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs focus:outline-none focus:border-brand-accent/50 pr-12 text-brand-bg placeholder:text-brand-bg/40 font-medium"
+                    />
+                    <button
+                      type="submit"
+                      aria-label="Subscribe"
+                      className="absolute right-1 p-2 rounded-lg bg-brand-accent text-brand-bg hover:bg-brand-accent-hover transition-colors cursor-pointer"
+                    >
+                      {subscribed ? <Check className="w-3.5 h-3.5" /> : <Send className="w-3.5 h-3.5" />}
+                    </button>
+                  </form>
+                ) : (
+                  <div className="w-full h-[38px] rounded-xl bg-white/5 border border-white/10" />
+                )}
+              </div>
               {subscribed && (
                 <p className="text-[10px] text-brand-sage font-medium animate-fadeIn">
                   Thank you! You are subscribed to our B2B newsletter.
@@ -117,6 +128,12 @@ export default function Footer() {
               <li>
                 <Link href="/about" className="text-brand-bg/70 hover:text-brand-accent transition-colors">
                   About Us & Legacy
+                </Link>
+              </li>
+              <li>
+                <Link href="/trust" className="text-brand-bg/70 hover:text-brand-accent transition-colors flex items-center gap-1.5">
+                  <span>CSR &amp; Trust</span>
+                  <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-brand-accent/20 text-brand-accent font-semibold">Trust</span>
                 </Link>
               </li>
               <li>
