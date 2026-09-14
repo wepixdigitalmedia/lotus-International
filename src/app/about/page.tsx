@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
+import BrandMarquee from "@/components/BrandMarquee";
 import { TIMELINE } from "@/data/db";
 import { Target, Eye, ShieldCheck, Heart, Sparkles, ArrowRight } from "lucide-react";
 
@@ -285,32 +286,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Trusted Partners & Global Brands (from Homepage) */}
+      {/* Trusted Partners & Global Brands */}
       <section className="py-14 md:py-18 overflow-hidden bg-brand-bg border-t border-brand-light-grey/80">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <ScrollReveal>
-            <h3 className="text-center text-[10px] font-bold tracking-[0.25em] uppercase text-brand-grey/85 mb-8">
-              TRUSTED PARTNER &amp; GLOBAL APPAREL BRANDS
-            </h3>
-            <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14">
-              {[
-                { src: "https://ik.imagekit.io/wepix/lotus%20international/us%20polo%20assn.png", alt: "U.S. Polo Assn." },
-                { src: "https://ik.imagekit.io/wepix/lotus%20international/max.png", alt: "Max Fashion" },
-                { src: "https://ik.imagekit.io/wepix/lotus%20international/aeropostale.png", alt: "Aeropostale" },
-                { src: "https://ik.imagekit.io/wepix/lotus%20international/studio%20earth.png", alt: "Studio Earth" },
-                { src: "https://ik.imagekit.io/wepix/lotus%20international/fabrika.png", alt: "Fabrika" },
-                { src: "https://ik.imagekit.io/wepix/lotus%20international/liverpool.png", alt: "Liverpool" },
-                { src: "https://ik.imagekit.io/wepix/lotus%20international/french%20connection.png", alt: "French Connection" },
-              ].map((brand) => (
-                <img
-                  key={brand.alt}
-                  src={brand.src}
-                  alt={brand.alt}
-                  className="h-8 md:h-10 w-auto object-contain opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-                />
-              ))}
-            </div>
-          </ScrollReveal>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <BrandMarquee />
         </div>
       </section>
 

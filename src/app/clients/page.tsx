@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import TestimonialCard from "@/components/TestimonialCard";
+import BrandMarquee from "@/components/BrandMarquee";
 import { CheckCircle2, Globe, ArrowRight } from "lucide-react";
 
 const CLIENT_BRANDS = [
@@ -10,6 +11,12 @@ const CLIENT_BRANDS = [
     logo: "https://ik.imagekit.io/wepix/lotus%20international/us%20polo%20assn.png",
     category: "Heritage Sportswear",
     programs: "Pique Polos, Zip Hoodies, Crew Knits",
+  },
+  {
+    name: "Arrow",
+    logo: "/images/logo/arrow.png",
+    category: "Heritage Menswear",
+    programs: "Executive Polos & Mercerized Smart Knits",
   },
   {
     name: "Max Fashion",
@@ -42,10 +49,34 @@ const CLIENT_BRANDS = [
     programs: "Premium Loungewear & Seasonal Knits",
   },
   {
-    name: "French Connection",
-    logo: "https://ik.imagekit.io/wepix/lotus%20international/french%20connection.png",
-    category: "High-Street Designer Label",
-    programs: "Tailored Knitwear, Ribbed Tops & French Terry",
+    name: "Ducati",
+    logo: "/images/logo/ducati.png",
+    category: "Performance Lifestyle",
+    programs: "Technical Cotton Blends & Graphic Knits",
+  },
+  {
+    name: "Flying Machine",
+    logo: "/images/logo/flying%20machine.png",
+    category: "Youth Apparel & Casuals",
+    programs: "Heavyweight Tees & Vintage Terry",
+  },
+  {
+    name: "Green Planet",
+    logo: "/images/logo/green%20planet.png",
+    category: "Eco-Conscious Apparel",
+    programs: "GOTS Certified Organic Basics",
+  },
+  {
+    name: "Landmark Group",
+    logo: "/images/logo/land%20mark%20group.png",
+    category: "Global Retail Conglomerate",
+    programs: "High-Volume Private Label Collections",
+  },
+  {
+    name: "Nautica",
+    logo: "/images/logo/nautica.png",
+    category: "Maritime Lifestyle",
+    programs: "Performance Pique & Ocean-Wash Tees",
   },
 ];
 
@@ -60,6 +91,15 @@ const CASE_STUDIES = [
     volume: "350,000+ Pcs Annually",
   },
   {
+    brand: "Arrow",
+    logo: "/images/logo/arrow.png",
+    program: "Executive Polos & Mercerized Smart Knits",
+    category: "Heritage Menswear",
+    details: "Engineered high-twist combed compact pique and mercerized cotton knits with collar shape-retention technology. Stringent dimensional stability (<3% shrinkage) and high colorfastness under ISO standards.",
+    tags: ["Mercerized Cotton", "Anti-Pilling", "Collar Shape Retention", "AQL 1.5 Gate"],
+    volume: "250,000+ Pcs Annually",
+  },
+  {
     brand: "Max Fashion",
     logo: "https://ik.imagekit.io/wepix/lotus%20international/max.png",
     program: "Everyday Combed Tees & Kids Playwear",
@@ -67,15 +107,6 @@ const CASE_STUDIES = [
     details: "Delivering fast-turnaround, 100% combed cotton jersey programs with strict OEKO-TEX Standard 100 Class 1 safety for baby and children's knitwear. Rapid 30-day replenishment re-order cycles.",
     tags: ["100% Combed Cotton", "OEKO-TEX Class 1", "Fast Re-Orders", "Eco Packaging"],
     volume: "500,000+ Pcs Annually",
-  },
-  {
-    brand: "French Connection",
-    logo: "https://ik.imagekit.io/wepix/lotus%20international/french%20connection.png",
-    program: "Designer Washed Jersey & French Terry",
-    category: "Contemporary Fashion",
-    details: "Custom-developed micro-rib trims, enzyme washed luxury touch, and custom Pantone lab-dip matching for seasonal fashion drops. Audited under Sedex 4-Pillar ethical standards.",
-    tags: ["Enzyme Washed", "Micro-Rib Trims", "Sedex 4-Pillar", "Custom Pantone"],
-    volume: "200,000+ Pcs Per Season",
   },
 ];
 
@@ -148,6 +179,11 @@ export default function ClientsPage() {
                 Supplying millions of private-label knitted garments annually to top retail distribution networks.
               </p>
             </ScrollReveal>
+          </div>
+
+          {/* Continuous Brand Marquee Ticker */}
+          <div className="mb-10 py-3 bg-brand-bg/50 rounded-2xl border border-brand-light-grey/80 overflow-hidden">
+            <BrandMarquee showHeading={false} />
           </div>
 
           {/* Compact Modern Logo Grid */}

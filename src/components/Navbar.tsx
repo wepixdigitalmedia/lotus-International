@@ -30,7 +30,7 @@ const navConfig = [
     ],
   },
   { name: "Manufacturing", href: "/manufacturing" },
-  { name: "Sustainability", href: "/sustainability" },
+  { name: "Women Empowerment", href: "/sustainability" },
   {
     name: "Resources",
     href: "/resources",

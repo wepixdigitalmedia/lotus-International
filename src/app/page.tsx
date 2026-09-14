@@ -41,6 +41,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import StatCounter from "@/components/StatCounter";
 import ParallaxImage from "@/components/ParallaxImage";
 import ProductCard from "@/components/ProductCard";
+import BrandMarquee from "@/components/BrandMarquee";
 import { useInquiry } from "@/components/InquiryProvider";
 import { PRODUCTS } from "@/data/db";
 
@@ -653,29 +654,9 @@ export default function HomePage() {
       </section>
 
       {/* 3. LOGO TICKER */}
-      <section className="py-12 overflow-hidden bg-brand-bg opacity-75">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <h3 className="text-center text-[10px] font-bold tracking-[0.25em] uppercase text-brand-grey/85 mb-8">
-            TRUSTED PARTNER & GLOBAL APPAREL BRANDS
-          </h3>
-          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14">
-            {[
-              { src: "https://ik.imagekit.io/wepix/lotus%20international/us%20polo%20assn.png", alt: "U.S. Polo Assn." },
-              { src: "https://ik.imagekit.io/wepix/lotus%20international/max.png", alt: "Max Fashion" },
-              { src: "https://ik.imagekit.io/wepix/lotus%20international/aeropostale.png", alt: "Aeropostale" },
-              { src: "https://ik.imagekit.io/wepix/lotus%20international/studio%20earth.png", alt: "Studio Earth" },
-              { src: "https://ik.imagekit.io/wepix/lotus%20international/fabrika.png", alt: "Fabrika" },
-              { src: "https://ik.imagekit.io/wepix/lotus%20international/liverpool.png", alt: "Liverpool" },
-              { src: "https://ik.imagekit.io/wepix/lotus%20international/french%20connection.png", alt: "French Connection" },
-            ].map((brand) => (
-              <img
-                key={brand.alt}
-                src={brand.src}
-                alt={brand.alt}
-                className="h-8 md:h-10 w-auto object-contain opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-              />
-            ))}
-          </div>
+      <section className="py-12 md:py-16 overflow-hidden bg-brand-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <BrandMarquee />
         </div>
       </section>
 
