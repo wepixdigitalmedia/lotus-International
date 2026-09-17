@@ -1,17 +1,17 @@
 [
   {
-    "id": "mens-casual-crew-neck-27",
+    "id": "m-mens-casual-crew-neck-1",
     "name": "Mens Casual Crew Neck",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Cotton Jersey",
     "gsm": "180 - 200 GSM",
-    "description": "Export-grade mens casual crew neck crafted from 100% Cotton Jersey (180 - 200 GSM). Engineered for superior comfort, color fastness, and durability. Features Discharge Print at Chest; Logo in Rubber Badge. Ideal for international private label collections.",
+    "description": "Export-grade mens casual crew neck crafted from 100% Cotton Jersey (180 - 200 GSM). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Discharge Print at Chest; Logo in Rubber Badge. Ideal for international private label collections.",
     "features": [
       "Discharge Print at Chest",
       "Logo in Rubber Badge",
       "100% Cotton Jersey Construction",
-      "Weight: 180 - 200 GSM",
+      "Fabric Weight: 180 - 200 GSM",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/26.webp?updatedAt=1789465561145",
@@ -40,10 +40,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -51,17 +52,17 @@
     }
   },
   {
-    "id": "mens-body-fit-t-shirt-26",
+    "id": "m-mens-body-fit-t-shirt-2",
     "name": "Mens Body Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Polyester",
     "gsm": "160 - 180 GSM Tencil",
-    "description": "Export-grade mens body fit t shirt crafted from 100% Polyester (160 - 180 GSM Tencil). Engineered for superior comfort, color fastness, and durability. Features Logo Embroidery at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens body fit t shirt crafted from 100% Polyester (160 - 180 GSM Tencil). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Logo Embroidery at Chest. Ideal for international private label collections.",
     "features": [
       "Logo Embroidery at Chest",
       "100% Polyester Construction",
-      "Weight: 160 - 180 GSM Tencil",
+      "Fabric Weight: 160 - 180 GSM Tencil",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/25.webp?updatedAt=1789465561171",
@@ -90,10 +91,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Body Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -101,18 +103,18 @@
     }
   },
   {
-    "id": "mens-body-fit-crew-neck-25",
+    "id": "m-mens-body-fit-crew-neck-3",
     "name": "Mens Body Fit Crew Neck",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Cotton Jersey",
     "gsm": "200 - 220 GSM",
-    "description": "Export-grade mens body fit crew neck crafted from 100% Cotton Jersey (200 - 220 GSM). Engineered for superior comfort, color fastness, and durability. Features High Density Puff Print at Chest; Cut & Sewn at Sleeves. Ideal for international private label collections.",
+    "description": "Export-grade mens body fit crew neck crafted from 100% Cotton Jersey (200 - 220 GSM). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features High Density Puff Print at Chest; Cut & Sewn at Sleeves. Ideal for international private label collections.",
     "features": [
       "High Density Puff Print at Chest",
       "Cut & Sewn at Sleeves",
       "100% Cotton Jersey Construction",
-      "Weight: 200 - 220 GSM",
+      "Fabric Weight: 200 - 220 GSM",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/24.webp?updatedAt=1789465561273",
@@ -141,10 +143,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Body Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -152,18 +155,18 @@
     }
   },
   {
-    "id": "mens-compression-t-shirt-24",
+    "id": "m-mens-compression-t-shirt-4",
     "name": "Mens Compression T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "92% Polyester 8% Spandex",
     "gsm": "190 - 200 GSM Jersey",
-    "description": "Export-grade mens compression t shirt crafted from 92% Polyester 8% Spandex (190 - 200 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features Raglan Sleeve; DTF Print Logo on Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens compression t shirt crafted from 92% Polyester 8% Spandex (190 - 200 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Raglan Sleeve; DTF Print Logo on Chest. Ideal for international private label collections.",
     "features": [
       "Raglan Sleeve",
       "DTF Print Logo on Chest",
       "92% Polyester 8% Spandex Construction",
-      "Weight: 190 - 200 GSM Jersey",
+      "Fabric Weight: 190 - 200 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/23.webp?updatedAt=1789465561276",
@@ -192,7 +195,8 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
       "fit": "Compression Athletic Fit",
@@ -203,17 +207,17 @@
     }
   },
   {
-    "id": "mens-casual-crew-neck-23",
+    "id": "m-mens-casual-crew-neck-5",
     "name": "Mens Casual Crew Neck",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Cotton Jersey",
     "gsm": "200 - 220 GSM",
-    "description": "Export-grade mens casual crew neck crafted from 100% Cotton Jersey (200 - 220 GSM). Engineered for superior comfort, color fastness, and durability. Features Chenille Embroidery. Ideal for international private label collections.",
+    "description": "Export-grade mens casual crew neck crafted from 100% Cotton Jersey (200 - 220 GSM). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Chenille Embroidery. Ideal for international private label collections.",
     "features": [
       "Chenille Embroidery",
       "100% Cotton Jersey Construction",
-      "Weight: 200 - 220 GSM",
+      "Fabric Weight: 200 - 220 GSM",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/22.webp?updatedAt=1789465560946",
@@ -242,10 +246,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -253,18 +258,18 @@
     }
   },
   {
-    "id": "mens-slim-fit-t-shirt-22",
+    "id": "m-mens-slim-fit-t-shirt-6",
     "name": "Mens Slim Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "92% Polyester 8% Spandex",
     "gsm": "190 - 200 GSM Jersey",
-    "description": "Export-grade mens slim fit t shirt crafted from 92% Polyester 8% Spandex (190 - 200 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features Abstract Sublimation Print; Logo Embroidery on Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens slim fit t shirt crafted from 92% Polyester 8% Spandex (190 - 200 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Abstract Sublimation Print; Logo Embroidery on Chest. Ideal for international private label collections.",
     "features": [
       "Abstract Sublimation Print",
       "Logo Embroidery on Chest",
       "92% Polyester 8% Spandex Construction",
-      "Weight: 190 - 200 GSM Jersey",
+      "Fabric Weight: 190 - 200 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/21.webp?updatedAt=1789465561128",
@@ -293,7 +298,8 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
       "fit": "Slim Fit",
@@ -304,18 +310,18 @@
     }
   },
   {
-    "id": "mens-sports-fit-t-shirt-21",
+    "id": "m-mens-sports-fit-t-shirt-7",
     "name": "Mens Sports Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Cotton",
     "gsm": "190 - 200 GSM Jersey",
-    "description": "Export-grade mens sports fit t shirt crafted from 100% Cotton (190 - 200 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features Tie & Dye All Over Print; DTF Logo Print at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens sports fit t shirt crafted from 100% Cotton (190 - 200 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Tie & Dye All Over Print; DTF Logo Print at Chest. Ideal for international private label collections.",
     "features": [
       "Tie & Dye All Over Print",
       "DTF Logo Print at Chest",
       "100% Cotton Construction",
-      "Weight: 190 - 200 GSM Jersey",
+      "Fabric Weight: 190 - 200 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/27.png",
@@ -344,10 +350,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -355,17 +362,17 @@
     }
   },
   {
-    "id": "mens-mock-neck-t-shirt-20",
+    "id": "m-mens-mock-neck-t-shirt-8",
     "name": "Mens Mock Neck T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "85% Polyester 15% Spandex",
     "gsm": "210 - 220 GSM Jersey",
-    "description": "Export-grade mens mock neck t shirt crafted from 85% Polyester 15% Spandex (210 - 220 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features Raglan Sleeve with DTF Print at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens mock neck t shirt crafted from 85% Polyester 15% Spandex (210 - 220 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Raglan Sleeve with DTF Print at Chest. Ideal for international private label collections.",
     "features": [
       "Raglan Sleeve with DTF Print at Chest",
       "85% Polyester 15% Spandex Construction",
-      "Weight: 210 - 220 GSM Jersey",
+      "Fabric Weight: 210 - 220 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/20.webp?updatedAt=1789465561183",
@@ -394,10 +401,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -405,18 +413,18 @@
     }
   },
   {
-    "id": "mens-comfort-fit-t-shirt-19",
+    "id": "m-mens-comfort-fit-t-shirt-9",
     "name": "Mens Comfort Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Polyester",
     "gsm": "200 - 210 GSM Pique",
-    "description": "Export-grade mens comfort fit t shirt crafted from 100% Polyester (200 - 210 GSM Pique). Engineered for superior comfort, color fastness, and durability. Features Contrast Piping on Shoulders; Reflective Logo Print at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens comfort fit t shirt crafted from 100% Polyester (200 - 210 GSM Pique). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Contrast Piping on Shoulders; Reflective Logo Print at Chest. Ideal for international private label collections.",
     "features": [
       "Contrast Piping on Shoulders",
       "Reflective Logo Print at Chest",
       "100% Polyester Construction",
-      "Weight: 200 - 210 GSM Pique",
+      "Fabric Weight: 200 - 210 GSM Pique",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/19.webp?updatedAt=1789465561187",
@@ -445,10 +453,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Pique Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -456,17 +465,17 @@
     }
   },
   {
-    "id": "mens-training-fit-t-shirt-18",
+    "id": "m-mens-training-fit-t-shirt-10",
     "name": "Mens Training Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Polyester Ferrari Knit",
     "gsm": "210 - 230 GSM Jersey",
-    "description": "Export-grade mens training fit t shirt crafted from 100% Polyester Ferrari Knit (210 - 230 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features High Density Print at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens training fit t shirt crafted from 100% Polyester Ferrari Knit (210 - 230 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features High Density Print at Chest. Ideal for international private label collections.",
     "features": [
       "High Density Print at Chest",
       "100% Polyester Ferrari Knit Construction",
-      "Weight: 210 - 230 GSM Jersey",
+      "Fabric Weight: 210 - 230 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/18.webp?updatedAt=1789465561191",
@@ -495,10 +504,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -506,18 +516,18 @@
     }
   },
   {
-    "id": "mens-active-t-shirt-17",
+    "id": "m-mens-active-t-shirt-11",
     "name": "Mens Active T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Polyester Mars",
     "gsm": "170 - 180 GSM Jersey",
-    "description": "Export-grade mens active t shirt crafted from 100% Polyester Mars (170 - 180 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features Raglan Sleeve; DTF Logo Print at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens active t shirt crafted from 100% Polyester Mars (170 - 180 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Raglan Sleeve; DTF Logo Print at Chest. Ideal for international private label collections.",
     "features": [
       "Raglan Sleeve",
       "DTF Logo Print at Chest",
       "100% Polyester Mars Construction",
-      "Weight: 170 - 180 GSM Jersey",
+      "Fabric Weight: 170 - 180 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/17.webp?updatedAt=1789465561163",
@@ -546,10 +556,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -557,17 +568,17 @@
     }
   },
   {
-    "id": "mens-casual-fit-t-shirt-16",
+    "id": "m-mens-casual-fit-t-shirt-12",
     "name": "Mens Casual Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "80% Cotton 20% Polyester",
     "gsm": "180 - 200 GSM Jersey",
-    "description": "Export-grade mens casual fit t shirt crafted from 80% Cotton 20% Polyester (180 - 200 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features Digital Print at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens casual fit t shirt crafted from 80% Cotton 20% Polyester (180 - 200 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Digital Print at Chest. Ideal for international private label collections.",
     "features": [
       "Digital Print at Chest",
       "80% Cotton 20% Polyester Construction",
-      "Weight: 180 - 200 GSM Jersey",
+      "Fabric Weight: 180 - 200 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/16.webp?updatedAt=1789465561251",
@@ -596,10 +607,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -607,17 +619,17 @@
     }
   },
   {
-    "id": "mens-longline-t-shirt-15",
+    "id": "m-mens-longline-t-shirt-13",
     "name": "Mens Longline T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Polyester Tencil",
     "gsm": "200 - 210 GSM Jersey",
-    "description": "Export-grade mens longline t shirt crafted from 100% Polyester Tencil (200 - 210 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features Deep Scoop Neck. Ideal for international private label collections.",
+    "description": "Export-grade mens longline t shirt crafted from 100% Polyester Tencil (200 - 210 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Deep Scoop Neck. Ideal for international private label collections.",
     "features": [
       "Deep Scoop Neck",
       "100% Polyester Tencil Construction",
-      "Weight: 200 - 210 GSM Jersey",
+      "Fabric Weight: 200 - 210 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/15.webp?updatedAt=1789465561291",
@@ -646,10 +658,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -657,17 +670,17 @@
     }
   },
   {
-    "id": "mens-v-sports-tee-shirt-14",
+    "id": "m-mens-v-sports-tee-shirt-14",
     "name": "Mens V Sports Tee Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "95% Cotton 5% Spandex",
     "gsm": "170 - 180 GSM Jersey",
-    "description": "Export-grade mens v sports tee shirt crafted from 95% Cotton 5% Spandex (170 - 180 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features V Neck with DTF Print at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens v sports tee shirt crafted from 95% Cotton 5% Spandex (170 - 180 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features V Neck with DTF Print at Chest. Ideal for international private label collections.",
     "features": [
       "V Neck with DTF Print at Chest",
       "95% Cotton 5% Spandex Construction",
-      "Weight: 170 - 180 GSM Jersey",
+      "Fabric Weight: 170 - 180 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/14.webp?updatedAt=1789465561245",
@@ -696,10 +709,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -707,18 +721,18 @@
     }
   },
   {
-    "id": "mens-dry-fit-t-shirt-13",
+    "id": "m-mens-dry-fit-t-shirt-15",
     "name": "Mens Dry Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Polyester",
     "gsm": "170 - 180 GSM Jersey",
-    "description": "Export-grade mens dry fit t shirt crafted from 100% Polyester (170 - 180 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features Dip Dye Print Technology; 2 Way Stretch. Ideal for international private label collections.",
+    "description": "Export-grade mens dry fit t shirt crafted from 100% Polyester (170 - 180 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Dip Dye Print Technology; 2 Way Stretch. Ideal for international private label collections.",
     "features": [
       "Dip Dye Print Technology",
       "2 Way Stretch",
       "100% Polyester Construction",
-      "Weight: 170 - 180 GSM Jersey",
+      "Fabric Weight: 170 - 180 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/13.webp?updatedAt=1789465561236",
@@ -747,10 +761,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -758,18 +773,18 @@
     }
   },
   {
-    "id": "sports-jersey-t-shirt-12",
+    "id": "m-sports-jersey-t-shirt-16",
     "name": "Sports Jersey T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Polyester",
     "gsm": "170 - 180 GSM Saleena",
-    "description": "Export-grade sports jersey t shirt crafted from 100% Polyester (170 - 180 GSM Saleena). Engineered for superior comfort, color fastness, and durability. Features Side Cut Panels with Piping; DTF Print Logo on Left Chest. Ideal for international private label collections.",
+    "description": "Export-grade sports jersey t shirt crafted from 100% Polyester (170 - 180 GSM Saleena). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Side Cut Panels with Piping; DTF Print Logo on Left Chest. Ideal for international private label collections.",
     "features": [
       "Side Cut Panels with Piping",
       "DTF Print Logo on Left Chest",
       "100% Polyester Construction",
-      "Weight: 170 - 180 GSM Saleena",
+      "Fabric Weight: 170 - 180 GSM Saleena",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/12.webp?updatedAt=1789465561086",
@@ -798,10 +813,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -809,18 +825,18 @@
     }
   },
   {
-    "id": "mens-wide-neck-t-shirt-11",
+    "id": "m-mens-wide-neck-t-shirt-17",
     "name": "Mens Wide Neck T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "95% Cotton 5% Spandex",
     "gsm": "170 - 180 GSM Jersey",
-    "description": "Export-grade mens wide neck t shirt crafted from 95% Cotton 5% Spandex (170 - 180 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features All Over Print; Solid Neck Binding. Ideal for international private label collections.",
+    "description": "Export-grade mens wide neck t shirt crafted from 95% Cotton 5% Spandex (170 - 180 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features All Over Print; Solid Neck Binding. Ideal for international private label collections.",
     "features": [
       "All Over Print",
       "Solid Neck Binding",
       "95% Cotton 5% Spandex Construction",
-      "Weight: 170 - 180 GSM Jersey",
+      "Fabric Weight: 170 - 180 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/11.webp?updatedAt=1789465561089",
@@ -849,10 +865,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -860,17 +877,17 @@
     }
   },
   {
-    "id": "mens-regular-fit-t-shirt-10",
+    "id": "m-mens-regular-fit-t-shirt-18",
     "name": "Mens Regular Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Polyester",
     "gsm": "160 - 180 GSM Tencil",
-    "description": "Export-grade mens regular fit t shirt crafted from 100% Polyester (160 - 180 GSM Tencil). Engineered for superior comfort, color fastness, and durability. Features Reflective DTF Print at Chest & Sleeves. Ideal for international private label collections.",
+    "description": "Export-grade mens regular fit t shirt crafted from 100% Polyester (160 - 180 GSM Tencil). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Reflective DTF Print at Chest & Sleeves. Ideal for international private label collections.",
     "features": [
       "Reflective DTF Print at Chest & Sleeves",
       "100% Polyester Construction",
-      "Weight: 160 - 180 GSM Tencil",
+      "Fabric Weight: 160 - 180 GSM Tencil",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/10.webp?updatedAt=1789465561323",
@@ -899,10 +916,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -910,18 +928,18 @@
     }
   },
   {
-    "id": "mens-athletic-t-shirt-9",
+    "id": "m-mens-athletic-t-shirt-19",
     "name": "Mens Athletic T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "93% Cotton 7% Spandex",
     "gsm": "200 - 220 GSM Pique",
-    "description": "Export-grade mens athletic t shirt crafted from 93% Cotton 7% Spandex (200 - 220 GSM Pique). Engineered for superior comfort, color fastness, and durability. Features Cut & Sew Raglan Sleeve; Applique Embroidery at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens athletic t shirt crafted from 93% Cotton 7% Spandex (200 - 220 GSM Pique). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Cut & Sew Raglan Sleeve; Applique Embroidery at Chest. Ideal for international private label collections.",
     "features": [
       "Cut & Sew Raglan Sleeve",
       "Applique Embroidery at Chest",
       "93% Cotton 7% Spandex Construction",
-      "Weight: 200 - 220 GSM Pique",
+      "Fabric Weight: 200 - 220 GSM Pique",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/9.webp?updatedAt=1789465561106",
@@ -950,10 +968,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Pique Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -961,18 +980,18 @@
     }
   },
   {
-    "id": "mens-casual-fit-t-shirt-8",
+    "id": "m-mens-casual-fit-t-shirt-20",
     "name": "Mens Casual Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Cotton",
     "gsm": "180 - 200 GSM Jersey",
-    "description": "Export-grade mens casual fit t shirt crafted from 100% Cotton (180 - 200 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features Cut & Sew Body with Solid Pocket; Stripes Print at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens casual fit t shirt crafted from 100% Cotton (180 - 200 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Cut & Sew Body with Solid Pocket; Stripes Print at Chest. Ideal for international private label collections.",
     "features": [
       "Cut & Sew Body with Solid Pocket",
       "Stripes Print at Chest",
       "100% Cotton Construction",
-      "Weight: 180 - 200 GSM Jersey",
+      "Fabric Weight: 180 - 200 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/8.webp?updatedAt=1789465560776",
@@ -1001,10 +1020,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -1012,18 +1032,18 @@
     }
   },
   {
-    "id": "mens-compress-full-sleeve-t-shirt-7",
+    "id": "m-mens-compress-full-sleeve-t-shirt-21",
     "name": "Mens Compress Full Sleeve T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "94% Polyester 6% Spandex",
     "gsm": "170 - 180 GSM Tencil",
-    "description": "Export-grade mens compress full sleeve t shirt crafted from 94% Polyester 6% Spandex (170 - 180 GSM Tencil). Engineered for superior comfort, color fastness, and durability. Features Raglan Sleeve with Side Cut Panels; Embroidery Logo at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens compress full sleeve t shirt crafted from 94% Polyester 6% Spandex (170 - 180 GSM Tencil). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Raglan Sleeve with Side Cut Panels; Embroidery Logo at Chest. Ideal for international private label collections.",
     "features": [
       "Raglan Sleeve with Side Cut Panels",
       "Embroidery Logo at Chest",
       "94% Polyester 6% Spandex Construction",
-      "Weight: 170 - 180 GSM Tencil",
+      "Fabric Weight: 170 - 180 GSM Tencil",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/7.webp?updatedAt=1789465561338",
@@ -1052,10 +1072,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Compression Athletic Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -1063,18 +1084,18 @@
     }
   },
   {
-    "id": "mens-colour-block-slim-fit-6",
+    "id": "m-mens-colour-block-slim-fit-22",
     "name": "Mens Colour Block Slim Fit",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Cotton Jersey",
     "gsm": "210 - 220 GSM",
-    "description": "Export-grade mens colour block slim fit crafted from 100% Cotton Jersey (210 - 220 GSM). Engineered for superior comfort, color fastness, and durability. Features Cut & Sew Body and Long Sleeve; Embroidery Logo at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens colour block slim fit crafted from 100% Cotton Jersey (210 - 220 GSM). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Cut & Sew Body and Long Sleeve; Embroidery Logo at Chest. Ideal for international private label collections.",
     "features": [
       "Cut & Sew Body and Long Sleeve",
       "Embroidery Logo at Chest",
       "100% Cotton Jersey Construction",
-      "Weight: 210 - 220 GSM",
+      "Fabric Weight: 210 - 220 GSM",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/6.webp?updatedAt=1789465561089",
@@ -1103,7 +1124,8 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
       "fit": "Slim Fit",
@@ -1114,18 +1136,18 @@
     }
   },
   {
-    "id": "mens-dry-fit-t-shirt-5",
+    "id": "m-mens-dry-fit-t-shirt-23",
     "name": "Mens Dry Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Spun Polyester",
     "gsm": "190 - 200 GSM Honey Comb",
-    "description": "Export-grade mens dry fit t shirt crafted from 100% Spun Polyester (190 - 200 GSM Honey Comb). Engineered for superior comfort, color fastness, and durability. Features Contrast Sleeves and Back; Embroidery Logo at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens dry fit t shirt crafted from 100% Spun Polyester (190 - 200 GSM Honey Comb). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Contrast Sleeves and Back; Embroidery Logo at Chest. Ideal for international private label collections.",
     "features": [
       "Contrast Sleeves and Back",
       "Embroidery Logo at Chest",
       "100% Spun Polyester Construction",
-      "Weight: 190 - 200 GSM Honey Comb",
+      "Fabric Weight: 190 - 200 GSM Honey Comb",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/5.webp?updatedAt=1789465560688",
@@ -1154,10 +1176,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Honeycomb Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -1165,18 +1188,18 @@
     }
   },
   {
-    "id": "mens-workout-t-shirt-4",
+    "id": "m-mens-workout-t-shirt-24",
     "name": "Mens Workout T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Polyester",
     "gsm": "210 - 220 GSM Mesh Jersey",
-    "description": "Export-grade mens workout t shirt crafted from 100% Polyester (210 - 220 GSM Mesh Jersey). Engineered for superior comfort, color fastness, and durability. Features Raglan Sleeve Body Fit; DTF Print at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens workout t shirt crafted from 100% Polyester (210 - 220 GSM Mesh Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Raglan Sleeve Body Fit; DTF Print at Chest. Ideal for international private label collections.",
     "features": [
       "Raglan Sleeve Body Fit",
       "DTF Print at Chest",
       "100% Polyester Construction",
-      "Weight: 210 - 220 GSM Mesh Jersey",
+      "Fabric Weight: 210 - 220 GSM Mesh Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/4.webp?updatedAt=1789465561169",
@@ -1205,28 +1228,29 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
-      "weave": "Single Jersey Knit",
+      "fit": "Regular Fit",
+      "weave": "Active Mesh Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
       "leadTime": "30-45 Days Bulk Delivery"
     }
   },
   {
-    "id": "mens-rugby-t-shirt-3",
+    "id": "m-mens-rugby-t-shirt-25",
     "name": "Mens Rugby T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "63% Cotton 32% Polyester 5% Spandex",
     "gsm": "210 - 220 GSM Jersey",
-    "description": "Export-grade mens rugby t shirt crafted from 63% Cotton 32% Polyester 5% Spandex (210 - 220 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features Raglan Sleeve with DTF Print at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens rugby t shirt crafted from 63% Cotton 32% Polyester 5% Spandex (210 - 220 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Raglan Sleeve with DTF Print at Chest. Ideal for international private label collections.",
     "features": [
       "Raglan Sleeve with DTF Print at Chest",
       "63% Cotton 32% Polyester 5% Spandex Construction",
-      "Weight: 210 - 220 GSM Jersey",
+      "Fabric Weight: 210 - 220 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/3.webp?updatedAt=1789465561836",
@@ -1255,10 +1279,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -1266,18 +1291,18 @@
     }
   },
   {
-    "id": "mens-block-fit-t-shirt-2",
+    "id": "m-mens-block-fit-t-shirt-26",
     "name": "Mens Block Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Cotton",
     "gsm": "180 - 200 GSM Jersey",
-    "description": "Export-grade mens block fit t shirt crafted from 100% Cotton (180 - 200 GSM Jersey). Engineered for superior comfort, color fastness, and durability. Features Cut & Sew Body with Solid Back; Non PVC Print at Chest. Ideal for international private label collections.",
+    "description": "Export-grade mens block fit t shirt crafted from 100% Cotton (180 - 200 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Cut & Sew Body with Solid Back; Non PVC Print at Chest. Ideal for international private label collections.",
     "features": [
       "Cut & Sew Body with Solid Back",
       "Non PVC Print at Chest",
       "100% Cotton Construction",
-      "Weight: 180 - 200 GSM Jersey",
+      "Fabric Weight: 180 - 200 GSM Jersey",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/2.webp?updatedAt=1789465561227",
@@ -1306,10 +1331,11 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
@@ -1317,18 +1343,18 @@
     }
   },
   {
-    "id": "mens-regular-fit-t-shirt-1",
+    "id": "m-mens-regular-fit-t-shirt-27",
     "name": "Mens Regular Fit T Shirt",
     "category": "Men",
     "type": "T-Shirt",
     "fabric": "100% Polyester",
     "gsm": "160 - 180 GSM Tencil",
-    "description": "Export-grade mens regular fit t shirt crafted from 100% Polyester (160 - 180 GSM Tencil). Engineered for superior comfort, color fastness, and durability. Features Full Sublimation Print; V Neck with Contrast Tape. Ideal for international private label collections.",
+    "description": "Export-grade mens regular fit t shirt crafted from 100% Polyester (160 - 180 GSM Tencil). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Full Sublimation Print; V Neck with Contrast Tape. Ideal for international private label collections.",
     "features": [
       "Full Sublimation Print",
       "V Neck with Contrast Tape",
       "100% Polyester Construction",
-      "Weight: 160 - 180 GSM Tencil",
+      "Fabric Weight: 160 - 180 GSM Tencil",
       "Pre-shrunk, bio-washed export standard"
     ],
     "image": "https://ik.imagekit.io/lotusinternational/mens%20crewneck/1.webp?updatedAt=1789465561067",
@@ -1357,10 +1383,1861 @@
     "tags": [
       "Custom Manufacturing",
       "Export Quality",
-      "B2B Supply"
+      "B2B Supply",
+      "Men"
     ],
     "specs": {
-      "fit": "Tailored Regular Fit",
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-typography-womens-v-neck-t-shirt-1",
+    "name": "Typography Womens V Neck T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "63% Polyester 32% Cotton 5% Spandex",
+    "gsm": "190 - 200 GSM Jersey",
+    "description": "Export-grade typography womens v neck t shirt crafted from 63% Polyester 32% Cotton 5% Spandex (190 - 200 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Contrast Cuffs and Non PVC Print at Chest. Ideal for international private label collections.",
+    "features": [
+      "Contrast Cuffs and Non PVC Print at Chest",
+      "63% Polyester 32% Cotton 5% Spandex Construction",
+      "Fabric Weight: 190 - 200 GSM Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/19.webp?updatedAt=1789628600008",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/19.webp?updatedAt=1789628600008"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-club-fit-t-shirt-2",
+    "name": "Womens Club Fit T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "100% Polyester",
+    "gsm": "160 - 170 GSM Pique",
+    "description": "Export-grade womens club fit t shirt crafted from 100% Polyester (160 - 170 GSM Pique). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features DTF Print on Body Side & Sleeve; ¼ Zipper with Collar Closure. Ideal for international private label collections.",
+    "features": [
+      "DTF Print on Body Side & Sleeve",
+      "¼ Zipper with Collar Closure",
+      "100% Polyester Construction",
+      "Fabric Weight: 160 - 170 GSM Pique",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/2.webp?updatedAt=1789628600154",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/2.webp?updatedAt=1789628600154"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Athletic Club Fit",
+      "weave": "Pique Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-dry-fit-t-shirt-3",
+    "name": "Womens Dry Fit T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "95% Polyester 5% Spandex",
+    "gsm": "200 - 210 GSM Pique",
+    "description": "Export-grade womens dry fit t shirt crafted from 95% Polyester 5% Spandex (200 - 210 GSM Pique). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Cut & Sewn on Sides; DTF Logo on Chest. Ideal for international private label collections.",
+    "features": [
+      "Cut & Sewn on Sides",
+      "DTF Logo on Chest",
+      "95% Polyester 5% Spandex Construction",
+      "Fabric Weight: 200 - 210 GSM Pique",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/3.webp?updatedAt=1789628600288",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/3.webp?updatedAt=1789628600288"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Pique Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-regular-polo-t-shirt-4",
+    "name": "Womens Regular Polo T Shirt",
+    "category": "Women",
+    "type": "Polo Shirt",
+    "fabric": "100% Polyester Uniqlo Knit",
+    "gsm": "200 - 210 GSM Pique",
+    "description": "Export-grade womens regular polo t shirt crafted from 100% Polyester Uniqlo Knit (200 - 210 GSM Pique). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Contrast Cuffs and V Neck Collar. Ideal for international private label collections.",
+    "features": [
+      "Contrast Cuffs and V Neck Collar",
+      "100% Polyester Uniqlo Knit Construction",
+      "Fabric Weight: 200 - 210 GSM Pique",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/4.webp?updatedAt=1789628600213",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/4.webp?updatedAt=1789628600213"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Pique Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-stride-polo-t-shirt-5",
+    "name": "Womens Stride Polo T Shirt",
+    "category": "Women",
+    "type": "Polo Shirt",
+    "fabric": "100% Polyester",
+    "gsm": "210 - 220 GSM Pique",
+    "description": "Export-grade womens stride polo t shirt crafted from 100% Polyester (210 - 220 GSM Pique). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Polo with 1/4th Zipper and Flap Pocket; DTF Print Logo at Sleeves. Ideal for international private label collections.",
+    "features": [
+      "Polo with 1/4th Zipper and Flap Pocket",
+      "DTF Print Logo at Sleeves",
+      "100% Polyester Construction",
+      "Fabric Weight: 210 - 220 GSM Pique",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/5.webp?updatedAt=1789628600039",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/5.webp?updatedAt=1789628600039"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Ergonomic Stride Fit",
+      "weave": "Pique Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-slim-fit-sports-tee-6",
+    "name": "Womens Slim Fit Sports Tee",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "65% Poly 35% Cotton Jersey",
+    "gsm": "210 - 230 GSM",
+    "description": "Export-grade womens slim fit sports tee crafted from 65% Poly 35% Cotton Jersey (210 - 230 GSM). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Contrast Cut & Sew Raglan Sleeve. Ideal for international private label collections.",
+    "features": [
+      "Contrast Cut & Sew Raglan Sleeve",
+      "65% Poly 35% Cotton Jersey Construction",
+      "Fabric Weight: 210 - 230 GSM",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/6.webp?updatedAt=1789628600201",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/6.webp?updatedAt=1789628600201"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Slim Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-dry-fit-t-shirt-7",
+    "name": "Womens Dry Fit T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "100% Polyester",
+    "gsm": "160 - 170 GSM Pique",
+    "description": "Export-grade womens dry fit t shirt crafted from 100% Polyester (160 - 170 GSM Pique). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Sublimation Print on Body; Contrast Plain Sleeves; Printed Logo on Right Shoulder. Ideal for international private label collections.",
+    "features": [
+      "Sublimation Print on Body",
+      "Contrast Plain Sleeves",
+      "Printed Logo on Right Shoulder",
+      "100% Polyester Construction",
+      "Fabric Weight: 160 - 170 GSM Pique",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/7.webp?updatedAt=1789628600192",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/7.webp?updatedAt=1789628600192"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Pique Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-sports-fit-t-shirt-8",
+    "name": "Womens Sports Fit T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "100% Spun Polyester",
+    "gsm": "190 - 200 GSM Jersey",
+    "description": "Export-grade womens sports fit t shirt crafted from 100% Spun Polyester (190 - 200 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Contrast Piping on Shoulders; Embroidery Logo at Chest. Ideal for international private label collections.",
+    "features": [
+      "Contrast Piping on Shoulders",
+      "Embroidery Logo at Chest",
+      "100% Spun Polyester Construction",
+      "Fabric Weight: 190 - 200 GSM Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/8.webp?updatedAt=1789628600061",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/8.webp?updatedAt=1789628600061"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-pull-over-t-shirt-9",
+    "name": "Womens Pull Over T Shirt",
+    "category": "Women",
+    "type": "Pull Over",
+    "fabric": "92% Polyester 8% Spandex",
+    "gsm": "200 - 210 GSM Jersey",
+    "description": "Export-grade womens pull over t shirt crafted from 92% Polyester 8% Spandex (200 - 210 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Mock Neck with ¼ Zipper; Long Sleeve with Logo Embroidery at C. Ideal for international private label collections.",
+    "features": [
+      "Mock Neck with ¼ Zipper",
+      "Long Sleeve with Logo Embroidery at C",
+      "92% Polyester 8% Spandex Construction",
+      "Fabric Weight: 200 - 210 GSM Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/9.webp?updatedAt=1789628600134",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/9.webp?updatedAt=1789628600134"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-solid-court-dress-10",
+    "name": "Womens Solid Court Dress",
+    "category": "Women",
+    "type": "Sport Dress",
+    "fabric": "100% Spun Poly Honey Comb",
+    "gsm": "210 - 220 GSM",
+    "description": "Export-grade womens solid court dress crafted from 100% Spun Poly Honey Comb (210 - 220 GSM). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Sleeveless Long Top; Logo Embroidery at Chest. Ideal for international private label collections.",
+    "features": [
+      "Sleeveless Long Top",
+      "Logo Embroidery at Chest",
+      "100% Spun Poly Honey Comb Construction",
+      "Fabric Weight: 210 - 220 GSM",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/10.webp?updatedAt=1789628600048",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/10.webp?updatedAt=1789628600048"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-regular-fit-t-shirt-11",
+    "name": "Womens Regular Fit T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "100% Polyester Tencil",
+    "gsm": "180 - 200 GSM",
+    "description": "Export-grade womens regular fit t shirt crafted from 100% Polyester Tencil (180 - 200 GSM). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features DTF Print Logo at Chest; Forward Slope Sleeves. Ideal for international private label collections.",
+    "features": [
+      "DTF Print Logo at Chest",
+      "Forward Slope Sleeves",
+      "100% Polyester Tencil Construction",
+      "Fabric Weight: 180 - 200 GSM",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/11.webp?updatedAt=1789628599704",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/11.webp?updatedAt=1789628599704"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-oversized-t-shirt-12",
+    "name": "Womens Oversized T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "100% Cotton",
+    "gsm": "200 - 210 GSM Jersey",
+    "description": "Export-grade womens oversized t shirt crafted from 100% Cotton (200 - 210 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Round Neck and Long Slit on Sides; DTF Print at Chest. Ideal for international private label collections.",
+    "features": [
+      "Round Neck and Long Slit on Sides",
+      "DTF Print at Chest",
+      "100% Cotton Construction",
+      "Fabric Weight: 200 - 210 GSM Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/12.webp?updatedAt=1789628600349",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/12.webp?updatedAt=1789628600349"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Oversized Relaxed Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-regular-v-neck-t-shirt-13",
+    "name": "Womens Regular V Neck T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "93% Polyester 8% Spandex",
+    "gsm": "190 - 200 GSM Pique",
+    "description": "Export-grade womens regular v neck t shirt crafted from 93% Polyester 8% Spandex (190 - 200 GSM Pique). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Contrast Cuffs and DTF Print at Chest. Ideal for international private label collections.",
+    "features": [
+      "Contrast Cuffs and DTF Print at Chest",
+      "93% Polyester 8% Spandex Construction",
+      "Fabric Weight: 190 - 200 GSM Pique",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/13.webp?updatedAt=1789628599826",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/13.webp?updatedAt=1789628599826"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Pique Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-active-t-shirt-14",
+    "name": "Womens Active T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "100% Polyester Mesh",
+    "gsm": "170 - 180 GSM Jersey",
+    "description": "Export-grade womens active t shirt crafted from 100% Polyester Mesh (170 - 180 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Contrast Striped Forward Shoulder Tapes. Ideal for international private label collections.",
+    "features": [
+      "Contrast Striped Forward Shoulder Tapes",
+      "100% Polyester Mesh Construction",
+      "Fabric Weight: 170 - 180 GSM Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/14.webp?updatedAt=1789628600135",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/14.webp?updatedAt=1789628600135"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-stride-polo-t-shirt-15",
+    "name": "Womens Stride Polo T Shirt",
+    "category": "Women",
+    "type": "Polo Shirt",
+    "fabric": "100% Polyester",
+    "gsm": "210 - 220 GSM Pique",
+    "description": "Export-grade womens stride polo t shirt crafted from 100% Polyester (210 - 220 GSM Pique). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Polo Self Collar with 1/4th Zipper; DTF Print Logo at Chest. Ideal for international private label collections.",
+    "features": [
+      "Polo Self Collar with 1/4th Zipper",
+      "DTF Print Logo at Chest",
+      "100% Polyester Construction",
+      "Fabric Weight: 210 - 220 GSM Pique",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/15.webp?updatedAt=1789628600139",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/15.webp?updatedAt=1789628600139"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Ergonomic Stride Fit",
+      "weave": "Pique Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-training-fit-vest-16",
+    "name": "Womens Training Fit Vest",
+    "category": "Women",
+    "type": "Active Vest",
+    "fabric": "100% Polyester Ferrari Knit",
+    "gsm": "210 - 230 GSM Jersey",
+    "description": "Export-grade womens training fit vest crafted from 100% Polyester Ferrari Knit (210 - 230 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features DTF Print at Chest. Ideal for international private label collections.",
+    "features": [
+      "DTF Print at Chest",
+      "100% Polyester Ferrari Knit Construction",
+      "Fabric Weight: 210 - 230 GSM Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/16.webp?updatedAt=1789628600274",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/16.webp?updatedAt=1789628600274"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-compression-half-top-17",
+    "name": "Womens Compression Half Top",
+    "category": "Women",
+    "type": "Active Top",
+    "fabric": "90% Polyester 10% Spandex",
+    "gsm": "200 - 210 GSM Tencil",
+    "description": "Export-grade womens compression half top crafted from 90% Polyester 10% Spandex (200 - 210 GSM Tencil). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Raglan Sleeve with Shoulder Contrast Tapes; Embroidery Logo at Chest. Ideal for international private label collections.",
+    "features": [
+      "Raglan Sleeve with Shoulder Contrast Tapes",
+      "Embroidery Logo at Chest",
+      "90% Polyester 10% Spandex Construction",
+      "Fabric Weight: 200 - 210 GSM Tencil",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/17.webp?updatedAt=1789628600120",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/17.webp?updatedAt=1789628600120"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Compression Athletic Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-solid-crew-t-shirt-18",
+    "name": "Womens Solid Crew T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "100% Cotton Honey Comb",
+    "gsm": "220 - 240 GSM",
+    "description": "Export-grade womens solid crew t shirt crafted from 100% Cotton Honey Comb (220 - 240 GSM). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Sleeve with Contrast Stripe. Ideal for international private label collections.",
+    "features": [
+      "Sleeve with Contrast Stripe",
+      "100% Cotton Honey Comb Construction",
+      "Fabric Weight: 220 - 240 GSM",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/18.webp?updatedAt=1789628600268",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/18.webp?updatedAt=1789628600268"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-boxy-fit-t-shirt-19",
+    "name": "Womens Boxy Fit T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "100% Cotton Jersey",
+    "gsm": "200 - 220 GSM",
+    "description": "Export-grade womens boxy fit t shirt crafted from 100% Cotton Jersey (200 - 220 GSM). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Contrast Raglan Sleeve; HD Print on Chest. Ideal for international private label collections.",
+    "features": [
+      "Contrast Raglan Sleeve",
+      "HD Print on Chest",
+      "100% Cotton Jersey Construction",
+      "Fabric Weight: 200 - 220 GSM",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/19.webp?updatedAt=1789628600008",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/19.webp?updatedAt=1789628600008"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Boxy Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-sports-tight-fit-vest-20",
+    "name": "Sports Tight Fit Vest",
+    "category": "Women",
+    "type": "Active Vest",
+    "fabric": "100% Polyester Tencil",
+    "gsm": "170 - 180 GSM",
+    "description": "Export-grade sports tight fit vest crafted from 100% Polyester Tencil (170 - 180 GSM). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features DTF Print on Chest. Ideal for international private label collections.",
+    "features": [
+      "DTF Print on Chest",
+      "100% Polyester Tencil Construction",
+      "Fabric Weight: 170 - 180 GSM",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/20.webp?updatedAt=1789628600249",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/20.webp?updatedAt=1789628600249"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Compression Athletic Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-tight-fit-pull-over-top-21",
+    "name": "Womens Tight Fit Pull Over Top",
+    "category": "Women",
+    "type": "Active Top",
+    "fabric": "95% Cotton 5% Spandex",
+    "gsm": "220 - 240 GSM Durby Rib",
+    "description": "Export-grade womens tight fit pull over top crafted from 95% Cotton 5% Spandex (220 - 240 GSM Durby Rib). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Mock Neck with Half Zipper. Ideal for international private label collections.",
+    "features": [
+      "Mock Neck with Half Zipper",
+      "95% Cotton 5% Spandex Construction",
+      "Fabric Weight: 220 - 240 GSM Durby Rib",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/21.webp?updatedAt=1789628600078",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/21.webp?updatedAt=1789628600078"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Compression Athletic Fit",
+      "weave": "Durby Rib Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-casual-fit-t-shirt-22",
+    "name": "Womens Casual Fit T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "100% Polyester",
+    "gsm": "210 - 220 GSM Pique",
+    "description": "Export-grade womens casual fit t shirt crafted from 100% Polyester (210 - 220 GSM Pique). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Contrast DTF Print Stripes on Sleeves; Embroidery Logo at Chest. Ideal for international private label collections.",
+    "features": [
+      "Contrast DTF Print Stripes on Sleeves",
+      "Embroidery Logo at Chest",
+      "100% Polyester Construction",
+      "Fabric Weight: 210 - 220 GSM Pique",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/22.webp?updatedAt=1789628600314",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/22.webp?updatedAt=1789628600314"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Pique Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-sleeveless-tee-23",
+    "name": "Womens Sleeveless Tee",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "100% Polyester",
+    "gsm": "160 - 170 GSM Interlock",
+    "description": "Export-grade womens sleeveless tee crafted from 100% Polyester (160 - 170 GSM Interlock). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Self Round Neck Collar and Sleeve Bindings. Ideal for international private label collections.",
+    "features": [
+      "Self Round Neck Collar and Sleeve Bindings",
+      "100% Polyester Construction",
+      "Fabric Weight: 160 - 170 GSM Interlock",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/23.webp?updatedAt=1789628600023",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/23.webp?updatedAt=1789628600023"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-golf-polo-t-shirt-24",
+    "name": "Womens Golf Polo T Shirt",
+    "category": "Women",
+    "type": "Polo Shirt",
+    "fabric": "50% Polyester 50% Cotton",
+    "gsm": "210 - 220 GSM Jersey",
+    "description": "Export-grade womens golf polo t shirt crafted from 50% Polyester 50% Cotton (210 - 220 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Polo Self Collar with Contrast Tipping and 1/4th Zipper. Ideal for international private label collections.",
+    "features": [
+      "Polo Self Collar with Contrast Tipping and 1/4th Zipper",
+      "50% Polyester 50% Cotton Construction",
+      "Fabric Weight: 210 - 220 GSM Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/24.webp?updatedAt=1789628600160",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/24.webp?updatedAt=1789628600160"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-sleeveless-top-25",
+    "name": "Womens Sleeveless Top",
+    "category": "Women",
+    "type": "Active Top",
+    "fabric": "63% Polyester 32% Cotton 5% Spandex",
+    "gsm": "210 - 230 GSM Tencil",
+    "description": "Export-grade womens sleeveless top crafted from 63% Polyester 32% Cotton 5% Spandex (210 - 230 GSM Tencil). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Mock Neck and Turn Up Hem and Arms. Ideal for international private label collections.",
+    "features": [
+      "Mock Neck and Turn Up Hem and Arms",
+      "63% Polyester 32% Cotton 5% Spandex Construction",
+      "Fabric Weight: 210 - 230 GSM Tencil",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/25.webp?updatedAt=1789628600109",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/25.webp?updatedAt=1789628600109"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-compress-fit-t-shirt-26",
+    "name": "Womens Compress Fit T Shirt",
+    "category": "Women",
+    "type": "T-Shirt",
+    "fabric": "85% Nylon 15% Spandex",
+    "gsm": "210 - 230 GSM Jersey",
+    "description": "Export-grade womens compress fit t shirt crafted from 85% Nylon 15% Spandex (210 - 230 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features 3/4th Sleeve with Embroidery Logo at Chest. Ideal for international private label collections.",
+    "features": [
+      "3/4th Sleeve with Embroidery Logo at Chest",
+      "85% Nylon 15% Spandex Construction",
+      "Fabric Weight: 210 - 230 GSM Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/26.webp?updatedAt=1789628600033",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/26.webp?updatedAt=1789628600033"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Compression Athletic Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-tank-top-27",
+    "name": "Womens Tank Top",
+    "category": "Women",
+    "type": "Tank Top",
+    "fabric": "95% Polyester 5% Spandex",
+    "gsm": "180 - 200 GSM Rice Knit",
+    "description": "Export-grade womens tank top crafted from 95% Polyester 5% Spandex (180 - 200 GSM Rice Knit). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Self Neck and Overlocked Hem and Arms. Ideal for international private label collections.",
+    "features": [
+      "Self Neck and Overlocked Hem and Arms",
+      "95% Polyester 5% Spandex Construction",
+      "Fabric Weight: 180 - 200 GSM Rice Knit",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/27.webp?updatedAt=1789628599964",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/27.webp?updatedAt=1789628599964"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-straight-leg-stripe-track-pant-28",
+    "name": "Straight Leg Stripe Track Pant",
+    "category": "Women",
+    "type": "Track Pants",
+    "fabric": "100% Polyester",
+    "gsm": "210 - 230 GSM Ferrari Knit",
+    "description": "Export-grade straight leg stripe track pant crafted from 100% Polyester (210 - 230 GSM Ferrari Knit). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Both Sides Pocket and Contrast Bindings. Ideal for international private label collections.",
+    "features": [
+      "Both Sides Pocket and Contrast Bindings",
+      "100% Polyester Construction",
+      "Fabric Weight: 210 - 230 GSM Ferrari Knit",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/28.webp?updatedAt=1789628600245",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/28.webp?updatedAt=1789628600245"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Straight Leg Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-cuffed-tracks-29",
+    "name": "Womens Cuffed Tracks",
+    "category": "Women",
+    "type": "Track Pants",
+    "fabric": "82% Polyester 18% Spandex",
+    "gsm": "180 - 200 GSM Uniqlo",
+    "description": "Export-grade womens cuffed tracks crafted from 82% Polyester 18% Spandex (180 - 200 GSM Uniqlo). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Contrast Cut Sewn Panels on Both Thighs to Toe. Ideal for international private label collections.",
+    "features": [
+      "Contrast Cut Sewn Panels on Both Thighs to Toe",
+      "82% Polyester 18% Spandex Construction",
+      "Fabric Weight: 180 - 200 GSM Uniqlo",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/29.webp?updatedAt=1789628600249",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/29.webp?updatedAt=1789628600249"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Cuffed Ankle Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-regular-fit-track-pant-30",
+    "name": "Womens Regular Fit Track Pant",
+    "category": "Women",
+    "type": "Track Pants",
+    "fabric": "95% Polyester 5% Spandex",
+    "gsm": "200 - 220 GSM Supreme Jersey",
+    "description": "Export-grade womens regular fit track pant crafted from 95% Polyester 5% Spandex (200 - 220 GSM Supreme Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Both Sides Pocket and Contrast Cut Panels. Ideal for international private label collections.",
+    "features": [
+      "Both Sides Pocket and Contrast Cut Panels",
+      "95% Polyester 5% Spandex Construction",
+      "Fabric Weight: 200 - 220 GSM Supreme Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/30.webp?updatedAt=1789628600243",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/30.webp?updatedAt=1789628600243"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-dry-fit-track-pant-31",
+    "name": "Womens Dry Fit Track Pant",
+    "category": "Women",
+    "type": "Track Pants",
+    "fabric": "100% Polyester",
+    "gsm": "210 - 230 GSM Jersey",
+    "description": "Export-grade womens dry fit track pant crafted from 100% Polyester (210 - 230 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Full Sublimation Print and Both Sides. Ideal for international private label collections.",
+    "features": [
+      "Full Sublimation Print and Both Sides",
+      "100% Polyester Construction",
+      "Fabric Weight: 210 - 230 GSM Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/31.webp?updatedAt=1789628600086",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/31.webp?updatedAt=1789628600086"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-straight-track-pant-32",
+    "name": "Womens Straight Track Pant",
+    "category": "Women",
+    "type": "Track Pants",
+    "fabric": "100% Cotton",
+    "gsm": "240 - 260 GSM French Terry",
+    "description": "Export-grade womens straight track pant crafted from 100% Cotton (240 - 260 GSM French Terry). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features DTF Print on Thigh and Contrast Stripe on Knee. Ideal for international private label collections.",
+    "features": [
+      "DTF Print on Thigh and Contrast Stripe on Knee",
+      "100% Cotton Construction",
+      "Fabric Weight: 240 - 260 GSM French Terry",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/32.webp?updatedAt=1789628600279",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/32.webp?updatedAt=1789628600279"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Straight Leg Fit",
+      "weave": "French Terry Loopback",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-chess-print-cuffed-tracks-33",
+    "name": "Womens Chess Print Cuffed Tracks",
+    "category": "Women",
+    "type": "Track Pants",
+    "fabric": "95% Polyester 5% Spandex",
+    "gsm": "180 - 200 GSM Jersey",
+    "description": "Export-grade womens chess print cuffed tracks crafted from 95% Polyester 5% Spandex (180 - 200 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Printed Pattern Cut and Sewn on Side Seams on Both End. Ideal for international private label collections.",
+    "features": [
+      "Printed Pattern Cut and Sewn on Side Seams on Both End",
+      "95% Polyester 5% Spandex Construction",
+      "Fabric Weight: 180 - 200 GSM Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/33.webp?updatedAt=1789628600230",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/33.webp?updatedAt=1789628600230"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Cuffed Ankle Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-baggy-track-pants-34",
+    "name": "Womens Baggy Track Pants",
+    "category": "Women",
+    "type": "Track Pants",
+    "fabric": "65% Cotton 30% Poly 5% Spandex",
+    "gsm": "240 - 260 GSM Brushed Fleece",
+    "description": "Export-grade womens baggy track pants crafted from 65% Cotton 30% Poly 5% Spandex (240 - 260 GSM Brushed Fleece). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Tight Elasticated Cuffs. Ideal for international private label collections.",
+    "features": [
+      "Tight Elasticated Cuffs",
+      "65% Cotton 30% Poly 5% Spandex Construction",
+      "Fabric Weight: 240 - 260 GSM Brushed Fleece",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/36.webp",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/36.webp"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Oversized Relaxed Fit",
+      "weave": "Brushed Fleece",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-army-track-pants-35",
+    "name": "Womens Army Track Pants",
+    "category": "Women",
+    "type": "Track Pants",
+    "fabric": "95% Cotton 5% Spandex",
+    "gsm": "200 - 220 GSM Jersey",
+    "description": "Export-grade womens army track pants crafted from 95% Cotton 5% Spandex (200 - 220 GSM Jersey). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Multicolour All Over Print. Ideal for international private label collections.",
+    "features": [
+      "Multicolour All Over Print",
+      "95% Cotton 5% Spandex Construction",
+      "Fabric Weight: 200 - 220 GSM Jersey",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/35.webp",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/35.webp"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
+      "weave": "Single Jersey Knit",
+      "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
+      "shrinkage": "< 3% ISO standard",
+      "leadTime": "30-45 Days Bulk Delivery"
+    }
+  },
+  {
+    "id": "w-womens-free-size-tracks-36",
+    "name": "Womens Free Size Tracks",
+    "category": "Women",
+    "type": "Track Pants",
+    "fabric": "82% Polyester 18% Spandex",
+    "gsm": "180 - 200 GSM Uniqlo",
+    "description": "Export-grade womens free size tracks crafted from 82% Polyester 18% Spandex (180 - 200 GSM Uniqlo). Engineered with high-durability performance yarn, flexible seams, and long-lasting color fastness. Features Elasticated Waist with Drawcord and Pockets on Sides. Ideal for international private label collections.",
+    "features": [
+      "Elasticated Waist with Drawcord and Pockets on Sides",
+      "82% Polyester 18% Spandex Construction",
+      "Fabric Weight: 180 - 200 GSM Uniqlo",
+      "Pre-shrunk, bio-washed export standard"
+    ],
+    "image": "https://ik.imagekit.io/lotusinternational/sports%20women/34.webp",
+    "images": [
+      "https://ik.imagekit.io/lotusinternational/sports%20women/34.webp"
+    ],
+    "colors": [
+      {
+        "name": "Black Charcoal",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1B2A4A"
+      },
+      {
+        "name": "Pure White",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Heather Grey",
+        "hex": "#A8A8A8"
+      }
+    ],
+    "moq": 1000,
+    "tags": [
+      "Custom Manufacturing",
+      "Export Quality",
+      "B2B Supply",
+      "Women"
+    ],
+    "specs": {
+      "fit": "Regular Fit",
       "weave": "Single Jersey Knit",
       "dyeing": "Reactive Low-Impact Dye / OEKO-TEX Standard",
       "shrinkage": "< 3% ISO standard",
