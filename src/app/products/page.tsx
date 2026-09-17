@@ -3,21 +3,43 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { PRODUCTS, Product } from "@/data/db";
+import { getAllProducts } from "@/lib/productService";
 import ProductCard from "@/components/ProductCard";
 import ScrollReveal from "@/components/ScrollReveal";
 import { SlidersHorizontal, RefreshCw } from "lucide-react";
 
 const CATEGORIES = ["All", "Men", "Women", "Kids", "Nature Polo Club"];
-const FABRICS = ["All", "Organic Cotton", "Combed Cotton Pique", "French Terry", "Bamboo Blend"];
+const FABRICS = [
+  "All",
+  "Cotton Jersey",
+  "Organic Cotton",
+  "Combed Cotton Pique",
+  "French Terry",
+  "Polyester",
+  "Spandex Blend",
+  "Bamboo Blend",
+];
 
 function ProductsCatalogue() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get("category") || "All";
 
+  const [allProducts, setAllProducts] = useState<Product[]>(PRODUCTS);
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedFabric, setSelectedFabric] = useState("All");
   const [sortBy, setSortBy] = useState("default");
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(PRODUCTS);
+
+  // Load from database / sync
+  useEffect(() => {
+    getAllProducts()
+      .then((data) => {
+        if (data && data.length > 0) {
+          setAllProducts(data);
+        }
+      })
+      .catch((e) => console.warn("Failed to load products from service:", e));
+  }, []);
 
   // Sync with search query when loaded
   useEffect(() => {
@@ -29,7 +51,7 @@ function ProductsCatalogue() {
 
   // Apply filters
   useEffect(() => {
-    let result = [...PRODUCTS];
+    let result = [...allProducts];
 
     // Filter by Category
     if (selectedCategory !== "All") {
@@ -51,7 +73,7 @@ function ProductsCatalogue() {
     }
 
     setFilteredProducts(result);
-  }, [selectedCategory, selectedFabric, sortBy]);
+  }, [allProducts, selectedCategory, selectedFabric, sortBy]);
 
   const resetFilters = () => {
     setSelectedCategory("All");

@@ -7,7 +7,7 @@ import { useAuth } from "@/components/AuthContext";
 import { ShieldCheck, Lock, Mail, ArrowRight, AlertCircle, Sparkles } from "lucide-react";
 
 export default function AdminLoginPage() {
-  const { user, loading, signInWithEmail, signInWithGoogle } = useAuth();
+  const { user, loading, signInWithEmail, signInWithGoogle, signInAsDemo } = useAuth();
   const router = useRouter();
 
   const [email, setEmail] = useState("");
@@ -17,7 +17,7 @@ export default function AdminLoginPage() {
 
   useEffect(() => {
     if (!loading && user) {
-      router.push("/admin/blog");
+      router.push("/admin");
     }
   }, [user, loading, router]);
 
@@ -28,7 +28,7 @@ export default function AdminLoginPage() {
 
     try {
       await signInWithEmail(email, password);
-      router.push("/admin/blog");
+      router.push("/admin");
     } catch (err: any) {
       console.error("Login error:", err);
       if (err.code === "auth/invalid-credential" || err.code === "auth/wrong-password" || err.code === "auth/user-not-found") {
@@ -48,7 +48,7 @@ export default function AdminLoginPage() {
     setIsSubmitting(true);
     try {
       await signInWithGoogle();
-      router.push("/admin/blog");
+      router.push("/admin");
     } catch (err: any) {
       console.error("Google login error:", err);
       setErrorMsg(err.message || "Google sign-in failed.");
@@ -172,6 +172,19 @@ export default function AdminLoginPage() {
               />
             </svg>
             <span>Google Workspace Login</span>
+          </button>
+
+          {/* Quick Demo Access Button */}
+          <button
+            onClick={() => {
+              signInAsDemo("lotusmd", "lotusmd@lotusint.in");
+              router.push("/admin");
+            }}
+            type="button"
+            className="w-full mt-3 flex items-center justify-center space-x-2 py-2.5 border border-amber-600/30 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 text-xs font-semibold transition cursor-pointer shadow-2xs"
+          >
+            <Sparkles className="w-4 h-4 text-amber-600" />
+            <span>Instant Demo Admin Access (lotusmd@lotusint.in)</span>
           </button>
 
           {/* Quick Access Helper for Local Dev / Setup */}

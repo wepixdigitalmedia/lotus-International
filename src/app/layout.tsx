@@ -5,10 +5,7 @@ import "./globals.css";
 import { AuthProvider } from "@/components/AuthContext";
 import LenisProvider from "@/components/LenisProvider";
 import { InquiryProvider } from "@/components/InquiryProvider";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import CustomCursor from "@/components/CustomCursor";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import AppShell from "@/components/AppShell";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -48,13 +45,7 @@ export default function RootLayout({
         <AuthProvider>
           <InquiryProvider>
             <LenisProvider>
-              <CustomCursor />
-              <Navbar />
-              <main className="flex-grow pt-14 md:pt-16">
-                {children}
-              </main>
-              <Footer />
-              <FloatingWhatsApp />
+              <AppShell>{children}</AppShell>
             </LenisProvider>
           </InquiryProvider>
         </AuthProvider>

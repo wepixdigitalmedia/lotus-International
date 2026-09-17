@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/AuthContext";
-import AdminHeader from "@/components/admin/AdminHeader";
 import { BlogPost, BLOG_CATEGORIES } from "@/types/blog";
 import {
   getAllBlogsForAdmin,
@@ -120,10 +119,7 @@ export default function AdminBlogDashboard() {
   const draftCount = blogs.filter((b) => !b.published).length;
 
   return (
-    <div className="min-h-screen bg-brand-bg/50">
-      <AdminHeader />
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <div className="space-y-8">
         {/* Banner with Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="md:col-span-2 bg-brand-ink text-white p-6 rounded-2xl shadow-md flex flex-col justify-between">
@@ -356,7 +352,6 @@ export default function AdminBlogDashboard() {
             </div>
           )}
         </div>
-      </main>
 
       {/* Delete Confirmation Modal */}
       {deleteModalOpen && (
