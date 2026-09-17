@@ -3,7 +3,7 @@
 import React, { use, useState } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { PRODUCTS } from "@/data/db";
+import { PRODUCTS, Product } from "@/data/db";
 import { useInquiry } from "@/components/InquiryProvider";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
@@ -29,21 +29,28 @@ interface ProductDetailPageProps {
 
 export default function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { id } = use(params);
-  const product = PRODUCTS.find((p) => p.id === id);
+  const [product, setProduct] = useState<Product | null>(
+    PRODUCTS.find((p) => p.id === id) || null
+  );
   const { addToInquiry, isInInquiry, removeFromInquiry } = useInquiry();
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"specs" | "compliance" | "shipping">("specs");
 
+  const added = product ? isInInquiry(product.id) : false;
+
+  const rawImages: string[] =
+    product?.images && product.images.length > 0
+      ? product.images.filter((img): img is string => Boolean(img))
+      : product?.image
+      ? [product.image]
+      : [];
+  const imagesList: string[] = Array.from(new Set(rawImages));
+
   if (!product) {
     notFound();
   }
-
-  const added = isInInquiry(product.id);
-  const imagesList = product.images && product.images.length >= 3 
-    ? product.images 
-    : [product.image, product.image, product.image];
 
   const handleInquiryToggle = () => {
     if (added) {
@@ -71,14 +78,14 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
         >
           <button
             onClick={() => setIsLightboxOpen(false)}
-            className="absolute top-6 right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+            className="absolute top-6 right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer"
           >
             <X className="w-6 h-6" />
           </button>
-          <div className="relative max-w-4xl max-h-[88vh] aspect-[3/4] overflow-hidden rounded-2xl">
+          <div className="relative max-w-3xl max-h-[85vh] aspect-square overflow-hidden rounded-2xl bg-white/5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={imagesList[activeImageIndex]}
+              src={imagesList[activeImageIndex] || product.image}
               alt={product.name}
               className="w-full h-full object-contain"
             />
@@ -114,11 +121,11 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
           {/* LEFT COLUMN: Preview & Thumbnails (Cols 1 to 7) */}
           <div className="lg:col-span-7 space-y-4">
             
-            {/* Main Full Viewport Preview Image (Aspect 3:4) */}
-            <ScrollReveal className="relative w-full aspect-[3/4] rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-brand-light-grey/80 shadow-md group">
+            {/* Main Full Viewport Preview Image (Aspect 1:1 Square) */}
+            <ScrollReveal className="relative w-full aspect-square rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-brand-light-grey/80 shadow-md group">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={imagesList[activeImageIndex]}
+                src={imagesList[activeImageIndex] || product.image}
                 alt={product.name}
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
@@ -137,37 +144,39 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
               {/* Fullscreen Viewport Zoom Button */}
               <button
                 onClick={() => setIsLightboxOpen(true)}
-                className="absolute bottom-4 right-4 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-brand-ink shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="absolute bottom-4 right-4 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-brand-ink shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer"
                 title="Expand Full Viewport"
               >
                 <Maximize2 className="w-4 h-4" />
               </button>
             </ScrollReveal>
 
-            {/* Thumbnail Navigation Strip (Min 3 Images) */}
-            <ScrollReveal delay={0.1} className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-none">
-              {imagesList.map((imgUrl, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveImageIndex(index)}
-                  className={`relative flex-shrink-0 w-20 sm:w-24 aspect-[3/4] rounded-xl overflow-hidden border-2 transition-all duration-300 bg-white ${
-                    activeImageIndex === index
-                      ? "border-brand-accent ring-2 ring-brand-accent/30 shadow-md scale-102"
-                      : "border-brand-light-grey/80 opacity-70 hover:opacity-100 hover:border-brand-accent/50"
-                  }`}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={imgUrl}
-                    alt={`${product.name} angle ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                  {activeImageIndex === index && (
-                    <div className="absolute inset-0 bg-brand-accent/10 border-2 border-brand-accent rounded-xl pointer-events-none" />
-                  )}
-                </button>
-              ))}
-            </ScrollReveal>
+            {/* Thumbnail Navigation Strip (Rendered only when >1 unique images exist) */}
+            {imagesList.length > 1 && (
+              <ScrollReveal delay={0.1} className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-none">
+                {imagesList.map((imgUrl, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveImageIndex(index)}
+                    className={`relative flex-shrink-0 w-16 sm:w-20 aspect-square rounded-xl overflow-hidden border-2 transition-all duration-300 bg-white cursor-pointer ${
+                      activeImageIndex === index
+                        ? "border-brand-accent ring-2 ring-brand-accent/30 shadow-md scale-102"
+                        : "border-brand-light-grey/80 opacity-70 hover:opacity-100 hover:border-brand-accent/50"
+                    }`}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={imgUrl}
+                      alt={`${product.name} angle ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                    {activeImageIndex === index && (
+                      <div className="absolute inset-0 bg-brand-accent/10 border-2 border-brand-accent rounded-xl pointer-events-none" />
+                    )}
+                  </button>
+                ))}
+              </ScrollReveal>
+            )}
           </div>
 
           {/* RIGHT COLUMN: Sticky Product Details (Cols 8 to 12) */}
@@ -224,7 +233,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
               </p>
 
               <div className="pt-2 space-y-2">
-                {product.features.map((feat, idx) => (
+                {(product.features || []).map((feat: string, idx: number) => (
                   <div key={idx} className="flex items-start gap-2.5 text-xs text-brand-ink font-medium">
                     <span className="w-5 h-5 rounded-full bg-brand-sage/15 text-brand-sage flex items-center justify-center shrink-0 mt-0.5">
                       <Check className="w-3 h-3" />

@@ -15,19 +15,23 @@ export default function ProductCard({ product }: ProductCardProps) {
   const added = isInInquiry(product.id);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
-  const imagesList = product.images && product.images.length >= 3 
-    ? product.images 
-    : [product.image, product.image, product.image];
+  const rawImages =
+    product.images && product.images.length > 0
+      ? product.images.filter(Boolean)
+      : [product.image].filter(Boolean);
+  const imagesList = Array.from(new Set(rawImages));
 
   const handlePrevImage = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    if (imagesList.length <= 1) return;
     setActiveImageIndex((prev) => (prev === 0 ? imagesList.length - 1 : prev - 1));
   };
 
   const handleNextImage = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    if (imagesList.length <= 1) return;
     setActiveImageIndex((prev) => (prev === imagesList.length - 1 ? 0 : prev + 1));
   };
 
@@ -51,8 +55,8 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="group relative bg-white border border-brand-light-grey/80 rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-500 flex flex-col h-full hover:-translate-y-1">
       
-      {/* 3:4 Aspect Ratio Carousel Viewport */}
-      <div className="relative w-full aspect-[3/4] overflow-hidden bg-brand-light-grey/30 group/img">
+      {/* 1:1 Aspect Ratio Carousel / Viewport */}
+      <div className="relative w-full aspect-square overflow-hidden bg-brand-light-grey/30 group/img">
         <Link 
           href={`/products/${product.id}`} 
           className="block w-full h-full"
@@ -69,9 +73,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/70 via-transparent to-black/10 opacity-50 group-hover/img:opacity-75 transition-opacity duration-300 pointer-events-none" />
         </Link>
 
-
-
-        {/* Carousel Navigation Arrows (Hover reveal) */}
+        {/* Carousel Navigation Arrows (Hover reveal - only when multi-image) */}
         {imagesList.length > 1 && (
           <>
             <button
@@ -92,7 +94,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </>
         )}
 
-        {/* Carousel Pagination Dots */}
+        {/* Carousel Pagination Dots (only when multi-image) */}
         {imagesList.length > 1 && (
           <div className="absolute bottom-3 inset-x-0 flex justify-center items-center gap-1.5 z-10 pointer-events-none">
             {imagesList.map((_, idx) => (
