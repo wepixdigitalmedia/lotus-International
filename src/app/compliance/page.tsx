@@ -6,7 +6,6 @@ import { Award, FileText, CheckCircle2, ShieldCheck, ArrowRight, Sparkles, Leaf,
 
 const CERT_ICONS: Record<string, React.ReactNode> = {
   "cert-sedex": <ShieldCheck className="w-5 h-5 text-brand-accent group-hover:text-white transition-colors duration-300" />,
-  "cert-oekotex": <Sparkles className="w-5 h-5 text-brand-accent group-hover:text-white transition-colors duration-300" />,
   "cert-gots": <Leaf className="w-5 h-5 text-brand-accent group-hover:text-white transition-colors duration-300" />,
   "cert-iso": <FileCheck2 className="w-5 h-5 text-brand-accent group-hover:text-white transition-colors duration-300" />,
 };
@@ -95,12 +94,12 @@ export default function CompliancePage() {
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
             {CERTIFICATES.map((cert, idx) => (
               <ScrollReveal
                 key={cert.id}
                 delay={idx * 0.08}
-                className="bg-white border border-brand-light-grey/90 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-md hover:border-brand-accent/50 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                className="bg-white border border-brand-light-grey/90 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-md hover:border-brand-accent/50 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden h-full"
               >
                 {/* Accent top highlight line */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-accent/80 via-brand-accent to-brand-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -305,7 +304,7 @@ export default function CompliancePage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-brand-accent" />
-                    <span>REACH and Oeko-Tex chemical restrictions</span>
+                    <span>REACH and GOTS chemical safety restrictions</span>
                   </div>
                 </div>
               </div>
@@ -338,7 +337,7 @@ export default function CompliancePage() {
               Need Audited & Compliant Garment Manufacturing?
             </h3>
             <p className="text-xs sm:text-sm text-brand-bg/85 leading-relaxed mb-8 font-medium">
-              We provide full Sedex SMETA audit access, GOTS transaction certificates, and OEKO-TEX documentation for your brand&apos;s compliance team.
+              We provide full Sedex SMETA audit access, GOTS transaction certificates, and ISO 9001:2015 documentation for your brand&apos;s compliance team.
             </p>
             <Link
               href="/contact"

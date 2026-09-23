@@ -264,9 +264,6 @@ export default function Footer() {
               Sedex 4-Pillar
             </span>
             <span className="text-[10px] font-bold tracking-widest uppercase border border-white/10 px-3 py-1 rounded-lg bg-white/5 text-brand-bg/85">
-              OEKO-TEX Standard 100
-            </span>
-            <span className="text-[10px] font-bold tracking-widest uppercase border border-white/10 px-3 py-1 rounded-lg bg-white/5 text-brand-bg/85">
               GOTS Certified
             </span>
             <span className="text-[10px] font-bold tracking-widest uppercase border border-white/10 px-3 py-1 rounded-lg bg-white/5 text-brand-bg/85">

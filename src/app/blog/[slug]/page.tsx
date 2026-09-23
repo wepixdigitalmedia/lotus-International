@@ -312,7 +312,7 @@ export default async function BlogPostPage({ params }: Props) {
               Have a Knitwear Manufacturing Project?
             </h3>
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl">
-              From organic cotton single jersey to custom-dyed heavyweight fleece hoodies, our team delivers complete OEM/ODM manufacturing with Sedex and OEKO-TEX compliance.
+              From organic cotton single jersey to custom-dyed heavyweight fleece hoodies, our team delivers complete OEM/ODM manufacturing with Sedex and GOTS compliance.
             </p>
             <div className="pt-2 flex flex-wrap gap-3">
               <Link

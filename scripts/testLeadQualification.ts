@@ -30,7 +30,7 @@ const TEST_SUITE: TestCase[] = [
       quantity: "5000",
       timeline: "1-3 months",
       businessType: "Brand",
-      message: "Looking for OEKO-TEX certified 220 GSM pique polos for SS26 retail collection in Europe.",
+      message: "Looking for GOTS organic certified 220 GSM pique polos for SS26 retail collection in Europe.",
       techPackAttached: true,
     },
     expectedTier: "GREEN",

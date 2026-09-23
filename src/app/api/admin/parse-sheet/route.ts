@@ -220,7 +220,7 @@ function parseCSVToProducts(
           : lowerGsm.includes("mesh")
           ? "Active Mesh Knit"
           : "Single Jersey Knit",
-        dyeing: "Reactive Low-Impact Dye / OEKO-TEX Standard",
+        dyeing: "Reactive Low-Impact Dye / Export Standard",
         shrinkage: "< 3% ISO standard",
         leadTime: "30-45 Days Bulk Delivery",
       },

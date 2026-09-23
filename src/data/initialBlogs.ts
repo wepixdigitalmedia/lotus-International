@@ -22,7 +22,7 @@ export const INITIAL_BLOGS: BlogPost[] = [
     updatedAt: 1714500000000,
     publishedAt: 1714500000000,
     seoTitle: "Sustainable Knitwear Manufacturing Guide Tirupur | Lotus International",
-    seoDescription: "Explore sustainable knitwear manufacturing in Tirupur. Learn about organic cotton sourcing, GOTS & OEKO-TEX compliance, and low-carbon export garment production.",
+    seoDescription: "Explore sustainable knitwear manufacturing in Tirupur. Learn about organic cotton sourcing, GOTS & Sedex compliance, and low-carbon export garment production.",
     focusKeywords: ["sustainable knitwear manufacturing", "Tirupur garment manufacturer", "organic cotton knitwear", "private label apparel exporter"],
     content: `
 # The Ultimate Guide to Sustainable Knitwear Manufacturing in Tirupur
@@ -71,7 +71,7 @@ Modern knitwear plants are powered significantly by renewable energy. At Lotus I
 
 When sourcing private label knitwear from India, global retailers look for:
 
-- **Strict Audit Compliance**: Sedex SMETA 4-Pillar, OEKO-TEX Standard 100, and WRAP compliant facilities.
+- **Strict Audit Compliance**: Sedex SMETA 4-Pillar, GOTS Organic, and ISO 9001 compliant facilities.
 - **Precision GSM & Color Fastness**: Controlled laboratory testing for shrinkage, tensile strength, and color matching under D65 lighting.
 - **Low MOQ Flexibility & Rapid Prototyping**: Complete tech-pack execution within 7 to 10 days.
 
@@ -115,9 +115,9 @@ Here is a practical checklist for apparel sourcing directors and founders evalua
 
 Never compromise on social and labor compliance. Legitimate international brands require Tier-1 factories to maintain verified audit credentials:
 
-- **Sedex SMETA**: Ethical trade audits covering labor standards, health & safety, environment, and business integrity.
-- **OEKO-TEX Standard 100**: Verification that every component (fabrics, buttons, zippers, sewing threads) is free of harmful substances.
-- **WRAP (Worldwide Responsible Accredited Production)**: Global certification for lawful, humane, and ethical manufacturing.
+- **Sedex SMETA 4-Pillar**: Ethical trade audits covering labor standards, health & safety, environment, and business integrity.
+- **Global Organic Textile Standard (GOTS)**: Verification for organic fiber cultivation, non-toxic processing, and ethical working conditions.
+- **ISO 9001:2015**: Quality Management Systems certification ensuring strict consistency across all production stages.
 
 ---
 

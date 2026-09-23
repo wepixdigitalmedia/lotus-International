@@ -65,14 +65,6 @@ export const CERTIFICATES: Certificate[] = [
     downloadUrl: "#",
   },
   {
-    id: "cert-oekotex",
-    name: "OEKO-TEX Standard 100",
-    issuingBody: "Hohenstein Textile Testing Institute",
-    validity: "Valid through Dec 2026",
-    scope: "Testing for harmful substances in textile products",
-    downloadUrl: "#",
-  },
-  {
     id: "cert-gots",
     name: "Global Organic Textile Standard (GOTS)",
     issuingBody: "OneCert International",

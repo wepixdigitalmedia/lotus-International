@@ -72,7 +72,7 @@ const SAMPLE_INQUIRIES: BuyerInquiry[] = [
     garments: ["Kids Cotton Romper & Baby Sets"],
     quantity: "8,000 sets",
     targetMarket: "Australia / New Zealand",
-    notes: "Requires Oeko-Tex Class 1 baby-safe certification and nickel-free YKK brass snap buttons.",
+    notes: "Requires GOTS Organic baby-safe certification and nickel-free YKK brass snap buttons.",
     status: "Quoted",
     date: "2026-09-10",
   },

@@ -104,8 +104,8 @@ const CASE_STUDIES = [
     logo: "https://ik.imagekit.io/wepix/lotus%20international/max.png",
     program: "Everyday Combed Tees & Kids Playwear",
     category: "High-Volume Retail",
-    details: "Delivering fast-turnaround, 100% combed cotton jersey programs with strict OEKO-TEX Standard 100 Class 1 safety for baby and children's knitwear. Rapid 30-day replenishment re-order cycles.",
-    tags: ["100% Combed Cotton", "OEKO-TEX Class 1", "Fast Re-Orders", "Eco Packaging"],
+    details: "Delivering fast-turnaround, 100% combed cotton jersey programs with strict GOTS and REACH chemical safety standards for baby and children's knitwear. Rapid 30-day replenishment re-order cycles.",
+    tags: ["100% Combed Cotton", "GOTS & REACH Safe", "Fast Re-Orders", "Eco Packaging"],
     volume: "500,000+ Pcs Annually",
   },
 ];

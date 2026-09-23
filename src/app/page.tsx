@@ -327,7 +327,7 @@ const WHY_CHOOSE_US = [
   },
   {
     title: "Quality Inspection",
-    desc: "Oeko-Tex Standard 100 chemical tests, needle-detection tunnel safety passes.",
+    desc: "GOTS & REACH chemical compliance, needle-detection tunnel safety passes.",
     icon: "https://ik.imagekit.io/wepix/lotus%20international/icons/Quality%20Inpection.png",
   },
   {
@@ -444,7 +444,7 @@ const PORTFOLIO_PROJECTS = [
     image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "Infant Oeko-Tex Romper Range",
+    title: "Infant Organic Cotton Romper Range",
     category: "Kids Wear",
     image: "https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?auto=format&fit=crop&q=80&w=800",
   },
@@ -498,7 +498,7 @@ const FAQS = [
   },
   {
     q: "What certifications do your manufacturing plants hold?",
-    a: "Our facility is Sedex 4-Pillar audited (Labor, Ethics, Environment, Health & Safety). We are certified for GOTS (Global Organic Textile Standard), OEKO-TEX Standard 100, and ISO 9001:2015 for quality management systems.",
+    a: "Our facility is Sedex 4-Pillar audited (Labor, Ethics, Environment, Health & Safety). We are certified for GOTS (Global Organic Textile Standard) and ISO 9001:2015 for comprehensive quality and safety management systems.",
   },
   {
     q: "Are your facilities fully sustainable?",

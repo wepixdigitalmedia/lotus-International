@@ -19,7 +19,7 @@ const VALUES = [
   {
     icon: <ShieldCheck className="w-5 h-5 text-brand-accent" />,
     title: "Compliance & Integrity",
-    description: "Strict adherence to Sedex 4-Pillar, GOTS, and Oeko-Tex certifications with zero tolerance for ethical shortcuts.",
+    description: "Strict adherence to Sedex 4-Pillar, GOTS, and ISO 9001 certifications with zero tolerance for ethical shortcuts.",
   },
   {
     icon: <Heart className="w-5 h-5 text-brand-accent" />,
