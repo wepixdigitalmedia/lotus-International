@@ -46,7 +46,7 @@ const STEPS = [
   {
     step: "Step 5",
     title: "Bulk Production & QC",
-    desc: "Dyeing, cutting, stitching, and finishing lines start. Inline QC inspections test seam strengths and final measurements against AQL 1.5 guidelines.",
+    desc: "Dyeing, cutting, stitching, and finishing lines start. Inline QC inspections test seam strengths and final measurements against AQL 2.5 guidelines.",
     icon: <CheckCircle2 className="w-5 h-5 text-brand-accent" />,
   },
   {
@@ -136,8 +136,8 @@ export default function PrivateLabelPage() {
                     <Layers className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-serif-heading text-base font-bold text-brand-ink block mb-0.5">Standard MOQ Policies</span>
-                    <p className="text-xs text-brand-grey leading-relaxed">1,000 Pcs per color/style. Lower MOQs of 500 Pcs supported for bamboo organic blends.</p>
+                    <span className="font-serif-heading text-base font-bold text-brand-ink block mb-0.5">Standard MOQ Policy</span>
+                    <p className="text-xs text-brand-grey leading-relaxed">Basic and all types of cotton start at 500 pcs per color. Bamboo organic and Pima blends are 1,000 pcs per color.</p>
                   </div>
                 </ScrollReveal>
 

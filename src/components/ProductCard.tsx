@@ -73,6 +73,13 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/70 via-transparent to-black/10 opacity-50 group-hover/img:opacity-75 transition-opacity duration-300 pointer-events-none" />
         </Link>
 
+        {/* Floating Category Badge */}
+        <div className="absolute top-3 left-3 z-10 pointer-events-none">
+          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[9px] font-bold tracking-wider uppercase bg-white/95 backdrop-blur-md text-brand-ink border border-white/60 shadow-xs">
+            {product.category}
+          </span>
+        </div>
+
         {/* Carousel Navigation Arrows (Hover reveal - only when multi-image) */}
         {imagesList.length > 1 && (
           <>
@@ -115,6 +122,16 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="p-4 sm:p-5 flex-grow flex flex-col justify-between space-y-3.5">
         <div className="space-y-2">
           
+          {/* Category & MOQ Row */}
+          <div className="flex items-center justify-between text-[10px] font-bold">
+            <span className="text-brand-accent uppercase tracking-wider">
+              {product.category}
+            </span>
+            <span className="text-brand-grey font-medium">
+              MOQ: {product.moq} pcs
+            </span>
+          </div>
+
           {/* Product Title */}
           <Link href={`/products/${product.id}`}>
             <h3 className="font-serif-heading text-base sm:text-lg font-bold text-brand-ink hover:text-brand-accent transition-colors line-clamp-1 leading-snug">

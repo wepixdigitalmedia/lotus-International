@@ -86,8 +86,8 @@ const CASE_STUDIES = [
     logo: "https://ik.imagekit.io/wepix/lotus%20international/us%20polo%20assn.png",
     program: "Classic Pique Polos & Heavyweight Fleece",
     category: "Heritage Sportswear",
-    details: "Engineered 220 GSM combed compact cotton pique with high dimensional stability (<3% shrinkage) and reactive dye fastness. Passed Hashima needle detection and AQL 1.5 standards across multi-country export distribution.",
-    tags: ["220 GSM Pique", "Colorfast D65", "AQL 1.5 Gate", "Hashima Scanned"],
+    details: "Engineered 220 GSM combed compact cotton pique with high dimensional stability (<3% shrinkage) and reactive dye fastness. Passed Hashima needle detection and AQL 2.5 standards across multi-country export distribution.",
+    tags: ["220 GSM Pique", "Colorfast D65", "AQL 2.5 Gate", "Hashima Scanned"],
     volume: "350,000+ Pcs Annually",
   },
   {
@@ -96,7 +96,7 @@ const CASE_STUDIES = [
     program: "Executive Polos & Mercerized Smart Knits",
     category: "Heritage Menswear",
     details: "Engineered high-twist combed compact pique and mercerized cotton knits with collar shape-retention technology. Stringent dimensional stability (<3% shrinkage) and high colorfastness under ISO standards.",
-    tags: ["Mercerized Cotton", "Anti-Pilling", "Collar Shape Retention", "AQL 1.5 Gate"],
+    tags: ["Mercerized Cotton", "Anti-Pilling", "Collar Shape Retention", "AQL 2.5 Gate"],
     volume: "250,000+ Pcs Annually",
   },
   {

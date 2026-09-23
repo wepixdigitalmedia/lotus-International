@@ -1,9 +1,10 @@
 "use client";
 
-import React, { use, useState } from "react";
+import React, { use, useState, useEffect } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PRODUCTS, Product } from "@/data/db";
+import { getProductById } from "@/lib/productService";
 import { useInquiry } from "@/components/InquiryProvider";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
@@ -32,6 +33,15 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
   const [product, setProduct] = useState<Product | null>(
     PRODUCTS.find((p) => p.id === id) || null
   );
+
+  useEffect(() => {
+    if (!product) {
+      getProductById(id).then((p) => {
+        if (p) setProduct(p);
+      });
+    }
+  }, [id, product]);
+
   const { addToInquiry, isInInquiry, removeFromInquiry } = useInquiry();
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
@@ -49,7 +59,13 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
   const imagesList: string[] = Array.from(new Set(rawImages));
 
   if (!product) {
-    notFound();
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-brand-bg text-brand-ink">
+        <div className="text-xs font-bold tracking-widest uppercase text-brand-accent animate-pulse">
+          Loading Garment Silhouette...
+        </div>
+      </div>
+    );
   }
 
   const handleInquiryToggle = () => {
@@ -96,17 +112,24 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
       {/* Top Breadcrumb Navigation */}
       <div className="bg-white/80 backdrop-blur-md border-b border-brand-light-grey/60 py-3.5 mt-4 sm:mt-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-brand-grey">
+          <div className="flex items-center gap-2 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-brand-grey flex-wrap">
             <Link href="/" className="hover:text-brand-accent transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3 text-brand-light-grey" />
             <Link href="/products" className="hover:text-brand-accent transition-colors">Catalogue</Link>
+            <ChevronRight className="w-3 h-3 text-brand-light-grey" />
+            <Link
+              href={`/products?category=${encodeURIComponent(product.category)}`}
+              className="hover:text-brand-accent transition-colors text-brand-accent"
+            >
+              {product.category}
+            </Link>
             <ChevronRight className="w-3 h-3 text-brand-light-grey" />
             <span className="text-brand-ink font-extrabold line-clamp-1">{product.name}</span>
           </div>
 
           <Link
             href="/products"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-accent hover:text-brand-accent-hover transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-accent hover:text-brand-accent-hover transition-colors shrink-0"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Back to Catalogue</span>

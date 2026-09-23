@@ -3,10 +3,26 @@ export interface ColorSwatch {
   hex: string;
 }
 
+export type ProductCategory =
+  | "Men's Crewneck"
+  | "Mens Polo"
+  | "Mens Sport"
+  | "Mens New"
+  | "Women's Sportwear"
+  | "Women's Sleepwear"
+  | "Nature Polo Club"
+  | "Men"
+  | "Women"
+  | "Kids"
+  | string;
+
+export type ProductDepartment = "Men" | "Women" | "Nature Polo Club" | "Unisex";
+
 export interface Product {
   id: string;
   name: string;
-  category: "Men" | "Women" | "Kids" | "Nature Polo Club";
+  category: ProductCategory;
+  department?: ProductDepartment;
   type: string;
   fabric: string;
   gsm: string;
@@ -117,7 +133,7 @@ export const CAREERS: JobOpening[] = [
     department: "Quality Assurance",
     location: "Avinashi Factory, Tirupur",
     experience: "5-7 Years",
-    description: "We are seeking a senior quality specialist to oversee fabric inspection, inline audits, and final AQL 1.5 audits for international buyers.",
+    description: "We are seeking a senior quality specialist to oversee fabric inspection, inline audits, and final AQL 2.5 audits for international buyers.",
     requirements: [
       "Experience with export buyers like U.S. Polo Assn. or Arrow",
       "Knowledge of AQL inspection methodologies and knitwear fabric defects",

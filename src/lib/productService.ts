@@ -120,7 +120,14 @@ export async function saveProduct(
   const fullProduct: Product = {
     id,
     name: productData.name || "Untitled Product",
-    category: productData.category || "Men",
+    category: productData.category || "Men's Crewneck",
+    department:
+      productData.department ||
+      (productData.category?.toLowerCase().includes("women")
+        ? "Women"
+        : productData.category === "Nature Polo Club"
+        ? "Nature Polo Club"
+        : "Men"),
     type: productData.type || "Garment",
     fabric: productData.fabric || "Cotton",
     gsm: productData.gsm || "180 GSM",

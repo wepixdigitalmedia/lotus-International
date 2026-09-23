@@ -17,13 +17,44 @@ import {
   Shield,
   Briefcase,
   Smile,
+  Droplets,
+  Trees,
+  Sun,
+  Leaf,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Women's Empowerment | Lotus International Garment Export Tirupur",
+  title: "Sustainability & Women's Empowerment | Lotus International Garment Export Tirupur",
   description:
-    "Fostering financial independence, leadership, and dignified livelihoods for over 220 rural women artisans across Tirupur and Avinashi.",
+    "Championing safe drinking water, soil preservation via water recycling, green premises with tree plantation, and dignified livelihoods for over 220 rural women artisans.",
 };
+
+const ECO_INITIATIVES = [
+  {
+    icon: <Droplets className="w-7 h-7 text-brand-accent" />,
+    badge: "Staff Welfare",
+    title: "Safe Drinking Water",
+    desc: "We provide safe drinking water to our staff and labourers, ensuring hydration, dignity, and workplace wellness across all departments.",
+  },
+  {
+    icon: <ShieldCheck className="w-7 h-7 text-brand-accent" />,
+    badge: "Soil Preservation",
+    title: "Waste Water Recycling",
+    desc: "To preserve soil contamination from waste waters, we recycle responsibly to reduce our overall carbon footprints.",
+  },
+  {
+    icon: <Trees className="w-7 h-7 text-brand-accent" />,
+    badge: "Green Premises",
+    title: "Trees & Plants Cultivation",
+    desc: "By planting more number of trees and plants inside of premises to maintain a safe, lush, and ecologically balanced environment.",
+  },
+  {
+    icon: <Sun className="w-7 h-7 text-brand-accent" />,
+    badge: "Clean Energy",
+    title: "100% Solar-Powered",
+    desc: "Our primary manufacturing floor operations run on captive rooftop solar arrays, eliminating fossil dependence.",
+  },
+];
 
 const EMPOWERMENT_METRICS = [
   {
@@ -113,18 +144,115 @@ export default function SustainabilityPage() {
               Ethical Garment Manufacturing &amp; Social Impact
             </span>
             <h1 className="font-serif-heading text-3xl md:text-5xl lg:text-6xl font-bold max-w-3xl leading-tight text-white">
-              Women&apos;s Empowerment
+              Sustainability &amp; Women&apos;s Empowerment
             </h1>
             <p className="text-sm md:text-base text-brand-bg/85 mt-4 max-w-2xl font-medium leading-relaxed">
-              Over 90% of our manufacturing family is composed of skilled women from rural Tamil Nadu.
-              We champion financial independence, gender equity, workplace dignity, and upward career mobility for over 220 female artisans.
+              We operate at the intersection of environmental care and social equity. From 100% captive solar power and eco-conscious factory grounds to empowering over 220 rural women artisans, sustainable ethics guide every garment we craft.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* 2. KEY EMPOWERMENT METRICS */}
+      {/* 2. ENVIRONMENTAL SUSTAINABILITY & SAFE ECOSYSTEM */}
       <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <ScrollReveal>
+              <span className="text-[10px] font-bold tracking-widest text-brand-accent uppercase bg-brand-accent/10 border border-brand-accent/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                Environmental Stewardship
+              </span>
+              <h2 className="font-serif-heading text-2xl sm:text-3xl md:text-4xl font-bold text-brand-ink">
+                Sustainable Practices &amp; Safe Ecosystem
+              </h2>
+              <p className="text-xs md:text-sm text-brand-grey max-w-xl mx-auto mt-3 font-medium leading-relaxed">
+                We provide safe drinking water to our staff and labourers. To preserve soil contamination from waste waters, we recycle to reduce carbon footprints, and plant trees and plants inside our premises to maintain a safe ecosystem.
+              </p>
+            </ScrollReveal>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {ECO_INITIATIVES.map((item, idx) => (
+              <ScrollReveal
+                key={idx}
+                delay={idx * 0.08}
+                className="bg-brand-bg border border-brand-light-grey rounded-2xl p-6 sm:p-7 text-center flex flex-col items-center shadow-xs hover:shadow-md transition-shadow"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center mb-5">
+                  {item.icon}
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-brand-accent bg-brand-accent/5 px-2.5 py-0.5 rounded-full border border-brand-accent/15 mb-2">
+                  {item.badge}
+                </span>
+                <h3 className="font-serif-heading text-base sm:text-lg font-bold text-brand-ink mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-brand-grey leading-relaxed font-medium">
+                  {item.desc}
+                </p>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Environmental Spotlight Panel */}
+          <div className="bg-brand-bg border border-brand-light-grey rounded-3xl p-6 sm:p-10 shadow-xs">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div>
+                <ScrollReveal>
+                  <span className="text-[10px] font-bold tracking-widest text-brand-accent uppercase bg-brand-accent/10 border border-brand-accent/20 px-3 py-1 rounded-full inline-block mb-3">
+                    Ecological Responsibility
+                  </span>
+                  <h3 className="font-serif-heading text-2xl sm:text-3xl font-bold text-brand-ink mb-4">
+                    Preserving Soil, Conserving Water &amp; Cultivating Greenery
+                  </h3>
+                  <p className="text-xs md:text-sm text-brand-grey leading-relaxed mb-6 font-medium">
+                    We provide safe drinking water to our staff and labourers. To preserve Soil contamination from waste waters, we recycle to reduce carbon footprints. By planting more number of trees and plants inside of premises to maintain safe eco system, Lotus International ensures that export garment manufacturing coexists harmoniously with natural biodiversity.
+                  </p>
+                </ScrollReveal>
+                <div className="space-y-3">
+                  <div className="flex gap-2.5 items-center text-xs text-brand-ink font-semibold">
+                    <CheckCircle2 className="w-4 h-4 text-brand-accent shrink-0" />
+                    <span>Safe drinking water provided to our staff and labourers</span>
+                  </div>
+                  <div className="flex gap-2.5 items-center text-xs text-brand-ink font-semibold">
+                    <CheckCircle2 className="w-4 h-4 text-brand-accent shrink-0" />
+                    <span>Preserving soil contamination from waste waters via responsible recycling</span>
+                  </div>
+                  <div className="flex gap-2.5 items-center text-xs text-brand-ink font-semibold">
+                    <CheckCircle2 className="w-4 h-4 text-brand-accent shrink-0" />
+                    <span>Reducing carbon footprints through closed-loop recycling &amp; solar energy</span>
+                  </div>
+                  <div className="flex gap-2.5 items-center text-xs text-brand-ink font-semibold">
+                    <CheckCircle2 className="w-4 h-4 text-brand-accent shrink-0" />
+                    <span>Planting more trees and plants inside premises to maintain a safe ecosystem</span>
+                  </div>
+                </div>
+              </div>
+              <ScrollReveal delay={0.1} className="relative aspect-[16/11] rounded-2xl overflow-hidden bg-brand-bg shadow-md border border-brand-light-grey group">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/heroes/sustainability.jpg"
+                  alt="Lotus International Green Manufacturing Facility with Solar Energy and Plantations in Tirupur"
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 brightness-[0.95]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
+                <div className="absolute bottom-3.5 left-3.5 right-3.5 p-3.5 rounded-xl bg-brand-ink/90 backdrop-blur-md border border-white/20 text-white flex items-center justify-between">
+                  <div>
+                    <h4 className="text-xs font-bold font-serif-heading">Eco-Friendly Factory Grounds</h4>
+                    <p className="text-[10px] text-brand-bg/80">Lush Plantation &amp; Safe Ecosystem • Tirupur Facility</p>
+                  </div>
+                  <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-brand-accent/20 border border-brand-accent/30 text-brand-accent uppercase tracking-wider">
+                    Green Premises
+                  </span>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 3. KEY EMPOWERMENT METRICS */}
+      <section className="py-16 md:py-20 bg-brand-bg border-t border-brand-light-grey/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <ScrollReveal>
@@ -142,7 +270,7 @@ export default function SustainabilityPage() {
               <ScrollReveal
                 key={idx}
                 delay={idx * 0.08}
-                className="bg-brand-bg border border-brand-light-grey rounded-2xl p-6 sm:p-7 text-center flex flex-col items-center shadow-xs hover:shadow-md transition-shadow"
+                className="bg-white border border-brand-light-grey rounded-2xl p-6 sm:p-7 text-center flex flex-col items-center shadow-xs hover:shadow-md transition-shadow"
               >
                 <div className="w-14 h-14 rounded-2xl bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center mb-5">
                   {metric.icon}

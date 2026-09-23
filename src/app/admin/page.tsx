@@ -53,10 +53,18 @@ export default function AdminDashboardPage() {
   const publishedBlogsCount = blogs.filter((b) => b.published).length;
   const draftBlogsCount = blogs.filter((b) => !b.published).length;
 
-  const menCount = products.filter((p) => p.category === "Men").length;
-  const womenCount = products.filter((p) => p.category === "Women").length;
-  const kidsCount = products.filter((p) => p.category === "Kids").length;
-  const poloClubCount = products.filter((p) => p.category === "Nature Polo Club").length;
+  const menCount = products.filter(
+    (p) => p.department === "Men" || p.category?.toLowerCase().includes("men")
+  ).length;
+  const womenCount = products.filter(
+    (p) => p.department === "Women" || p.category?.toLowerCase().includes("women")
+  ).length;
+  const poloClubCount = products.filter(
+    (p) =>
+      p.department === "Nature Polo Club" ||
+      p.category === "Nature Polo Club" ||
+      p.category === "Nature Polo"
+  ).length;
 
   const userName = user?.displayName || user?.email?.split("@")[0] || "Administrator";
 
@@ -165,7 +173,7 @@ export default function AdminDashboardPage() {
             <span>•</span>
             <span>Women ({womenCount})</span>
             <span>•</span>
-            <span>Kids ({kidsCount})</span>
+            <span>Polo Club ({poloClubCount})</span>
           </div>
         </div>
 

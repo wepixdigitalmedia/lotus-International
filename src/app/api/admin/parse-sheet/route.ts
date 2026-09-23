@@ -48,7 +48,7 @@ function parseCSVRow(rowStr: string): string[] {
 
 function parseCSVToProducts(
   csvText: string,
-  defaultCategory: Product["category"] = "Men"
+  defaultCategory: Product["category"] = "Men's Crewneck"
 ): Product[] {
   const lines = csvText.split(/\r?\n/).filter((l) => l.trim().length > 0);
   if (lines.length < 2) return [];
@@ -183,10 +183,18 @@ function parseCSVToProducts(
     const catPrefix = defaultCategory.toLowerCase().slice(0, 1);
     const id = `${catPrefix}-${cleanSlug}-${Date.now().toString().slice(-4)}-${i}`;
 
+    const department: Product["department"] =
+      defaultCategory.toLowerCase().includes("women")
+        ? "Women"
+        : defaultCategory.toLowerCase().includes("nature")
+        ? "Nature Polo Club"
+        : "Men";
+
     const product: Product = {
       id,
       name: productName,
       category: defaultCategory,
+      department,
       type,
       fabric: material,
       gsm: gsm.includes("GSM") ? gsm : `${gsm} GSM`,
@@ -235,7 +243,7 @@ function parseCSVToProducts(
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { sheetUrl, csvText, category = "Men" } = body;
+    const { sheetUrl, csvText, category = "Men's Crewneck" } = body;
 
     let rawCsv = csvText;
 

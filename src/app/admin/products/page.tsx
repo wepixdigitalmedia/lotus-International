@@ -31,7 +31,18 @@ import {
   Table,
 } from "lucide-react";
 
-const CATEGORIES = ["All", "Men", "Women", "Kids", "Nature Polo Club"] as const;
+const CATEGORIES = [
+  "All",
+  "Men's Crewneck",
+  "Mens Polo",
+  "Mens Sport",
+  "Mens New",
+  "Women's Sportwear",
+  "Women's Sleepwear",
+  "Nature Polo Club",
+  "Men",
+  "Women",
+] as const;
 
 export default function AdminProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -48,7 +59,7 @@ export default function AdminProductsPage() {
 
   // Form State for Add / Edit
   const [formName, setFormName] = useState("");
-  const [formCategory, setFormCategory] = useState<Product["category"]>("Men");
+  const [formCategory, setFormCategory] = useState<string>("Men's Crewneck");
   const [formType, setFormType] = useState("");
   const [formFabric, setFormFabric] = useState("");
   const [formGsm, setFormGsm] = useState("");
@@ -64,7 +75,7 @@ export default function AdminProductsPage() {
     "https://docs.google.com/spreadsheets/d/1zAIsq_BqP3Khrnj_pxC0LAXiJT2AZJZdEgzPKlNlPxY/edit?usp=sharing"
   );
   const [bulkCsvText, setBulkCsvText] = useState("");
-  const [bulkCategory, setBulkCategory] = useState<Product["category"]>("Men");
+  const [bulkCategory, setBulkCategory] = useState<string>("Men's Crewneck");
   const [bulkParsedProducts, setBulkParsedProducts] = useState<Product[]>([]);
   const [isParsing, setIsParsing] = useState(false);
   const [isImporting, setIsImporting] = useState(false);
@@ -96,7 +107,7 @@ export default function AdminProductsPage() {
   const handleOpenAddModal = () => {
     setEditingProduct(null);
     setFormName("");
-    setFormCategory("Men");
+    setFormCategory("Men's Crewneck");
     setFormType("T-Shirt");
     setFormFabric("100% Combed Organic Cotton");
     setFormGsm("180 GSM");
@@ -557,10 +568,15 @@ export default function AdminProductsPage() {
                     onChange={(e: any) => setBulkCategory(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-amber-500"
                   >
-                    <option value="Men">Men</option>
-                    <option value="Women">Women</option>
-                    <option value="Kids">Kids</option>
+                    <option value="Men's Crewneck">Men&apos;s Crewneck</option>
+                    <option value="Mens Polo">Mens Polo</option>
+                    <option value="Mens Sport">Mens Sport</option>
+                    <option value="Mens New">Mens New</option>
+                    <option value="Women's Sportwear">Women&apos;s Sportwear</option>
+                    <option value="Women's Sleepwear">Women&apos;s Sleepwear</option>
                     <option value="Nature Polo Club">Nature Polo Club</option>
+                    <option value="Men">Men (General)</option>
+                    <option value="Women">Women (General)</option>
                   </select>
                 </div>
               </div>
@@ -786,10 +802,15 @@ export default function AdminProductsPage() {
                     onChange={(e: any) => setFormCategory(e.target.value)}
                     className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-amber-500"
                   >
-                    <option value="Men">Men</option>
-                    <option value="Women">Women</option>
-                    <option value="Kids">Kids</option>
+                    <option value="Men's Crewneck">Men&apos;s Crewneck</option>
+                    <option value="Mens Polo">Mens Polo</option>
+                    <option value="Mens Sport">Mens Sport</option>
+                    <option value="Mens New">Mens New</option>
+                    <option value="Women's Sportwear">Women&apos;s Sportwear</option>
+                    <option value="Women's Sleepwear">Women&apos;s Sleepwear</option>
                     <option value="Nature Polo Club">Nature Polo Club</option>
+                    <option value="Men">Men (General)</option>
+                    <option value="Women">Women (General)</option>
                   </select>
                 </div>
 

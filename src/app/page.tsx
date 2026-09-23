@@ -207,7 +207,7 @@ const SERVICES = [
     icon: <CheckCircle2 className="w-4 h-4 text-brand-accent" />,
     title: "Finishing",
     category: "Dyeing & Finishing",
-    desc: "Heavy steam pressing, thread trimming, metal detection gates, and final AQL 1.5 audits.",
+    desc: "Heavy steam pressing, thread trimming, metal detection gates, and final AQL 2.5 audits.",
     image: "https://ik.imagekit.io/wepix/lotus%20international/B2B%20Services/Finishing.webp",
   },
   {
@@ -273,7 +273,7 @@ const PROCESS_STEPS = [
   {
     num: "05",
     title: "Quality Inspection",
-    tagline: "AQL 1.5 Strict Auditing",
+    tagline: "AQL 2.5 Strict Auditing",
     desc: "Stitch count audits, measurement checks, garment safety checks, and dual metal-detector scans.",
     icon: <CheckCircle2 className="w-5 h-5" />,
   },
@@ -297,7 +297,7 @@ const PROCESS_STEPS = [
 const WHY_CHOOSE_US = [
   {
     title: "Premium Quality",
-    desc: "All garments pass AQL 1.5 standards. Inline checkers inspect every single garment.",
+    desc: "All garments pass AQL 2.5 standards. Inline checkers inspect every single garment.",
     icon: "https://ik.imagekit.io/wepix/lotus%20international/icons/premium%20quality.png",
   },
   {
@@ -459,7 +459,7 @@ const PORTFOLIO_PROJECTS = [
 const TESTIMONIALS = [
   {
     quote:
-      "The Lotus International has been our primary B2B knitwear manufacturing partner in India for over 8 years. Their consistency in AQL 1.5 standards, organic cotton sourcing, and transparent timelines is outstanding.",
+      "The Lotus International has been our primary B2B knitwear manufacturing partner in India for over 8 years. Their consistency in AQL 2.5 standards, organic cotton sourcing, and transparent timelines is outstanding.",
     author: "Marcello V.",
     role: "Director of Global Sourcing",
     company: "Studio Earth (Europe)",
@@ -490,7 +490,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "What is your minimum order quantity (MOQ)?",
-    a: "Our standard MOQ is 1,000 pieces per style/colorway. For custom eco-blends like bamboo-organic cotton blends under the Nature Polo Club line, we support concessions down to 500 pieces per colorway.",
+    a: "Basic and all types of cotton garments start at 500 pieces per color. Specialty materials like bamboo organic and Pima blends require an MOQ of 1,000 pieces per color.",
   },
   {
     q: "How long does the sampling process take?",
@@ -502,7 +502,7 @@ const FAQS = [
   },
   {
     q: "Are your facilities fully sustainable?",
-    a: "Yes. 100% of our floor operations run on captive solar energy arrays. We also operate a Zero Liquid Discharge (ZLD) RO plant that recycles 95% of our waste water back into the facility loops.",
+    a: "Yes. 100% of our floor operations run on captive solar energy arrays. We provide safe drinking water to our staff and labourers. To preserve soil contamination from waste waters, we recycle to reduce carbon footprints, and maintain a safe ecosystem by planting more trees and plants inside our premises.",
   },
   {
     q: "Can you assist with shipping and customs clearance?",
@@ -789,7 +789,7 @@ export default function HomePage() {
             </ScrollReveal>
             <ScrollReveal delay={0.15}>
               <p className="text-xs md:text-sm text-brand-ink/90 font-medium max-w-xl mx-auto leading-relaxed drop-shadow-[0_1px_12px_rgba(255,255,255,0.95)]">
-                Combining cotton craftsmanship in Tirupur with certified compliance integrity, strict AQL 1.5 inspection, and transparent delivery.
+                Combining cotton craftsmanship in Tirupur with certified compliance integrity, strict AQL 2.5 inspection, and transparent delivery.
               </p>
             </ScrollReveal>
           </div>

@@ -38,8 +38,8 @@ const QA_PROCESS = [
   {
     stage: "Stage 5",
     icon: <ClipboardCheck className="w-5 h-5 text-brand-accent group-hover:text-white transition-colors duration-300" />,
-    title: "Final AQL 1.5 Audits",
-    desc: "Our independent QA division conducts final random checks based on international AQL 1.5 standard criteria (fabric flaws, print errors, measurements).",
+    title: "Final AQL 2.5 Audits",
+    desc: "Our independent QA division conducts final random checks based on international AQL 2.5 standard criteria (fabric flaws, print errors, measurements).",
   },
 ];
 
@@ -217,7 +217,7 @@ export default function CompliancePage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/images/compliance/lotus_packaging.webp"
-                    alt="Final AQL 1.5 Packaging & Needle Detection Audit"
+                    alt="Final AQL 2.5 Packaging & Needle Detection Audit"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.92]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
@@ -316,8 +316,8 @@ export default function CompliancePage() {
                     Standard stitch density ranges from 10 to 12 stitches per inch (SPI) depending on buyer specifications.
                   </p>
                   <p>
-                    <span className="font-bold text-brand-accent block mb-1">AQL 1.5 Standard</span>
-                    Maximum allowed minor defects: 4.0%; Major defects: 1.5%; Critical defects: 0% (e.g. needles, oil stains).
+                    <span className="font-bold text-brand-accent block mb-1">AQL 2.5 Standard</span>
+                    Maximum allowed minor defects: 4.0%; Major defects: 2.5%; Critical defects: 0% (e.g. needles, oil stains).
                   </p>
                 </div>
               </div>

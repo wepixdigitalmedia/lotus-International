@@ -73,9 +73,9 @@ const PROCESS_STEPS = [
     icon: <Cpu className="w-4 h-4" />,
   },
   {
-    title: "Quality Control (AQL 1.5)",
-    desc: "Inline checking, end-of-line inspections, and final AQL 1.5 audits. Garments pass through metal detection tunnels to ensure total safety.",
-    milestone: "AQL 1.5 Gate",
+    title: "Quality Control (AQL 2.5)",
+    desc: "Inline checking, end-of-line inspections, and final AQL 2.5 audits. Garments pass through metal detection tunnels to ensure total safety.",
+    milestone: "AQL 2.5 Gate",
     icon: <ShieldCheck className="w-4 h-4" />,
   },
   {
@@ -117,7 +117,7 @@ export default function ManufacturingPage() {
               State-of-the-Art Knitwear Facility
             </h1>
             <p className="text-sm md:text-base text-brand-bg/75 mt-4 max-w-2xl font-medium">
-              We translate fiber into global-market garments using modern machinery, automated cutting layouts, and a highly skilled workforce of 250+ artisans.
+              We transform fiber into global-market garments using modern machinery, automated cutting layouts, and a highly skilled workforce of 250+ artisans.
             </p>
           </ScrollReveal>
         </div>
@@ -202,8 +202,10 @@ export default function ManufacturingPage() {
               <div className="p-4 pt-6 md:pt-4">
                 <ClipboardCheck className="w-8 h-8 text-brand-accent mx-auto mb-2.5" />
                 <h4 className="font-serif-heading text-base font-bold text-brand-ink mb-1">Minimum Order Quantity</h4>
-                <p className="text-xs text-brand-ink font-semibold">1,000 Pcs per Colorway</p>
-                <p className="text-[11px] text-brand-grey mt-1">Special concessions up to 500 pcs for organic bamboo blends.</p>
+                <p className="text-xs text-brand-ink font-semibold">500 Pcs (Cottons) / 1,000 Pcs (Blends)</p>
+                <p className="text-[11px] text-brand-grey mt-1">
+                  Basic all type of Cottons will start with 500 pcs per color. Bamboo organic and Pima blends will be 1,000 pcs per color.
+                </p>
               </div>
             </div>
             <div className="text-center mt-8">

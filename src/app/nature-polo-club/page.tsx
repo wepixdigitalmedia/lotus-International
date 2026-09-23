@@ -114,7 +114,7 @@ export default function NaturePoloClubPage() {
                   <div className="w-8 h-8 rounded-lg bg-brand-sage/15 flex items-center justify-center text-brand-sage mb-2.5">
                     <Leaf className="w-4 h-4" />
                   </div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-1">Bamboo Blend</h4>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-1">All Organic Blends</h4>
                   <p className="text-[11px] text-brand-bg/75 leading-normal">Silk-smooth, breathable &amp; anti-bacterial.</p>
                 </ScrollReveal>
 
