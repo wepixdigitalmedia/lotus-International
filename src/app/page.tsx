@@ -577,6 +577,8 @@ export default function HomePage() {
     }
   };
 
+  const [isTestimonialPaused, setIsTestimonialPaused] = useState(false);
+
   const nextTestimonial = () => {
     setActiveTestimonial((prev) => (prev + 1) % TESTIMONIALS.length);
   };
@@ -585,13 +587,14 @@ export default function HomePage() {
     setActiveTestimonial((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
   };
 
-  // Auto-slide homepage testimonials every 5 seconds
+  // Auto-slide homepage testimonials every 4.5 seconds with pause on hover
   useEffect(() => {
+    if (isTestimonialPaused) return;
     const timer = setInterval(() => {
       setActiveTestimonial((prev) => (prev + 1) % TESTIMONIALS.length);
-    }, 5000);
+    }, 4500);
     return () => clearInterval(timer);
-  }, []);
+  }, [isTestimonialPaused]);
 
   return (
     <div className="page-transition bg-brand-bg text-brand-ink">
@@ -1109,10 +1112,14 @@ export default function HomePage() {
       </section>
 
       {/* 9. CLIENT TESTIMONIALS */}
-      <section className="py-24 bg-brand-bg relative overflow-hidden">
+      <section
+        className="py-24 bg-brand-bg relative overflow-hidden"
+        onMouseEnter={() => setIsTestimonialPaused(true)}
+        onMouseLeave={() => setIsTestimonialPaused(false)}
+      >
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center relative z-10">
 
-          <span className="text-[10px] font-bold tracking-widest text-brand-accent uppercase bg-brand-accent/10 px-3 py-1 rounded-full mb-6 inline-block">
+          <span className="text-[10px] font-bold tracking-widest text-brand-accent uppercase bg-brand-accent/10 border border-brand-accent/20 px-3.5 py-1.5 rounded-full mb-6 inline-block">
             Global Feedback
           </span>
 
@@ -1134,18 +1141,24 @@ export default function HomePage() {
 
                 {/* Client Avatar details */}
                 <div className="flex flex-col items-center justify-center space-y-3">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={TESTIMONIALS[activeTestimonial].photo}
-                    alt={TESTIMONIALS[activeTestimonial].author}
-                    className="w-12 h-12 rounded-full object-cover border border-brand-accent/40"
-                  />
+                  {TESTIMONIALS[activeTestimonial].photo ? (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      src={TESTIMONIALS[activeTestimonial].photo}
+                      alt={TESTIMONIALS[activeTestimonial].author}
+                      className="w-14 h-14 rounded-full object-cover border-2 border-brand-accent/40 shadow-sm bg-white"
+                    />
+                  ) : (
+                    <div className="w-14 h-14 rounded-full bg-brand-accent/15 border-2 border-brand-accent/40 flex items-center justify-center text-brand-accent font-bold text-base shadow-sm">
+                      {TESTIMONIALS[activeTestimonial].author.charAt(0)}
+                    </div>
+                  )}
                   <div>
-                    <h4 className="text-xs font-bold text-brand-ink">
+                    <h4 className="text-sm font-bold text-brand-ink font-serif-heading">
                       {TESTIMONIALS[activeTestimonial].author}
                     </h4>
-                    <p className="text-[10px] text-brand-grey font-semibold mt-0.5">
-                      {TESTIMONIALS[activeTestimonial].role}, {TESTIMONIALS[activeTestimonial].company}
+                    <p className="text-xs text-brand-grey font-medium mt-0.5">
+                      {TESTIMONIALS[activeTestimonial].role}, <span className="text-brand-accent font-semibold">{TESTIMONIALS[activeTestimonial].company}</span>
                     </p>
                   </div>
                 </div>
@@ -1153,17 +1166,36 @@ export default function HomePage() {
             </AnimatePresence>
           </div>
 
-          {/* Carousel buttons */}
-          <div className="flex justify-center gap-4 mt-10">
+          {/* Carousel buttons & Pagination Dots */}
+          <div className="flex items-center justify-center gap-6 mt-10">
             <button
               onClick={prevTestimonial}
-              className="p-2.5 rounded-full border border-brand-ink/10 hover:border-brand-accent hover:text-brand-accent transition-colors bg-white shadow-sm"
+              className="p-2.5 rounded-full border border-brand-light-grey hover:border-brand-accent hover:text-brand-accent transition-colors bg-white shadow-xs hover:shadow-md cursor-pointer"
+              aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
+
+            {/* Pagination Dots */}
+            <div className="flex items-center gap-1.5">
+              {TESTIMONIALS.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveTestimonial(idx)}
+                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                    activeTestimonial === idx
+                      ? "w-6 bg-brand-accent"
+                      : "w-2 bg-brand-light-grey hover:bg-brand-grey"
+                  }`}
+                  aria-label={`Go to testimonial ${idx + 1}`}
+                />
+              ))}
+            </div>
+
             <button
               onClick={nextTestimonial}
-              className="p-2.5 rounded-full border border-brand-ink/10 hover:border-brand-accent hover:text-brand-accent transition-colors bg-white shadow-sm"
+              className="p-2.5 rounded-full border border-brand-light-grey hover:border-brand-accent hover:text-brand-accent transition-colors bg-white shadow-xs hover:shadow-md cursor-pointer"
+              aria-label="Next testimonial"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
