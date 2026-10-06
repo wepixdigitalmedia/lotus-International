@@ -94,7 +94,7 @@ export default function CompliancePage() {
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 w-full">
             {CERTIFICATES.map((cert, idx) => (
               <ScrollReveal
                 key={cert.id}
