@@ -222,7 +222,7 @@ export default function AdminDashboardPage() {
           </div>
           <div className="flex items-center space-x-1 mt-3 pt-3 border-t border-slate-100 text-xs text-emerald-700 font-medium">
             <Award className="w-3.5 h-3.5" />
-            <span>Sedex, GOTS & ISO 9001</span>
+            <span>Sedex 4-Pillar &amp; ISO 9001</span>
           </div>
         </div>
       </div>

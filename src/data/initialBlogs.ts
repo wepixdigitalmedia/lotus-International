@@ -5,9 +5,9 @@ export const INITIAL_BLOGS: BlogPost[] = [
     id: "sustainable-knitwear-manufacturing-guide",
     slug: "sustainable-knitwear-manufacturing-guide-tirupur",
     title: "The Ultimate Guide to Sustainable Knitwear Manufacturing in Tirupur",
-    excerpt: "Discover how modern Tirupur garment factories are revolutionizing sustainable apparel manufacturing with GOTS-certified organic cotton, closed-loop water treatment, and zero liquid discharge.",
+    excerpt: "Discover how modern Tirupur garment factories are revolutionizing sustainable apparel manufacturing with certified organic cotton, solar-powered facilities, and responsible water recycling.",
     category: "Sustainable Manufacturing",
-    tags: ["Sustainable Fashion", "Tirupur Garments", "Organic Cotton", "GOTS Certification", "Zero Liquid Discharge"],
+    tags: ["Sustainable Fashion", "Tirupur Garments", "Organic Cotton", "Sedex Compliance", "Responsible Recycling"],
     coverImage: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80",
     coverImageAlt: "Sustainable fabric weaving and circular knitwear manufacturing in factory",
     author: {
@@ -22,7 +22,7 @@ export const INITIAL_BLOGS: BlogPost[] = [
     updatedAt: 1714500000000,
     publishedAt: 1714500000000,
     seoTitle: "Sustainable Knitwear Manufacturing Guide Tirupur | Lotus International",
-    seoDescription: "Explore sustainable knitwear manufacturing in Tirupur. Learn about organic cotton sourcing, GOTS & Sedex compliance, and low-carbon export garment production.",
+    seoDescription: "Explore sustainable knitwear manufacturing in Tirupur. Learn about organic cotton sourcing, Sedex compliance, and low-carbon export garment production.",
     focusKeywords: ["sustainable knitwear manufacturing", "Tirupur garment manufacturer", "organic cotton knitwear", "private label apparel exporter"],
     content: `
 # The Ultimate Guide to Sustainable Knitwear Manufacturing in Tirupur
@@ -39,31 +39,30 @@ At **The Lotus International**, we have been engineering premium private-label k
 
 Sustainable garment production begins at the fiber level. Key sustainable raw materials include:
 
-- **GOTS-Certified Organic Cotton**: Cultivated without toxic pesticides, synthetic fertilizers, or GMO seeds, preserving soil biodiversity and consuming up to 91% less water.
+- **Certified Organic Cotton**: Cultivated without toxic pesticides, synthetic fertilizers, or GMO seeds, preserving soil biodiversity and natural ecosystems.
 - **Recycled Cotton & Pre-Consumer Waste Blends**: Converting spinning room fiber waste into high-durability yarn blends.
 - **BCI (Better Cotton Initiative) Cotton**: Supporting ethical farming practices and water efficiency.
 - **TENCEL™ Lyocell & Modal**: Wood-pulp-derived fibers produced in a closed-loop solvent system.
 
 \`\`\`text
-Fiber Sourcing ──> Circular Knitting ──> Eco-Dyeing (ZLD) ──> Precision Cutting ──> Finishing & QC ──> Global Export
+Fiber Sourcing ──> Circular Knitting ──> Eco-Dyeing ──> Precision Cutting ──> Finishing & QC ──> Global Export
 \`\`\`
 
 ---
 
-## 2. Zero Liquid Discharge (ZLD) Dyeing & Water Stewardship
+## 2. Waste Water Recycling, Soil Preservation & Worker Care
 
-One of the greatest environmental milestones in Tirupur is the universal adoption of **Zero Liquid Discharge (ZLD)** technology.
+At Lotus International, ecological responsibility and workplace welfare go hand in hand:
 
-Unlike conventional textile hubs that release untreated effluent into waterways, ZLD facilities in Tirupur:
-1. Treat 100% of chemical effluent.
-2. Recover up to **95-98% of clean water** for reuse in subsequent dye batches.
-3. Crystallize residual salts for industrial repurposing.
+1. **Safe Drinking Water**: We provide clean, purified safe drinking water to all our staff and factory labourers.
+2. **Soil Preservation & Recycling**: To preserve soil contamination from waste waters, we recycle responsibly to reduce our overall carbon footprints.
+3. **Biodiversity on Premises**: By planting more trees and plants inside our premises, we maintain a safe, balanced ecosystem.
 
 ---
 
 ## 3. Renewable Energy in Apparel Export
 
-Modern knitwear plants are powered significantly by renewable energy. At Lotus International, we harness solar photovoltaic rooftop installations and wind energy to power our sewing, ironing, and quality assurance lines, minimizing the carbon footprint per garment exported.
+Modern knitwear plants are powered significantly by renewable energy. At Lotus International, we harness 100% captive solar photovoltaic rooftop installations to power our sewing, ironing, and quality assurance lines, minimizing the carbon footprint per garment exported.
 
 ---
 
@@ -71,7 +70,7 @@ Modern knitwear plants are powered significantly by renewable energy. At Lotus I
 
 When sourcing private label knitwear from India, global retailers look for:
 
-- **Strict Audit Compliance**: Sedex SMETA 4-Pillar, GOTS Organic, and ISO 9001 compliant facilities.
+- **Strict Audit Compliance**: Sedex SMETA 4-Pillar and ISO 9001:2015 compliant facilities.
 - **Precision GSM & Color Fastness**: Controlled laboratory testing for shrinkage, tensile strength, and color matching under D65 lighting.
 - **Low MOQ Flexibility & Rapid Prototyping**: Complete tech-pack execution within 7 to 10 days.
 
@@ -116,8 +115,8 @@ Here is a practical checklist for apparel sourcing directors and founders evalua
 Never compromise on social and labor compliance. Legitimate international brands require Tier-1 factories to maintain verified audit credentials:
 
 - **Sedex SMETA 4-Pillar**: Ethical trade audits covering labor standards, health & safety, environment, and business integrity.
-- **Global Organic Textile Standard (GOTS)**: Verification for organic fiber cultivation, non-toxic processing, and ethical working conditions.
 - **ISO 9001:2015**: Quality Management Systems certification ensuring strict consistency across all production stages.
+- **OEKO-TEX & REACH Safety**: Verification for non-toxic chemicals, skin-safe dyestuffs, and worker safety.
 
 ---
 

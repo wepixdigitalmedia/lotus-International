@@ -15,7 +15,7 @@ const QA_PROCESS = [
     stage: "Stage 1",
     icon: <Microscope className="w-5 h-5 text-brand-accent group-hover:text-white transition-colors duration-300" />,
     title: "Yarn & Raw Input Testing",
-    desc: "Every batch of cotton yarn is checked for count, twist, tensile strength, and color fastness. Organic yarns must arrive with valid GOTS transaction certificates.",
+    desc: "Every batch of cotton yarn is checked for count, twist, tensile strength, and color fastness. Organic yarns arrive with certified origin documentation.",
   },
   {
     stage: "Stage 2",
@@ -94,7 +94,7 @@ export default function CompliancePage() {
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl">
             {CERTIFICATES.map((cert, idx) => (
               <ScrollReveal
                 key={cert.id}
@@ -164,7 +164,7 @@ export default function CompliancePage() {
               <div className="md:col-span-7 relative min-h-[260px] sm:min-h-[320px] md:min-h-full rounded-xl md:rounded-2xl overflow-hidden group shadow-sm">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/compliance/lotus_finishing.webp"
+                  src="https://ik.imagekit.io/wepix/lotus%20international/B2B%20Services/Finishing.webp"
                   alt="Lotus International Garment Final Inspection & Finishing in Tirupur"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.92]"
                 />
@@ -304,7 +304,7 @@ export default function CompliancePage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-brand-accent" />
-                    <span>REACH and GOTS chemical safety restrictions</span>
+                    <span>REACH and OEKO-TEX chemical safety restrictions</span>
                   </div>
                 </div>
               </div>
@@ -337,7 +337,7 @@ export default function CompliancePage() {
               Need Audited & Compliant Garment Manufacturing?
             </h3>
             <p className="text-xs sm:text-sm text-brand-bg/85 leading-relaxed mb-8 font-medium">
-              We provide full Sedex SMETA audit access, GOTS transaction certificates, and ISO 9001:2015 documentation for your brand&apos;s compliance team.
+              We provide full Sedex SMETA audit access and ISO 9001:2015 documentation for your brand&apos;s compliance team.
             </p>
             <Link
               href="/contact"

@@ -106,7 +106,7 @@ export default function ResourcesPage() {
                   File Size: 2.4 MB | Last Updated: July 2026
                 </p>
                 <p className="text-xs text-brand-ink/90 leading-relaxed font-medium mb-6">
-                  Includes factory floor diagrams, complete sewing machinery list counts, boiler and waste plant specs, GOTS and Sedex audit transcripts, and capacity metrics.
+                  Includes factory floor diagrams, complete sewing machinery list counts, boiler and waste plant specs, ISO 9001 and Sedex audit transcripts, and capacity metrics.
                 </p>
               </div>
 

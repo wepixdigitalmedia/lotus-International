@@ -136,7 +136,7 @@ export default function ManufacturingPage() {
                   In-House Capabilities &amp; Engineering
                 </h2>
                 <p className="text-xs md:text-sm text-brand-grey leading-relaxed mb-6 font-medium">
-                  At Lotus, we control every manufacturing step except spinning and dyeing, which we outsource to GOTS-certified local partners under our strict QA supervision. This ensures we maintain cost-efficiency while keeping oversight of quality.
+                  At Lotus, we control every manufacturing step except spinning and dyeing, which we outsource to certified, audited local partners under our strict QA supervision. This ensures we maintain cost-efficiency while keeping oversight of quality.
                 </p>
               </ScrollReveal>
 

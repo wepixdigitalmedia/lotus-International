@@ -81,14 +81,6 @@ export const CERTIFICATES: Certificate[] = [
     downloadUrl: "#",
   },
   {
-    id: "cert-gots",
-    name: "Global Organic Textile Standard (GOTS)",
-    issuingBody: "OneCert International",
-    validity: "Valid through Sept 2026",
-    scope: "Processing and manufacturing of organic fiber textiles",
-    downloadUrl: "#",
-  },
-  {
     id: "cert-iso",
     name: "ISO 9001:2015",
     issuingBody: "TUV SUD South Asia Pvt Ltd",

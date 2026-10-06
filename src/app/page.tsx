@@ -327,7 +327,7 @@ const WHY_CHOOSE_US = [
   },
   {
     title: "Quality Inspection",
-    desc: "GOTS & REACH chemical compliance, needle-detection tunnel safety passes.",
+    desc: "AQL 2.5 standards, REACH chemical compliance, needle-detection tunnel safety passes.",
     icon: "https://ik.imagekit.io/wepix/lotus%20international/icons/Quality%20Inpection.png",
   },
   {
@@ -392,7 +392,7 @@ const INDUSTRIES = [
   {
     title: "Kids Wear",
     tagline: "Comfortable and safe clothing for kids of all ages.",
-    desc: "Ultra-soft GOTS certified organic rompers, Nickel-free snaps, and safe water-based prints.",
+    desc: "Ultra-soft combed organic cotton rompers, Nickel-free snaps, and safe water-based prints.",
     icon: <Smile className="w-4 h-4" />,
     bgImage: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800",
     widthClass: "lg:w-[25%]",
@@ -459,30 +459,64 @@ const PORTFOLIO_PROJECTS = [
 const TESTIMONIALS = [
   {
     quote:
-      "The Lotus International has been our primary B2B knitwear manufacturing partner in India for over 8 years. Their consistency in AQL 2.5 standards, organic cotton sourcing, and transparent timelines is outstanding.",
-    author: "Marcello V.",
-    role: "Director of Global Sourcing",
-    company: "Studio Earth (Europe)",
-    photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=120",
+      "Lotus began interacting with the factory in 2022. The facility is clean, well-organized, and committed to sustainability, using eco-friendly materials. The skilled employees follow safety protocols diligently, ensuring a safe work environment. Lotus excels in delivery, providing customer satisfaction with tracking updates and timely information. They welcome customer feedback to improve quality and delivery. Lotus invests in machinery and infrastructure based on customer needs and cares about employee growth, both professionally and personally. Their ethical business practices are commendable. Best wishes for their continued success and prosperity.",
+    author: "Head BD & Corporate Sales",
+    role: "Head of BD & Corporate Sales",
+    company: "Studio Earth",
+    photo: "/images/testimonials/studio_earth_head_bd.png",
     logo: "STUDIO EARTH",
   },
   {
     quote:
-      "Their commitment to ethical labor, solar-powered loops, and 100% GOTS compliance made them the ideal partner for our organic capsule programs. Their sampling speed is the fastest in Tirupur.",
-    author: "Ritu M.",
-    role: "Apparel Procurement Lead",
+      "We have done orders for school reunions, their quality was top class. Reasonably priced and always delivered on time.",
+    author: "Mahim Kumar",
+    role: "Head Procurement Hub, Bangalore",
     company: "Fabindia",
-    photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=120",
+    photo: "/images/testimonials/fabindia_logo.png",
     logo: "FABINDIA",
   },
   {
     quote:
-      "Dealing with Lotus means zero worries about compliance audits or shipping slip-ups. Their Sedex 4-Pillar audit scores are top-tier. Truly an enterprise B2B export manufacturer.",
-    author: "S. K. Goel",
+      "I am pleased to inform you that I have always hear good things from my colleagues and team regarding your expertise, professionalism and commitment and your passion for the Job was unbelievably amazing, A special thank you for working with me to create products that stands out from everything else available on the market. Thank you for your creativity and for going the extra mile to help our small company succeed in such a big world.",
+    author: "Mr. RajMohan",
+    role: "Client Partner",
+    company: "Apparel Brand",
+    photo: "/images/testimonials/default_avatar.svg",
+    logo: "CLIENT PARTNER",
+  },
+  {
+    quote:
+      "The customer support from The lotus international is outstanding. They are always available to address our concerns and provide solutions that work for us. Their proactive approach and dedication to excellence make them a standout in the industry.",
+    author: "Mr. JK",
+    role: "Client Partner",
+    company: "Fabrikaaa",
+    photo: "/images/testimonials/default_avatar.svg",
+    logo: "FABRIKAAA",
+  },
+  {
+    quote: "Exceptional Quality and Service!",
+    author: "Kavin",
+    role: "Client Partner",
+    company: "Proclime",
+    photo: "/images/testimonials/kavin_proclime.png",
+    logo: "PROCLIME",
+  },
+  {
+    quote: "Innovative Designs and Sustainable Practices",
+    author: "Sourcing Team",
+    role: "Global Sourcing",
+    company: "SCALIST",
+    photo: "/images/testimonials/scalist_logo.png",
+    logo: "SCALIST",
+  },
+  {
+    quote:
+      "Excellent quality polos, soft and stitched to perfection. I have been using several T-shirt brands and found Lotus products to be good quality and value for money.",
+    author: "Mr. Harish Babu",
     role: "Managing Director",
-    company: "M.G. Cotton Exports",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120",
-    logo: "M.G. COTTON",
+    company: "M.G Cotton Company",
+    photo: "/images/testimonials/harish_babu_mg_cotton.jpg",
+    logo: "M.G COTTON",
   },
 ];
 
@@ -490,7 +524,7 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "What is your minimum order quantity (MOQ)?",
-    a: "Basic and all types of cotton garments start at 500 pieces per color. Specialty materials like bamboo organic and Pima blends require an MOQ of 1,000 pieces per color.",
+    a: "Basic all type of Cottons will start with 500 pcs per color. Bamboo organic and Pima blends will be 1,000 pcs per color.",
   },
   {
     q: "How long does the sampling process take?",
@@ -498,7 +532,7 @@ const FAQS = [
   },
   {
     q: "What certifications do your manufacturing plants hold?",
-    a: "Our facility is Sedex 4-Pillar audited (Labor, Ethics, Environment, Health & Safety). We are certified for GOTS (Global Organic Textile Standard) and ISO 9001:2015 for comprehensive quality and safety management systems.",
+    a: "Our facility is Sedex 4-Pillar audited (Labor, Ethics, Environment, Health & Safety) and ISO 9001:2015 certified for comprehensive quality and safety management systems.",
   },
   {
     q: "Are your facilities fully sustainable?",
@@ -550,6 +584,14 @@ export default function HomePage() {
   const prevTestimonial = () => {
     setActiveTestimonial((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
   };
+
+  // Auto-slide homepage testimonials every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % TESTIMONIALS.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="page-transition bg-brand-bg text-brand-ink">
@@ -629,7 +671,7 @@ export default function HomePage() {
             {/* Sub-banner trust text */}
             <ScrollReveal delay={0.45} className="pt-2">
               <div className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-brand-accent/90 bg-white/5 px-4 py-2 rounded-xl border border-white/10">
-                <Award className="w-4 h-4" /> SEDEX 4-PILLAR AUDITED &amp; GOTS CERTIFIED
+                <Award className="w-4 h-4" /> SEDEX 4-PILLAR AUDITED &amp; ISO 9001:2015 CERTIFIED
               </div>
             </ScrollReveal>
 

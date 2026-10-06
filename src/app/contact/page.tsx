@@ -55,8 +55,8 @@ export default function ContactPage() {
                   <Mail className="w-5 h-5 text-brand-accent shrink-0 mt-1" />
                   <div>
                     <h4 className="font-serif-heading text-base font-bold text-brand-ink mb-1">Corporate Inquiries</h4>
-                    <a href="mailto:info@thelotus-international.com" className="text-xs text-brand-grey font-medium hover:text-brand-accent transition-colors block">
-                      info@thelotus-international.com
+                    <a href="mailto:hema@lotusintltextiles.com" className="text-xs text-brand-grey font-medium hover:text-brand-accent transition-colors block">
+                      hema@lotusintltextiles.com
                     </a>
                   </div>
                 </ScrollReveal>

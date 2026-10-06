@@ -137,7 +137,7 @@ export default function PrivateLabelPage() {
                   </div>
                   <div>
                     <span className="font-serif-heading text-base font-bold text-brand-ink block mb-0.5">Standard MOQ Policy</span>
-                    <p className="text-xs text-brand-grey leading-relaxed">Basic and all types of cotton start at 500 pcs per color. Bamboo organic and Pima blends are 1,000 pcs per color.</p>
+                    <p className="text-xs text-brand-grey leading-relaxed">Basic all type of Cottons will start with 500 pcs per color. Bamboo organic and Pima blends will be 1,000 pcs per color.</p>
                   </div>
                 </ScrollReveal>
 

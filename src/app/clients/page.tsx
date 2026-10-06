@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
-import TestimonialCard from "@/components/TestimonialCard";
+import TestimonialSlider from "@/components/TestimonialSlider";
 import BrandMarquee from "@/components/BrandMarquee";
 import { CheckCircle2, Globe, ArrowRight } from "lucide-react";
 
@@ -34,7 +34,7 @@ const CLIENT_BRANDS = [
     name: "Studio Earth",
     logo: "https://ik.imagekit.io/wepix/lotus%20international/studio%20earth.png",
     category: "Sustainable & Eco Apparel",
-    programs: "100% GOTS Organic Bamboo Cotton",
+    programs: "100% Organic Bamboo Cotton",
   },
   {
     name: "Fabrika",
@@ -64,7 +64,7 @@ const CLIENT_BRANDS = [
     name: "Green Planet",
     logo: "/images/logo/green%20planet.png",
     category: "Eco-Conscious Apparel",
-    programs: "GOTS Certified Organic Basics",
+    programs: "Certified Organic Basics",
   },
   {
     name: "Landmark Group",
@@ -104,30 +104,61 @@ const CASE_STUDIES = [
     logo: "https://ik.imagekit.io/wepix/lotus%20international/max.png",
     program: "Everyday Combed Tees & Kids Playwear",
     category: "High-Volume Retail",
-    details: "Delivering fast-turnaround, 100% combed cotton jersey programs with strict GOTS and REACH chemical safety standards for baby and children's knitwear. Rapid 30-day replenishment re-order cycles.",
-    tags: ["100% Combed Cotton", "GOTS & REACH Safe", "Fast Re-Orders", "Eco Packaging"],
+    details: "Delivering fast-turnaround, 100% combed cotton jersey programs with strict OEKO-TEX and REACH chemical safety standards for baby and children's knitwear. Rapid 30-day replenishment re-order cycles.",
+    tags: ["100% Combed Cotton", "OEKO-TEX & REACH Safe", "Fast Re-Orders", "Eco Packaging"],
     volume: "500,000+ Pcs Annually",
   },
 ];
 
 const FEEDBACKS = [
   {
-    quote: "Lotus International is our benchmark supplier for social and technical audits in South Asia. Their Sedex compliance, quality consistency, and ethical workforce standards are exemplary.",
-    author: "Elena G.",
-    role: "Global Sourcing Coordinator",
-    company: "Studio Earth (Europe)",
+    quote: "Lotus began interacting with the factory in 2022. The facility is clean, well-organized, and committed to sustainability, using eco-friendly materials. The skilled employees follow safety protocols diligently, ensuring a safe work environment. Lotus excels in delivery, providing customer satisfaction with tracking updates and timely information. They welcome customer feedback to improve quality and delivery. Lotus invests in machinery and infrastructure based on customer needs and cares about employee growth, both professionally and personally. Their ethical business practices are commendable. Best wishes for their continued success and prosperity.",
+    author: "Head BD & Corporate Sales",
+    role: "Head of BD & Corporate Sales",
+    company: "Studio Earth",
+    avatar: "/images/testimonials/studio_earth_head_bd.png",
   },
   {
-    quote: "Their responsiveness and technical agility are world-class. If an export spec or CAD pattern needs fine-tuning, their technical team resolves it within hours without stopping production lines.",
-    author: "Pradeep K.",
-    role: "VP Sourcing & Procurement",
-    company: "Max Fashion Group",
+    quote: "We have done orders for school reunions, their quality was top class. Reasonably priced and always delivered on time.",
+    author: "Mahim Kumar",
+    role: "Head Procurement Hub, Bangalore",
+    company: "Fabindia",
+    avatar: "/images/testimonials/fabindia_logo.png",
   },
   {
-    quote: "Lotus has consistently delivered our seasonal retail collections with zero rejection rates at port clearance. Their packaging inspection protocols leave no margin for errors.",
-    author: "Arthur Pendelton",
-    role: "Apparel Buying Agent",
-    company: "US Sourcing Desk",
+    quote: "I am pleased to inform you that I have always hear good things from my colleagues and team regarding your expertise, professionalism and commitment and your passion for the Job was unbelievably amazing, A special thank you for working with me to create products that stands out from everything else available on the market. Thank you for your creativity and for going the extra mile to help our small company succeed in such a big world.",
+    author: "Mr. RajMohan",
+    role: "Client Partner",
+    company: "Apparel Brand",
+    avatar: "/images/testimonials/default_avatar.svg",
+  },
+  {
+    quote: "The customer support from The lotus international is outstanding. They are always available to address our concerns and provide solutions that work for us. Their proactive approach and dedication to excellence make them a standout in the industry.",
+    author: "Mr. JK",
+    role: "Client Partner",
+    company: "Fabrikaaa",
+    avatar: "/images/testimonials/default_avatar.svg",
+  },
+  {
+    quote: "Exceptional Quality and Service!",
+    author: "Kavin",
+    role: "Client Partner",
+    company: "Proclime",
+    avatar: "/images/testimonials/kavin_proclime.png",
+  },
+  {
+    quote: "Innovative Designs and Sustainable Practices",
+    author: "Sourcing Team",
+    role: "Global Sourcing",
+    company: "SCALIST",
+    avatar: "/images/testimonials/scalist_logo.png",
+  },
+  {
+    quote: "Excellent quality polos, soft and stitched to perfection. I have been using several T-shirt brands and found Lotus products to be good quality and value for money.",
+    author: "Mr. Harish Babu",
+    role: "Managing Director",
+    company: "M.G Cotton Company",
+    avatar: "/images/testimonials/harish_babu_mg_cotton.jpg",
   },
 ];
 
@@ -336,18 +367,9 @@ export default function ClientsPage() {
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {FEEDBACKS.map((f, idx) => (
-              <ScrollReveal key={idx} delay={idx * 0.08} className="flex">
-                <TestimonialCard
-                  quote={f.quote}
-                  author={f.author}
-                  role={f.role}
-                  company={f.company}
-                />
-              </ScrollReveal>
-            ))}
-          </div>
+          <ScrollReveal>
+            <TestimonialSlider testimonials={FEEDBACKS} autoSlideInterval={4500} />
+          </ScrollReveal>
         </div>
       </section>
 

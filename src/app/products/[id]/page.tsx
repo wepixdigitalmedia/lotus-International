@@ -213,7 +213,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                 </span>
                 <span className="text-xs font-semibold text-brand-sage flex items-center gap-1">
                   <ShieldCheck className="w-4 h-4" />
-                  <span>Sedex &amp; GOTS Certified</span>
+                  <span>Sedex &amp; ISO 9001 Certified</span>
                 </span>
               </div>
 
@@ -351,10 +351,10 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                   <div className="bg-white p-4 rounded-xl border border-brand-light-grey/70 space-y-2">
                     <p className="flex items-center gap-2 text-brand-ink font-semibold">
                       <Award className="w-4 h-4 text-brand-accent" />
-                      <span>Sedex 4-Pillar & GOTS Certified Campus</span>
+                      <span>Sedex 4-Pillar &amp; ISO 9001:2015 Certified Campus</span>
                     </p>
                     <p className="leading-relaxed">
-                      All raw cotton yarns pass international toxicity testing, GOTS organic certification standards, and metal tunnel safety inspection prior to garment finishing.
+                      All raw cotton yarns pass international toxicity testing, REACH chemical safety standards, and metal tunnel safety inspection prior to garment finishing.
                     </p>
                   </div>
                 )}

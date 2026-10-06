@@ -180,8 +180,8 @@ export default function Footer() {
               </li>
               <li className="flex gap-3 text-brand-bg/70 items-center">
                 <Mail className="w-5 h-5 text-brand-accent shrink-0" />
-                <a href="mailto:info@thelotus-international.com" className="hover:text-brand-accent transition-colors">
-                  info@thelotus-international.com
+                <a href="mailto:hema@lotusintltextiles.com" className="hover:text-brand-accent transition-colors">
+                  hema@lotusintltextiles.com
                 </a>
               </li>
               <li className="flex gap-3 text-brand-bg/70 items-center">
@@ -262,9 +262,6 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-4">
             <span className="text-[10px] font-bold tracking-widest uppercase border border-white/10 px-3 py-1 rounded-lg bg-white/5 text-brand-bg/85">
               Sedex 4-Pillar
-            </span>
-            <span className="text-[10px] font-bold tracking-widest uppercase border border-white/10 px-3 py-1 rounded-lg bg-white/5 text-brand-bg/85">
-              GOTS Certified
             </span>
             <span className="text-[10px] font-bold tracking-widest uppercase border border-white/10 px-3 py-1 rounded-lg bg-white/5 text-brand-bg/85">
               ISO 9001:2015
