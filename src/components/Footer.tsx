@@ -2,13 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Mail, Phone, MapPin, Send, Check, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Check, MessageCircle, Calendar } from "lucide-react";
+import { useInquiry } from "./InquiryProvider";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { openConsultation } = useInquiry();
 
   useEffect(() => {
     setMounted(true);
@@ -42,7 +44,7 @@ export default function Footer() {
               Export-grade knitwear garment manufacturers in Tirupur, India. Partnering with global lifestyle brands with a deep focus on sustainability and women&apos;s empowerment.
             </p>
 
-            {/* Newsletter Hook */}
+            {/* Newsletter & Book Consultation Hook */}
             <div className="space-y-3 pt-2">
               <h4 className="text-[10px] font-bold tracking-widest uppercase text-brand-accent">
                 Subscribe to Industry Reports
@@ -86,6 +88,18 @@ export default function Footer() {
                   Thank you! You are subscribed to our B2B newsletter.
                 </p>
               )}
+
+              {/* Book Consultation Button in Footer */}
+              <div className="pt-2">
+                <button
+                  type="button"
+                  onClick={openConsultation}
+                  className="w-full max-w-sm py-2.5 px-4 rounded-xl bg-brand-accent hover:bg-brand-accent-hover text-brand-bg text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span>Book B2B Consultation</span>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -101,6 +115,11 @@ export default function Footer() {
               <li>
                 <Link href="/manufacturing" className="text-brand-bg/70 hover:text-brand-accent transition-colors">
                   Factory Capabilities
+                </Link>
+              </li>
+              <li>
+                <Link href="/infrastructure" className="text-brand-bg/70 hover:text-brand-accent transition-colors">
+                  Infrastructure &amp; Plant
                 </Link>
               </li>
               <li>
@@ -123,6 +142,16 @@ export default function Footer() {
                   Quality & Compliance
                 </Link>
               </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={openConsultation}
+                  className="text-brand-bg/70 hover:text-brand-accent transition-colors text-left flex items-center gap-1.5 cursor-pointer"
+                >
+                  <span>Book Consultation</span>
+                  <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-brand-accent/20 text-brand-accent font-semibold">Free</span>
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -133,6 +162,11 @@ export default function Footer() {
               <li>
                 <Link href="/about" className="text-brand-bg/70 hover:text-brand-accent transition-colors">
                   About Us & Legacy
+                </Link>
+              </li>
+              <li>
+                <Link href="/about#certificates" className="text-brand-bg/70 hover:text-brand-accent transition-colors">
+                  Certificates &amp; Audits
                 </Link>
               </li>
               <li>

@@ -50,7 +50,7 @@ const CLIENT_BRANDS = [
   },
   {
     name: "Ducati",
-    logo: "/images/logo/ducati.png",
+    logo: "https://ik.imagekit.io/wepix/lotus%20international/Ducati%20Taupe%20Wordmark%20and%20Emblem.png",
     category: "Performance Lifestyle",
     programs: "Technical Cotton Blends & Graphic Knits",
   },

@@ -31,11 +31,6 @@ export const BRAND_LOGOS: BrandLogo[] = [
     alt: "Aeropostale",
   },
   {
-    name: "Studio Earth",
-    src: "https://ik.imagekit.io/wepix/lotus%20international/studio%20earth.png",
-    alt: "Studio Earth",
-  },
-  {
     name: "Fabrika",
     src: "https://ik.imagekit.io/wepix/lotus%20international/fabrika.png",
     alt: "Fabrika",
@@ -47,7 +42,7 @@ export const BRAND_LOGOS: BrandLogo[] = [
   },
   {
     name: "Ducati",
-    src: "/images/logo/ducati.png",
+    src: "https://ik.imagekit.io/wepix/lotus%20international/Ducati%20Taupe%20Wordmark%20and%20Emblem.png",
     alt: "Ducati",
     className: "max-h-7 sm:max-h-8 md:max-h-9",
   },

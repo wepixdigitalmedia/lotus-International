@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, FileText, ChevronDown, Calendar } from "lucide-react";
+import { Menu, X, FileText, ChevronDown } from "lucide-react";
 import { useInquiry } from "./InquiryProvider";
 
 // WePix-style navigation structure with rich submenus
@@ -16,6 +16,7 @@ const navConfig = [
       { name: "About Lotus International", href: "/about" },
       { name: "CSR & Trust", href: "/trust" },
       { name: "Quality & Compliance", href: "/compliance" },
+      { name: "Certificates & Accreditations", href: "/about#certificates" },
       { name: "Global Clients", href: "/clients" },
       { name: "Careers", href: "/careers" },
     ],
@@ -29,7 +30,14 @@ const navConfig = [
       { name: "Nature Polo Club", href: "/nature-polo-club" },
     ],
   },
-  { name: "Manufacturing", href: "/manufacturing" },
+  {
+    name: "Manufacturing",
+    href: "/manufacturing",
+    submenu: [
+      { name: "Manufacturing Process", href: "/manufacturing" },
+      { name: "Infrastructure & Facilities", href: "/infrastructure" },
+    ],
+  },
   { name: "Sustainability", href: "/sustainability" },
   { name: "Women’s Empowerment", href: "/women-empowerment" },
   {
@@ -48,7 +56,7 @@ export default function Navbar() {
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const { items, openConsultation } = useInquiry();
+  const { items } = useInquiry();
   const ticking = useRef(false);
 
   useEffect(() => {
@@ -217,18 +225,6 @@ export default function Navbar() {
                 )}
               </Link>
 
-              {/* Consultation Button */}
-              <button
-                onClick={openConsultation}
-                className={`px-3.5 py-2 text-xs font-semibold transition-all duration-300 whitespace-nowrap ${
-                  scrolled
-                    ? "text-white/90 hover:text-white"
-                    : "text-neutral-700 hover:text-brand-accent"
-                }`}
-              >
-                Book Consultation
-              </button>
-
               {/* Get Quote Pill Button (Matching WePix Sourcing) */}
               <Link
                 href="/contact"
@@ -365,17 +361,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Drawer Bottom Actions */}
-        <div className="pt-6 border-t border-neutral-200 space-y-3">
-          <button
-            onClick={() => {
-              setIsOpen(false);
-              openConsultation();
-            }}
-            className="w-full text-center py-3 rounded-full border border-neutral-300 font-semibold text-xs text-neutral-800 hover:bg-neutral-50 transition-colors flex items-center justify-center gap-2"
-          >
-            <Calendar className="w-4 h-4 text-brand-accent" />
-            <span>Book Consultation</span>
-          </button>
+        <div className="pt-6 border-t border-neutral-200">
           <Link
             href="/contact"
             onClick={() => setIsOpen(false)}

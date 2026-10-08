@@ -28,6 +28,48 @@ const VALUES = [
   },
 ];
 
+const CERTIFICATES = [
+  {
+    image: "/images/certificates/smeta-capr.png",
+    title: "SMETA Corrective Action Plan Report (CAPR)",
+    date: "2024-01-24",
+    badge: "Ethical Social Audit",
+    description:
+      "SMETA (Sedex Members Ethical Trade Audit) is an ethical audit methodology that encompasses all aspects of responsible business practice. SMETA is the most widely used social audit in the world. It was designed to enable businesses to evaluate working conditions within their supply chain.",
+    points: [
+      "Sedex 4-Pillar Audited Facility",
+      "Fair labor standards & worker welfare",
+      "Rigorous workplace health, safety & environment review",
+    ],
+  },
+  {
+    image: "/images/certificates/bci-member.png",
+    title: "BECOMING A BCI MEMBER",
+    date: "2022-01-04",
+    badge: "Sustainable Sourcing",
+    description:
+      "Membership is open to all organisations. BCI is an inclusive initiative which aims to work with its members and partners to achieve its goal of transforming cotton production worldwide by developing Better Cotton as a sustainable mainstream commodity.",
+    points: [
+      "Official Better Cotton Initiative Member",
+      "Promoting soil health & water conservation",
+      "Supporting farmer livelihoods & ethical agriculture",
+    ],
+  },
+  {
+    image: "/images/certificates/better-cotton.png",
+    title: "Better Cotton",
+    date: "2022-03-07",
+    badge: "Global Cotton Standards",
+    description:
+      "Better Cotton is a non-profit, multistakeholder governance group that promotes better standards in cotton farming and practices across 22 countries. As of 2023, Better Cotton accounts for 22% of global cotton production.",
+    points: [
+      "Traceable & certified sustainable cotton",
+      "Accounts for 22% of global cotton production standard",
+      "Reduced pesticide & resource consumption footprint",
+    ],
+  },
+];
+
 export default function AboutPage() {
   return (
     <div className="page-transition">
@@ -286,8 +328,77 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* CERTIFICATES & COMPLIANCE SECTION */}
+      <section id="certificates" className="py-20 md:py-28 bg-brand-bg border-t border-brand-light-grey/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+            <ScrollReveal>
+              <span className="text-[10px] font-bold tracking-widest text-brand-accent uppercase bg-brand-accent/10 border border-brand-accent/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                Verified Accreditations
+              </span>
+              <h2 className="font-serif-heading text-3xl sm:text-4xl md:text-5xl font-bold text-brand-ink">
+                Certificates &amp; Accreditations
+              </h2>
+              <p className="text-xs md:text-sm text-brand-grey max-w-xl mx-auto mt-3 font-medium leading-relaxed">
+                Our manufacturing operations and sourcing practices are strictly audited and certified by leading international ethical and sustainable trade bodies.
+              </p>
+            </ScrollReveal>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+            {CERTIFICATES.map((cert, idx) => (
+              <ScrollReveal
+                key={idx}
+                delay={idx * 0.08}
+                className="bg-white border border-brand-light-grey rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-lg hover:border-brand-accent/30 transition-all duration-300 group"
+              >
+                <div>
+                  {/* Certificate Logo Frame */}
+                  <div className="relative w-full aspect-[4/3] rounded-2xl bg-brand-bg/60 border border-brand-light-grey/70 p-6 flex items-center justify-center mb-6 overflow-hidden group-hover:bg-brand-bg transition-colors">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Date & Badge Tag */}
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-brand-accent/10 text-brand-accent border border-brand-accent/20">
+                      {cert.badge}
+                    </span>
+                    <span className="text-[11px] font-semibold text-brand-grey font-mono">
+                      {cert.date}
+                    </span>
+                  </div>
+
+                  {/* Title & Description */}
+                  <h3 className="font-serif-heading text-lg sm:text-xl font-bold text-brand-ink mb-3 leading-snug">
+                    {cert.title}
+                  </h3>
+                  <p className="text-xs text-brand-grey leading-relaxed font-normal mb-6">
+                    {cert.description}
+                  </p>
+                </div>
+
+                {/* Key Points / Bullet Highlights */}
+                <div className="pt-4 border-t border-brand-light-grey/80 space-y-2">
+                  {cert.points.map((pt, pIdx) => (
+                    <div key={pIdx} className="flex items-start gap-2 text-[11px] text-brand-ink font-semibold">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-accent shrink-0 mt-1.5" />
+                      <span>{pt}</span>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Trusted Partners & Global Brands */}
-      <section className="py-14 md:py-18 overflow-hidden bg-brand-bg border-t border-brand-light-grey/80">
+      <section className="py-14 md:py-18 overflow-hidden bg-white border-t border-brand-light-grey/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <BrandMarquee />
         </div>
