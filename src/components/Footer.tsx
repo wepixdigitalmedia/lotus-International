@@ -110,7 +110,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/sustainability" className="text-brand-bg/70 hover:text-brand-accent transition-colors">
-                  Women&apos;s Empowerment
+                  Sustainability
+                </Link>
+              </li>
+              <li>
+                <Link href="/women-empowerment" className="text-brand-bg/70 hover:text-brand-accent transition-colors">
+                  Women’s Empowerment
                 </Link>
               </li>
               <li>

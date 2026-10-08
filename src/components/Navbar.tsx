@@ -30,7 +30,8 @@ const navConfig = [
     ],
   },
   { name: "Manufacturing", href: "/manufacturing" },
-  { name: "Women Empowerment", href: "/sustainability" },
+  { name: "Sustainability", href: "/sustainability" },
+  { name: "Women’s Empowerment", href: "/women-empowerment" },
   {
     name: "Resources",
     href: "/resources",
@@ -118,7 +119,7 @@ export default function Navbar() {
           </div>
 
           {/* ── Center: Desktop Navigation (WePix Sourcing Reference Style) ────────── */}
-          <nav className="hidden lg:flex items-center justify-center gap-5 xl:gap-7">
+          <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-6 2xl:gap-7">
             {navConfig.map((item) => {
               const isActive =
                 pathname === item.href ||
