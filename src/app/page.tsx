@@ -164,12 +164,6 @@ const CLIENT_BRANDS = [
     programs: "Heavyweight Fleece, Vintage Graphic Knits",
   },
   {
-    name: "Studio Earth",
-    logo: "https://ik.imagekit.io/wepix/lotus%20international/studio%20earth.png",
-    category: "Sustainable & Eco Apparel",
-    programs: "100% Organic Bamboo Cotton",
-  },
-  {
     name: "Fabrika",
     logo: "https://ik.imagekit.io/wepix/lotus%20international/fabrika.png",
     category: "Contemporary Fashion",
@@ -532,15 +526,6 @@ const PORTFOLIO_PROJECTS = [
 
 // Testimonials
 const TESTIMONIALS = [
-  {
-    quote:
-      "Lotus began interacting with the factory in 2022. The facility is clean, well-organized, and committed to sustainability, using eco-friendly materials. The skilled employees follow safety protocols diligently, ensuring a safe work environment. Lotus excels in delivery, providing customer satisfaction with tracking updates and timely information. They welcome customer feedback to improve quality and delivery. Lotus invests in machinery and infrastructure based on customer needs and cares about employee growth, both professionally and personally. Their ethical business practices are commendable. Best wishes for their continued success and prosperity.",
-    author: "Head BD & Corporate Sales",
-    role: "Head of BD & Corporate Sales",
-    company: "Studio Earth",
-    photo: "/images/testimonials/studio_earth_head_bd.png",
-    logo: "STUDIO EARTH",
-  },
   {
     quote:
       "We have done orders for school reunions, their quality was top class. Reasonably priced and always delivered on time.",

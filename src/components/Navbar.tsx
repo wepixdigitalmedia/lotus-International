@@ -54,9 +54,11 @@ const navConfig = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
+  const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
+  const desktopNavRef = useRef<HTMLElement>(null);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const { items } = useInquiry();
+  const { items, openConsultation } = useInquiry();
   const ticking = useRef(false);
 
   useEffect(() => {
@@ -82,7 +84,27 @@ export default function Navbar() {
   useEffect(() => {
     setIsOpen(false);
     setOpenMobileSubmenu(null);
+    setOpenDesktopMenu(null);
   }, [pathname]);
+
+  // Close desktop dropdown on outside tap/click or Escape
+  useEffect(() => {
+    if (!openDesktopMenu) return;
+    const handlePointerDown = (e: PointerEvent) => {
+      if (desktopNavRef.current && !desktopNavRef.current.contains(e.target as Node)) {
+        setOpenDesktopMenu(null);
+      }
+    };
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpenDesktopMenu(null);
+    };
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [openDesktopMenu]);
 
   const toggleMobileSubmenu = (name: string) => {
     setOpenMobileSubmenu(openMobileSubmenu === name ? null : name);
@@ -127,7 +149,7 @@ export default function Navbar() {
           </div>
 
           {/* ── Center: Desktop Navigation (WePix Sourcing Reference Style) ────────── */}
-          <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-6 2xl:gap-7">
+          <nav ref={desktopNavRef} className="hidden lg:flex items-center justify-center gap-4 xl:gap-6 2xl:gap-7">
             {navConfig.map((item) => {
               const isActive =
                 pathname === item.href ||
@@ -135,10 +157,29 @@ export default function Navbar() {
 
               if (item.submenu) {
                 return (
-                  <div key={item.name} className="relative group py-2">
-                    <Link
-                      href={item.href}
-                      className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200 whitespace-nowrap ${
+                  <div
+                    key={item.name}
+                    className="relative py-2"
+                    onPointerEnter={(e) => {
+                      if (e.pointerType === "mouse") setOpenDesktopMenu(item.name);
+                    }}
+                    onPointerLeave={(e) => {
+                      if (e.pointerType === "mouse") setOpenDesktopMenu(null);
+                    }}
+                  >
+                    <button
+                      type="button"
+                      aria-haspopup="menu"
+                      aria-expanded={openDesktopMenu === item.name}
+                      onClick={(e) => {
+                        const pt = (e.nativeEvent as PointerEvent).pointerType;
+                        if (pt === "mouse") {
+                          setOpenDesktopMenu(item.name);
+                        } else {
+                          setOpenDesktopMenu(openDesktopMenu === item.name ? null : item.name);
+                        }
+                      }}
+                      className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200 whitespace-nowrap outline-none ${
                         scrolled
                           ? isActive
                             ? "text-brand-accent font-bold"
@@ -149,11 +190,21 @@ export default function Navbar() {
                       }`}
                     >
                       <span>{item.name}</span>
-                      <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180 opacity-70" />
-                    </Link>
+                      <ChevronDown
+                        className={`w-3.5 h-3.5 transition-transform duration-300 opacity-70 ${
+                          openDesktopMenu === item.name ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
 
                     {/* Smooth Dropdown Panel */}
-                    <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform group-hover:translate-y-0 -translate-y-1.5 z-50">
+                    <div
+                      className={`absolute left-1/2 -translate-x-1/2 top-full pt-2 transition-all duration-200 ease-out transform z-50 ${
+                        openDesktopMenu === item.name
+                          ? "opacity-100 visible translate-y-0"
+                          : "opacity-0 invisible -translate-y-1.5 pointer-events-none"
+                      }`}
+                    >
                       <div
                         className={`w-56 rounded-2xl shadow-2xl py-3 border overflow-hidden transition-all duration-300 ${
                           scrolled
@@ -165,6 +216,7 @@ export default function Navbar() {
                           <Link
                             key={sub.href}
                             href={sub.href}
+                            onClick={() => setOpenDesktopMenu(null)}
                             className={`block px-5 py-2.5 text-xs font-semibold transition-colors duration-150 ${
                               scrolled
                                 ? pathname === sub.href
@@ -208,8 +260,9 @@ export default function Navbar() {
           <div className="flex items-center justify-end gap-3 flex-shrink-0">
             <div className="hidden lg:flex items-center gap-3">
               {/* Inquiry Counter Icon */}
-              <Link
-                href="/contact"
+              <button
+                type="button"
+                onClick={openConsultation}
                 title="Inquiry List"
                 className={`relative p-2 rounded-full border transition-all duration-300 ${
                   scrolled
@@ -223,7 +276,7 @@ export default function Navbar() {
                     {items.length}
                   </span>
                 )}
-              </Link>
+              </button>
 
               {/* Get Quote Pill Button (Matching WePix Sourcing) */}
               <Link
@@ -240,8 +293,9 @@ export default function Navbar() {
 
             {/* Mobile Menu Icon */}
             <div className="flex items-center gap-2 lg:hidden">
-              <Link
-                href="/contact"
+              <button
+                type="button"
+                onClick={openConsultation}
                 className={`relative p-2 rounded-full border transition-colors duration-300 ${
                   scrolled
                     ? "border-white/20 text-white bg-white/10"
@@ -254,7 +308,7 @@ export default function Navbar() {
                     {items.length}
                   </span>
                 )}
-              </Link>
+              </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle menu"
