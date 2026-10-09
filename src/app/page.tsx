@@ -138,6 +138,81 @@ const TRUST_STATS = [
   { end: 22, suffix: "+", label: "Years of Experience" },
 ];
 
+const CLIENT_BRANDS = [
+  {
+    name: "U.S. Polo Assn.",
+    logo: "https://ik.imagekit.io/wepix/lotus%20international/us%20polo%20assn.png",
+    category: "Heritage Sportswear",
+    programs: "Pique Polos, Zip Hoodies, Crew Knits",
+  },
+  {
+    name: "Arrow",
+    logo: "/images/logo/arrow.png",
+    category: "Heritage Menswear",
+    programs: "Executive Polos & Mercerized Smart Knits",
+  },
+  {
+    name: "Max Fashion",
+    logo: "https://ik.imagekit.io/wepix/lotus%20international/max.png",
+    category: "Retail Department Chain",
+    programs: "Everyday Combed Tees, Kids Playwear",
+  },
+  {
+    name: "Aeropostale",
+    logo: "https://ik.imagekit.io/wepix/lotus%20international/aeropostale.png",
+    category: "Youth & Casual Lifestyle",
+    programs: "Heavyweight Fleece, Vintage Graphic Knits",
+  },
+  {
+    name: "Studio Earth",
+    logo: "https://ik.imagekit.io/wepix/lotus%20international/studio%20earth.png",
+    category: "Sustainable & Eco Apparel",
+    programs: "100% Organic Bamboo Cotton",
+  },
+  {
+    name: "Fabrika",
+    logo: "https://ik.imagekit.io/wepix/lotus%20international/fabrika.png",
+    category: "Contemporary Fashion",
+    programs: "Enzyme Washed Slub, Structured Jersey",
+  },
+  {
+    name: "Liverpool",
+    logo: "https://ik.imagekit.io/wepix/lotus%20international/liverpool.png",
+    category: "Department Store Retail",
+    programs: "Premium Loungewear & Seasonal Knits",
+  },
+  {
+    name: "Ducati",
+    logo: "https://ik.imagekit.io/wepix/lotus%20international/Ducati%20Taupe%20Wordmark%20and%20Emblem.png",
+    category: "Performance Lifestyle",
+    programs: "Technical Cotton Blends & Graphic Knits",
+  },
+  {
+    name: "Flying Machine",
+    logo: "/images/logo/flying%20machine.png",
+    category: "Youth Apparel & Casuals",
+    programs: "Heavyweight Tees & Vintage Terry",
+  },
+  {
+    name: "Green Planet",
+    logo: "/images/logo/green%20planet.png",
+    category: "Eco-Conscious Apparel",
+    programs: "Certified Organic Basics",
+  },
+  {
+    name: "Landmark Group",
+    logo: "/images/logo/land%20mark%20group.png",
+    category: "Global Retail Conglomerate",
+    programs: "High-Volume Private Label Collections",
+  },
+  {
+    name: "Nautica",
+    logo: "/images/logo/nautica.png",
+    category: "Maritime Lifestyle",
+    programs: "Performance Pique & Ocean-Wash Tees",
+  },
+];
+
 
 const SERVICES = [
   {
@@ -698,10 +773,60 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. LOGO TICKER */}
-      <section className="py-12 md:py-16 overflow-hidden bg-brand-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <BrandMarquee />
+      {/* 3. LOGO TICKER & BRAND PORTFOLIO */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 pb-6 border-b border-brand-light-grey/80">
+            <ScrollReveal>
+              <span className="text-[10px] font-bold tracking-widest text-brand-accent uppercase bg-brand-accent/10 border border-brand-accent/20 px-3 py-1 rounded-full inline-block mb-2">
+                Brand Portfolio
+              </span>
+              <h2 className="font-serif-heading text-2xl sm:text-3xl md:text-4xl font-bold text-brand-ink">
+                Trusted Partner &amp; Global Apparel Brands
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <p className="text-xs md:text-sm text-brand-grey max-w-md font-medium">
+                Supplying millions of private-label knitted garments annually to top retail distribution networks.
+              </p>
+            </ScrollReveal>
+          </div>
+
+          {/* Continuous Brand Marquee Ticker */}
+          <div className="mb-10 py-3 bg-brand-bg/50 rounded-2xl border border-brand-light-grey/80 overflow-hidden">
+            <BrandMarquee showHeading={false} />
+          </div>
+
+          {/* Compact Modern Logo Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+            {CLIENT_BRANDS.map((brand, idx) => (
+              <ScrollReveal
+                key={brand.name}
+                delay={idx * 0.05}
+                className="bg-brand-bg/40 border border-brand-light-grey/80 rounded-2xl p-5 md:p-6 shadow-xs hover:shadow-md hover:border-brand-accent/40 transition-all duration-300 flex flex-col items-center justify-between text-center group min-h-[140px]"
+              >
+                <div className="h-12 w-full flex items-center justify-center mb-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="max-h-9 md:max-h-10 max-w-[140px] w-auto object-contain opacity-70 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  />
+                </div>
+                <div className="pt-2 border-t border-brand-light-grey/50 w-full">
+                  <span className="text-[10px] font-bold tracking-wider text-brand-accent uppercase block">
+                    {brand.category}
+                  </span>
+                  <span className="text-[11px] text-brand-grey font-medium truncate block mt-0.5">
+                    {brand.programs}
+                  </span>
+                </div>
+              </ScrollReveal>
+            ))}
+
+          </div>
+
         </div>
       </section>
 

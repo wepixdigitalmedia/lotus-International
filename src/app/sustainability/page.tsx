@@ -319,20 +319,10 @@ export default function SustainabilityPage() {
               <ScrollReveal delay={0.1} className="relative aspect-[16/11] rounded-2xl overflow-hidden bg-brand-bg shadow-md border border-brand-light-grey group">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/heroes/sustainability.jpg"
-                  alt="Lotus International Green Manufacturing Facility with Solar Energy and Plantations in Tirupur"
+                  src="https://ik.imagekit.io/wepix/lotus%20international/Process/Sustainable%20Sourcing%20Eco%20Still%20Life.webp"
+                  alt="Sustainable Sourcing Eco Still Life"
                   className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 brightness-[0.95]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/85 via-transparent to-transparent opacity-85 group-hover:opacity-70 transition-opacity duration-300" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-brand-ink/90 backdrop-blur-md border border-white/20 text-white flex items-center justify-between">
-                  <div>
-                    <h4 className="text-xs sm:text-sm font-bold font-serif-heading">Eco-Friendly Factory Campus</h4>
-                    <p className="text-[10px] sm:text-[11px] text-brand-bg/80">Lush Plantation &amp; Safe Ecosystem • Avinashi, Tirupur</p>
-                  </div>
-                  <span className="text-[9px] font-bold px-2.5 py-1 rounded-full bg-brand-accent/20 border border-brand-accent/30 text-brand-accent uppercase tracking-wider">
-                    Green Premises
-                  </span>
-                </div>
               </ScrollReveal>
             </div>
           </div>

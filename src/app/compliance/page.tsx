@@ -158,76 +158,13 @@ export default function CompliancePage() {
       <section className="py-8 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4 aspect-auto md:aspect-[16/9] w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-xl border border-brand-light-grey/80 p-2.5 sm:p-3.5 bg-brand-bg/60">
-              
-              {/* Main Feature Panel: Final Inspection & Finishing */}
-              <div className="md:col-span-7 relative min-h-[260px] sm:min-h-[320px] md:min-h-full rounded-xl md:rounded-2xl overflow-hidden group shadow-sm">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://ik.imagekit.io/wepix/lotus%20international/B2B%20Services/Finishing.webp"
-                  alt="Lotus International Garment Final Inspection & Finishing in Tirupur"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.92]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
-                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 p-2.5 sm:p-3 rounded-lg sm:rounded-xl bg-brand-ink/85 backdrop-blur-md border border-white/15 text-white flex items-center justify-between">
-                  <div>
-                    <h4 className="text-xs sm:text-sm font-bold font-serif-heading">Final Garment Inspection &amp; Finishing</h4>
-                    <p className="text-[10px] sm:text-[11px] text-brand-bg/80">Tirupur Facility QA Desk</p>
-                  </div>
-                  <span className="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full bg-brand-accent/20 border border-brand-accent/30 text-brand-accent uppercase tracking-wider">
-                    100% Inspected
-                  </span>
-                </div>
-              </div>
-
-              {/* Secondary Inspection Grid */}
-              <div className="md:col-span-5 grid grid-cols-2 md:grid-rows-2 gap-3 sm:gap-4 min-h-[220px] sm:min-h-[260px] md:min-h-full">
-                
-                {/* In-Line Sewing Audit */}
-                <div className="col-span-2 relative h-full rounded-xl md:rounded-2xl overflow-hidden group shadow-sm">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/compliance/lotus_manufacturing.webp"
-                    alt="In-line Stitching & Assembly Quality Audit"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.92]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
-                  <div className="absolute bottom-2.5 left-2.5 right-2.5 p-2 rounded-lg bg-brand-ink/85 backdrop-blur-md border border-white/15 text-white flex items-center justify-between">
-                    <span className="text-[11px] sm:text-xs font-bold font-serif-heading">In-Line Sewing Audit</span>
-                    <span className="text-[9px] font-semibold text-brand-bg/80">Live Production Floor</span>
-                  </div>
-                </div>
-
-                {/* Fabric Roll & Knit Quality Check */}
-                <div className="relative h-full rounded-xl md:rounded-2xl overflow-hidden group shadow-sm">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/compliance/lotus_fabric.webp"
-                    alt="Fabric Quality & Knit Structure Inspection"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.92]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
-                  <div className="absolute bottom-2 left-2 right-2 p-1.5 rounded-lg bg-brand-ink/85 backdrop-blur-md border border-white/15 text-white">
-                    <span className="text-[10px] sm:text-[11px] font-bold block truncate">Fabric Roll Check</span>
-                  </div>
-                </div>
-
-                {/* Packaging & AQL Carton Audit */}
-                <div className="relative h-full rounded-xl md:rounded-2xl overflow-hidden group shadow-sm">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/compliance/lotus_packaging.webp"
-                    alt="Final AQL 2.5 Packaging & Needle Detection Audit"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.92]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
-                  <div className="absolute bottom-2 left-2 right-2 p-1.5 rounded-lg bg-brand-ink/85 backdrop-blur-md border border-white/15 text-white">
-                    <span className="text-[10px] sm:text-[11px] font-bold block truncate">Packaging &amp; AQL</span>
-                  </div>
-                </div>
-
-              </div>
-
+            <div className="w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-xl border border-brand-light-grey/80 bg-brand-bg/60">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/compliance/qa_visual_banner_1.jpg"
+                alt="Garment Quality Inspection & Checking"
+                className="w-full h-auto block"
+              />
             </div>
           </ScrollReveal>
         </div>

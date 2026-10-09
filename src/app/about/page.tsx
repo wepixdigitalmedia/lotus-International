@@ -141,18 +141,6 @@ export default function AboutPage() {
                     alt="The Lotus International Headquarters and Manufacturing Facility"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
-                  
-                  {/* Floating Tag */}
-                  <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-white/40 shadow-lg flex items-center justify-between">
-                    <div>
-                      <h4 className="text-xs font-bold text-brand-ink font-serif-heading">The Lotus International Facility</h4>
-                      <p className="text-[11px] text-brand-grey">Tirupur, Tamil Nadu, India</p>
-                    </div>
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-brand-accent/10 text-brand-accent uppercase tracking-wider">
-                      Est. 2004
-                    </span>
-                  </div>
                 </div>
 
                 {/* Decorative glow / backdrop */}
@@ -345,27 +333,27 @@ export default function AboutPage() {
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
             {CERTIFICATES.map((cert, idx) => (
               <ScrollReveal
                 key={idx}
                 delay={idx * 0.08}
-                className="bg-white border border-brand-light-grey rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-lg hover:border-brand-accent/30 transition-all duration-300 group"
+                className="flex flex-col group"
               >
                 <div>
-                  {/* Certificate Logo Frame */}
-                  <div className="relative w-full aspect-[4/3] rounded-2xl bg-brand-bg/60 border border-brand-light-grey/70 p-6 flex items-center justify-center mb-6 overflow-hidden group-hover:bg-brand-bg transition-colors">
+                  {/* Certificate Logo (No Border/Padding) */}
+                  <div className="relative w-full aspect-[16/9] flex items-center justify-start mb-6 overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={cert.image}
                       alt={cert.title}
-                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="max-h-full max-w-full object-contain object-left group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
 
                   {/* Date & Badge Tag */}
-                  <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-brand-accent/10 text-brand-accent border border-brand-accent/20">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-brand-accent/10 text-brand-accent">
                       {cert.badge}
                     </span>
                     <span className="text-[11px] font-semibold text-brand-grey font-mono">
@@ -374,18 +362,18 @@ export default function AboutPage() {
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="font-serif-heading text-lg sm:text-xl font-bold text-brand-ink mb-3 leading-snug">
+                  <h3 className="font-serif-heading text-xl sm:text-2xl font-bold text-brand-ink mb-3 leading-snug">
                     {cert.title}
                   </h3>
-                  <p className="text-xs text-brand-grey leading-relaxed font-normal mb-6">
+                  <p className="text-sm text-brand-grey leading-relaxed font-normal mb-6">
                     {cert.description}
                   </p>
                 </div>
 
                 {/* Key Points / Bullet Highlights */}
-                <div className="pt-4 border-t border-brand-light-grey/80 space-y-2">
+                <div className="space-y-2 mt-auto">
                   {cert.points.map((pt, pIdx) => (
-                    <div key={pIdx} className="flex items-start gap-2 text-[11px] text-brand-ink font-semibold">
+                    <div key={pIdx} className="flex items-start gap-2 text-xs text-brand-ink font-semibold">
                       <span className="w-1.5 h-1.5 rounded-full bg-brand-accent shrink-0 mt-1.5" />
                       <span>{pt}</span>
                     </div>

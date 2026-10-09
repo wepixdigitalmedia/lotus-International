@@ -244,23 +244,6 @@ export default function ClientsPage() {
               </ScrollReveal>
             ))}
 
-            {/* Global Sourcing Tag Card */}
-            <ScrollReveal
-              delay={0.35}
-              className="bg-brand-ink text-brand-bg rounded-2xl p-5 md:p-6 shadow-sm flex flex-col justify-between items-center text-center col-span-2 sm:col-span-1"
-            >
-              <div className="w-9 h-9 rounded-full bg-brand-accent/20 border border-brand-accent/40 flex items-center justify-center text-brand-accent mb-2">
-                <Globe className="w-4 h-4" />
-              </div>
-              <div>
-                <h4 className="font-serif-heading text-sm font-bold text-white mb-1">
-                  10+ Export Countries
-                </h4>
-                <p className="text-[11px] text-brand-bg/75">
-                  USA, UK, Germany, Spain, France, UAE &amp; Australia
-                </p>
-              </div>
-            </ScrollReveal>
           </div>
 
         </div>

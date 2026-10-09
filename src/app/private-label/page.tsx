@@ -188,6 +188,16 @@ export default function PrivateLabelPage() {
 
           </div>
 
+          {/* Textile Manufacturing Mosaic Banner */}
+          <ScrollReveal className="w-full mb-16 md:mb-20">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src="https://ik.imagekit.io/wepix/lotus%20international/Process/Textile%20Manufacturing%20Mosaic.webp" 
+              alt="Textile Manufacturing Mosaic" 
+              className="w-full h-auto rounded-2xl md:rounded-3xl shadow-sm object-cover"
+            />
+          </ScrollReveal>
+
           {/* Step-by-Step OEM Workflow */}
           <div className="border-t border-brand-light-grey/80 pt-16 md:pt-20">
             <div className="text-center max-w-2xl mx-auto mb-14">
