@@ -10,6 +10,15 @@ export const revalidate = 3600; // Revalidate every hour
 // Baseline release date for static pages to avoid misleading search engines with new Date() every request
 const STATIC_CONTENT_LASTMOD = new Date("2026-10-01T00:00:00.000Z");
 
+/**
+ * Escapes bare '&' in URLs into '&amp;' to adhere to strict XML specifications.
+ * Prevents XML parser errors such as 'EntityRef: expecting ;' when image URLs contain query parameters.
+ */
+function sanitizeXmlUrl(url?: string): string {
+  if (!url) return "";
+  return url.trim().replace(/&(?!(amp|lt|gt|quot|apos);)/g, "&amp;");
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = SITE_URL;
 
@@ -21,7 +30,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 1.0,
       images: [
-        "https://ik.imagekit.io/wepix/lotus%20international/banner/banner%20image%20LI%2001.webp",
+        sanitizeXmlUrl(
+          "https://ik.imagekit.io/wepix/lotus%20international/banner/banner%20image%20LI%2001.webp"
+        ),
       ],
     },
     {
@@ -116,16 +127,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Dynamic Blog Posts with cover images and actual publish/update timestamps
+  // Dynamic Blog Posts with XML-sanitized cover images and actual publish/update timestamps
   let blogRoutes: MetadataRoute.Sitemap = [];
   try {
     const blogs = await getPublishedBlogs();
     blogRoutes = blogs.map((blog) => {
       const lastModTimestamp =
         blog.updatedAt || blog.publishedAt || blog.createdAt;
-      const images: string[] = [];
-      if (blog.coverImage) images.push(blog.coverImage);
-      if (blog.ogImage && blog.ogImage !== blog.coverImage) images.push(blog.ogImage);
+      const rawImages: string[] = [];
+      if (blog.coverImage) rawImages.push(blog.coverImage);
+      if (blog.ogImage && blog.ogImage !== blog.coverImage) rawImages.push(blog.ogImage);
+
+      const images = rawImages.map(sanitizeXmlUrl).filter(Boolean);
 
       return {
         url: `${baseUrl}/blog/${blog.slug}`,
@@ -139,7 +152,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error("Error generating blog sitemap:", err);
   }
 
-  // Dynamic Products with image gallery attachments for Google Image indexing
+  // Dynamic Products with XML-sanitized image gallery attachments for Google Image indexing
   let productRoutes: MetadataRoute.Sitemap = [];
   try {
     const products = await getAllProducts();
@@ -149,7 +162,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         ...(product.images || []),
       ].filter(Boolean) as string[];
 
-      const uniqueImages = Array.from(new Set(rawImages));
+      const uniqueImages = Array.from(new Set(rawImages))
+        .map(sanitizeXmlUrl)
+        .filter(Boolean);
 
       return {
         url: `${baseUrl}/products/${product.id}`,
