@@ -1,4 +1,5 @@
 import React from "react";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import { 
@@ -17,6 +18,14 @@ import {
   Globe,
   ArrowRight
 } from "lucide-react";
+
+export const metadata = buildPageMetadata({
+  title: "Knitwear Manufacturing Process & Capacity",
+  description:
+    "Inside our Tirupur knitwear facility: modern machinery, automated cutting layouts and 250+ skilled artisans turning fibre into export-grade garments for global markets.",
+  path: "/manufacturing",
+  keywords: ["knitwear manufacturing process", "garment factory Tirupur", "apparel production capacity India"],
+});
 
 const INFRASTRUCTURE = [
   {

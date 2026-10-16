@@ -1,9 +1,18 @@
 import React from "react";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import BrandMarquee from "@/components/BrandMarquee";
 import { CheckCircle2, Globe, ArrowRight } from "lucide-react";
+
+export const metadata = buildPageMetadata({
+  title: "Our Clients – Trusted by Global Apparel Brands",
+  description:
+    "The Lotus International manufactures knitted garments for leading retailers, sportswear houses and designer labels across the U.S., Europe and Asia. See the brands we partner with.",
+  path: "/clients",
+  keywords: ["garment manufacturer clients", "apparel brands sourcing India", "knitwear supplier for retailers"],
+});
 
 const CLIENT_BRANDS = [
   {

@@ -1,9 +1,18 @@
 import React from "react";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import BrandMarquee from "@/components/BrandMarquee";
 import { TIMELINE } from "@/data/db";
 import { Target, Eye, ShieldCheck, Heart, Sparkles, ArrowRight } from "lucide-react";
+
+export const metadata = buildPageMetadata({
+  title: "About Us – Knitwear Export Excellence Since 2004",
+  description:
+    "From Paruthi in 2004 to a leading Tirupur knitwear exporter: discover The Lotus International's history, mission, values and certifications behind millions of private-label garments.",
+  path: "/about",
+  keywords: ["about Lotus International", "Tirupur knitwear exporter history", "garment export company India"],
+});
 
 const VALUES = [
   {

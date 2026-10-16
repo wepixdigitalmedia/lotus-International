@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
@@ -18,11 +19,18 @@ import {
   Leaf,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Women’s Empowerment & Social Impact | Lotus International Garment Export Tirupur",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Women’s Empowerment & Social Impact",
   description:
     "Empowering over 220 rural women artisans with dignified livelihoods, 90% female workforce, equal pay, safe transport, and collegiate educational sponsorships in Tirupur, India.",
-};
+  path: "/women-empowerment",
+  keywords: [
+    "women empowerment garment industry",
+    "female workforce textile factory Tirupur",
+    "ethical apparel manufacturing India",
+    "social impact fashion",
+  ],
+});
 
 const EMPOWERMENT_METRICS = [
   {

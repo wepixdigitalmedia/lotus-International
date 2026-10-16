@@ -1,7 +1,16 @@
 import React from "react";
+import { buildPageMetadata } from "@/lib/seo";
 import ScrollReveal from "@/components/ScrollReveal";
 import RFQForm from "@/components/RFQForm";
 import { Mail, Phone, Clock, MapPin, MessageCircle } from "lucide-react";
+
+export const metadata = buildPageMetadata({
+  title: "Contact Us & Request a Quote",
+  description:
+    "Send your program details, target quantities and fabric requirements to our Tirupur merchandising desk. Get a formal garment manufacturing quote within 24 hours.",
+  path: "/contact",
+  keywords: ["garment manufacturing quote", "contact knitwear manufacturer", "apparel RFQ India"],
+});
 
 export default function ContactPage() {
   return (

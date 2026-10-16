@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -16,24 +17,19 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Jayakumar Srinivasan Charitable Trust | Lotus International CSR",
+export const metadata: Metadata = buildPageMetadata({
+  title: "CSR – Jayakumar Srinivasan Charitable Trust",
   description:
     "Jayakumar Srinivasan Charitable Trust supports girl child education, higher college studies, and free community healthcare camps across Pudhupalayam and Tirupur.",
-  openGraph: {
-    title: "Jayakumar Srinivasan Charitable Trust | Lotus International CSR",
-    description:
-      "Supporting girl child education, college sponsorships, and monthly rural healthcare camps in Pudhupalayam and Tirupur.",
-    images: [
-      {
-        url: "https://ik.imagekit.io/lotusinternational/csr/trust%20logo.webp",
-        width: 1000,
-        height: 1000,
-        alt: "Jayakumar Srinivasan Charitable Trust",
-      },
-    ],
+  path: "/trust",
+  keywords: ["Lotus International CSR", "Jayakumar Srinivasan Charitable Trust", "girl child education Tirupur"],
+  image: {
+    url: "https://ik.imagekit.io/lotusinternational/csr/trust%20logo.webp",
+    width: 1000,
+    height: 1000,
+    alt: "Jayakumar Srinivasan Charitable Trust",
   },
-};
+});
 
 const INITIATIVES = [
   {

@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
@@ -17,11 +18,19 @@ import {
   HeartHandshake,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Sustainability & Eco-Friendly Manufacturing | Lotus International Garment Export Tirupur",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Sustainability & Eco-Friendly Manufacturing",
   description:
     "Discover how Lotus International champions sustainability through 100% solar power, organic & recycled fibers, zero-waste cutting, water recycling, and green factory premises in Tirupur, India.",
-};
+  path: "/sustainability",
+  keywords: [
+    "sustainable garment manufacturing",
+    "solar powered clothing factory",
+    "organic cotton knitwear Tirupur",
+    "eco friendly apparel exporter India",
+    "zero waste garment factory",
+  ],
+});
 
 const SUSTAINABILITY_METRICS = [
   {

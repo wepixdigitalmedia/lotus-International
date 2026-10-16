@@ -1,10 +1,12 @@
 import { MetadataRoute } from "next";
 import { getPublishedBlogs } from "@/lib/blogService";
+import { getAllProducts } from "@/lib/productService";
+import { SITE_URL } from "@/lib/seo";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://thelotusinternational.com";
+  const baseUrl = SITE_URL;
 
-  // Static marketing & product routes
+  // Static core routes (canonical only, excluding redirect routes like /certificates & /csr)
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}`,
@@ -13,28 +15,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/certificates`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/products`,
       lastModified: new Date(),
       changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/private-label`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/nature-polo-club`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/manufacturing`,
@@ -67,44 +63,76 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/private-label`,
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/clients`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/trust`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.85,
+      priority: 0.8,
     },
     {
-      url: `${baseUrl}/csr`,
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/resources`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.85,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/careers`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
   ];
 
   // Dynamic Blog Posts
+  let blogRoutes: MetadataRoute.Sitemap = [];
   try {
     const blogs = await getPublishedBlogs();
-    const blogRoutes: MetadataRoute.Sitemap = blogs.map((blog) => ({
+    blogRoutes = blogs.map((blog) => ({
       url: `${baseUrl}/blog/${blog.slug}`,
       lastModified: blog.updatedAt ? new Date(blog.updatedAt) : new Date(),
       changeFrequency: "weekly",
       priority: 0.85,
     }));
-
-    return [...staticRoutes, ...blogRoutes];
   } catch (err) {
-    console.error("Error generating sitemap:", err);
-    return staticRoutes;
+    console.error("Error generating blog sitemap:", err);
   }
+
+  // Dynamic Products
+  let productRoutes: MetadataRoute.Sitemap = [];
+  try {
+    const products = await getAllProducts();
+    productRoutes = products.map((product) => ({
+      url: `${baseUrl}/products/${product.id}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    }));
+  } catch (err) {
+    console.error("Error generating product sitemap:", err);
+  }
+
+  return [...staticRoutes, ...blogRoutes, ...productRoutes];
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { getPublishedBlogs } from "@/lib/blogService";
 import { BLOG_CATEGORIES, BlogPost } from "@/types/blog";
@@ -14,20 +15,19 @@ import {
 
 export const revalidate = 60; // Revalidate every 60 seconds (ISR)
 
-export const metadata: Metadata = {
-  title: "Garment Manufacturing & Knitwear Export Insights | The Lotus International",
-  description: "Industry insights, sustainable apparel manufacturing guides, textile technology, and buyer resources from Tirupur's premier knitwear exporter.",
-  keywords: "knitwear manufacturing blog, apparel export guide, Tirupur garment factory insights, sustainable textiles, organic cotton manufacturing",
-  openGraph: {
-    title: "Lotus International Blog | Apparel Export & Manufacturing Insights",
-    description: "Expert articles on sustainable knitwear manufacturing, Tirupur apparel export, fabric GSM, and OEM/ODM private label production.",
-    type: "website",
-    url: "https://thelotusinternational.com/blog",
-  },
-  alternates: {
-    canonical: "https://thelotusinternational.com/blog",
-  },
-};
+export const metadata: Metadata = buildPageMetadata({
+  title: "Garment Manufacturing & Knitwear Export Insights",
+  description:
+    "Industry insights, sustainable apparel manufacturing guides, textile technology, and buyer resources from Tirupur's premier knitwear exporter.",
+  path: "/blog",
+  keywords: [
+    "knitwear manufacturing blog",
+    "apparel export guide",
+    "Tirupur garment factory insights",
+    "sustainable textiles",
+    "organic cotton manufacturing",
+  ],
+});
 
 export default async function BlogIndexPage({
   searchParams,

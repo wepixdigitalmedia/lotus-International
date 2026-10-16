@@ -1,4 +1,5 @@
 import React from "react";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import { 
@@ -17,6 +18,14 @@ import {
   Ruler,
   ArrowRight
 } from "lucide-react";
+
+export const metadata = buildPageMetadata({
+  title: "Private Label & OEM Clothing Manufacturer",
+  description:
+    "Full-service OEM and private-label apparel manufacturing. You share the designs and sizing; we handle fabric sourcing, production, compliance and export shipping from Tirupur, India.",
+  path: "/private-label",
+  keywords: ["private label clothing manufacturer", "OEM apparel manufacturer India", "custom knitwear manufacturing", "low MOQ garment manufacturer"],
+});
 
 const STEPS = [
   {

@@ -1,8 +1,17 @@
 import React from "react";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import { CERTIFICATES } from "@/data/db";
 import { Award, FileText, CheckCircle2, ShieldCheck, ArrowRight, Sparkles, Leaf, FileCheck2, Microscope, Droplets, Scissors, Scan, ClipboardCheck } from "lucide-react";
+
+export const metadata = buildPageMetadata({
+  title: "Quality Assurance & Export Compliance Certifications",
+  description:
+    "Annually audited for ethical labour, safe operations and non-toxic materials. Explore our export compliance certifications and multi-stage garment quality inspection process.",
+  path: "/compliance",
+  keywords: ["Sedex compliant garment factory", "apparel quality assurance", "export compliance certifications", "ethical garment manufacturing"],
+});
 
 const CERT_ICONS: Record<string, React.ReactNode> = {
   "cert-sedex": <ShieldCheck className="w-5 h-5 text-brand-accent group-hover:text-white transition-colors duration-300" />,
