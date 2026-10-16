@@ -8,6 +8,12 @@ service cloud.firestore {
       allow write, delete: if request.auth != null;
     }
 
+    // Products Collection: Public read access for garment catalog, Admin auth for write
+    match /products/{productId} {
+      allow read: if true;
+      allow write, delete: if request.auth != null;
+    }
+
     // Default deny for all other collections
     match /{document=**} {
       allow read, write: if false;

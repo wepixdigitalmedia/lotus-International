@@ -6,7 +6,7 @@ import type { Metadata } from "next";
  * property you verify in Google Search Console (https, with/without www).
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://thelotusinternational.com"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://lotusinternationaltextiles.com"
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "The Lotus International";
@@ -89,7 +89,7 @@ export function buildPageMetadata({
 export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "Corporation"],
     "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
     legalName: BUSINESS.legalName,
@@ -101,6 +101,25 @@ export function organizationJsonLd() {
     email: BUSINESS.email,
     telephone: BUSINESS.telephone,
     address: { "@type": "PostalAddress", ...BUSINESS.address },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 11.1932,
+      longitude: 77.2687,
+    },
+    knowsAbout: [
+      "Knitwear Manufacturing",
+      "OEM Apparel Production",
+      "Private Label Clothing Exporter",
+      "Organic Cotton Garments",
+      "Sedex SMETA Audited Factory",
+      "Solar Powered Textile Manufacturing",
+      "Tirupur Garment Industry",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Private Label Knitwear Silhouette Catalog",
+      url: `${SITE_URL}/products`,
+    },
     contactPoint: [
       {
         "@type": "ContactPoint",

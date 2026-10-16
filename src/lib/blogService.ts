@@ -57,8 +57,18 @@ export async function getPublishedBlogs(): Promise<BlogPost[]> {
       ...d.data(),
     })) as BlogPost[];
 
+    // Merge with INITIAL_BLOGS so foundational pillar articles remain accessible
+    const existingSlugs = new Set(firestoreBlogs.map((b) => b.slug));
+    const existingIds = new Set(firestoreBlogs.map((b) => b.id));
+    const merged = [
+      ...firestoreBlogs,
+      ...INITIAL_BLOGS.filter(
+        (b) => b.published && !existingSlugs.has(b.slug) && !existingIds.has(b.id)
+      ),
+    ];
+
     // Sort by latest publication date
-    return firestoreBlogs.sort(
+    return merged.sort(
       (a, b) => (b.publishedAt || b.createdAt || 0) - (a.publishedAt || a.createdAt || 0)
     );
   } catch (error) {

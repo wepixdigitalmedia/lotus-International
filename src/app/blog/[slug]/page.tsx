@@ -13,6 +13,7 @@ import {
   Check,
   Tag,
 } from "lucide-react";
+import { SITE_URL, breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
 
 export const revalidate = 60; // ISR
 
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = blog.seoTitle || `${blog.title} | The Lotus International`;
   const description = blog.seoDescription || blog.excerpt;
-  const url = blog.canonicalUrl || `https://thelotusinternational.com/blog/${blog.slug}`;
+  const url = blog.canonicalUrl || `${SITE_URL}/blog/${blog.slug}`;
   const imageUrl = blog.ogImage || blog.coverImage;
 
   return {
@@ -117,26 +118,33 @@ export default async function BlogPostPage({ params }: Props) {
       name: "The Lotus International",
       logo: {
         "@type": "ImageObject",
-        url: "https://thelotusinternational.com/favicon.ico",
+        url: `${SITE_URL}/android-chrome-512x512.png`,
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://thelotusinternational.com/blog/${blog.slug}`,
+      "@id": `${SITE_URL}/blog/${blog.slug}`,
     },
     keywords: blog.tags?.join(", "),
     articleSection: blog.category,
   };
 
-  const currentUrl = `https://thelotusinternational.com/blog/${blog.slug}`;
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blog" },
+    { name: blog.category, path: `/blog?category=${encodeURIComponent(blog.category)}` },
+    { name: blog.title, path: `/blog/${blog.slug}` },
+  ]);
+
+  const currentUrl = `${SITE_URL}/blog/${blog.slug}`;
   const shareText = encodeURIComponent(`${blog.title} - The Lotus International`);
 
   return (
     <div className="bg-brand-bg min-h-screen">
-      {/* JSON-LD Script */}
+      {/* JSON-LD Script with BlogPosting and BreadcrumbList */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={jsonLdScript([jsonLd, breadcrumbs])}
       />
 
       {/* Breadcrumb Navigation */}
