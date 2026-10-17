@@ -672,7 +672,7 @@ export default function HomePage() {
             poster="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=1600"
           >
             <source
-              src="https://lotusinternationaltextiles.com/static/images/frontend/hero_banner/home/home_hero.mp4"
+              src="/videos/home_hero.mp4"
               type="video/mp4"
             />
           </video>
